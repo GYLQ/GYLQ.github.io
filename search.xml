@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>我的第一个博客</title>
+    <title>Hexo博客托管Github</title>
     <url>/2020/07/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><h2 id="估计也只是好奇心作怪，浪费了几天的时间来琢磨Hexo在Github上托管一个博客"><a href="#估计也只是好奇心作怪，浪费了几天的时间来琢磨Hexo在Github上托管一个博客" class="headerlink" title="估计也只是好奇心作怪，浪费了几天的时间来琢磨Hexo在Github上托管一个博客"></a><strong>估计也只是好奇心作怪，浪费了几天的时间来琢磨Hexo在Github上托管一个博客</strong></h2><h2 id="多久会发下一次"><a href="#多久会发下一次" class="headerlink" title="多久会发下一次"></a>多久会发下一次</h2>]]></content>
+    <content><![CDATA[<h1 id="先占个位置"><a href="#先占个位置" class="headerlink" title="先占个位置"></a>先占个位置</h1><h2 id="现在暂时没有时间管理这个个人博客，先挂着了哈哈。之后有时间-再见。"><a href="#现在暂时没有时间管理这个个人博客，先挂着了哈哈。之后有时间-再见。" class="headerlink" title="现在暂时没有时间管理这个个人博客，先挂着了哈哈。之后有时间 再见。"></a><strong>现在暂时没有时间管理这个个人博客，先挂着了哈哈。之后有时间 再见。</strong></h2><p><strong>坑先留着没填</strong></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h1 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h1><h1 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h1><h2 id="检验Git是否安装成功"><a href="#检验Git是否安装成功" class="headerlink" title="检验Git是否安装成功"></a>检验Git是否安装成功</h2><h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><h2 id="Hexo-初始化配置"><a href="#Hexo-初始化配置" class="headerlink" title="Hexo 初始化配置"></a>Hexo 初始化配置</h2><h1 id="本地查看效果"><a href="#本地查看效果" class="headerlink" title="本地查看效果"></a>本地查看效果</h1><h1 id="将博客部署到-Github-Pages-上"><a href="#将博客部署到-Github-Pages-上" class="headerlink" title="将博客部署到 Github Pages 上"></a>将博客部署到 Github Pages 上</h1><h2 id="注册-Github-账户"><a href="#注册-Github-账户" class="headerlink" title="注册 Github 账户"></a>注册 Github 账户</h2><h2 id="创建项目代码库"><a href="#创建项目代码库" class="headerlink" title="创建项目代码库"></a>创建项目代码库</h2><h2 id="配置-Git-个人信息"><a href="#配置-Git-个人信息" class="headerlink" title="配置 Git 个人信息"></a>配置 Git 个人信息</h2><h1 id="将本地的-Hexo-文件更新到-Github-的库中"><a href="#将本地的-Hexo-文件更新到-Github-的库中" class="headerlink" title="将本地的 Hexo 文件更新到 Github 的库中"></a>将本地的 Hexo 文件更新到 Github 的库中</h1><h1 id="在博客上发表文章"><a href="#在博客上发表文章" class="headerlink" title="在博客上发表文章"></a>在博客上发表文章</h1><h1 id="为博客更换自己喜欢的主题"><a href="#为博客更换自己喜欢的主题" class="headerlink" title="为博客更换自己喜欢的主题"></a>为博客更换自己喜欢的主题</h1><h1 id="博客美化和实用功能的添加"><a href="#博客美化和实用功能的添加" class="headerlink" title="博客美化和实用功能的添加"></a>博客美化和实用功能的添加</h1><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><h1 id="测试视频功能"><a href="#测试视频功能" class="headerlink" title="测试视频功能"></a>测试视频功能</h1><hr>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+    <iframe src="//player.bilibili.com/player.html?aid=371032790&bvid=BV18Z4y1H7Ze&cid=204194784&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
+</div>
+***]]></content>
+      <categories>
+        <category>博客搭建系列</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
   </entry>
 </search>
