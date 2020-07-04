@@ -8,21 +8,27 @@
       <categories>
         <category>每日一句</category>
       </categories>
+      <tags>
+        <tag>English</tag>
+      </tags>
   </entry>
   <entry>
     <title>每日一句2020-7-3</title>
     <url>/2020/07/04/2020-7-3/</url>
-    <content><![CDATA[<img src="https://edu-wps.ks3-cn-beijing.ksyun.com/image/e66a2f008a4585193b96697ef57c27ab.jpg" alt />
+    <content><![CDATA[<img src="https://edu-wps.ks3-cn-beijing.ksyun.com/image/e66a2f008a4585193b96697ef57c27ab.jpg" alt="img"  />
 
 <h1 id="We-all-whether-we-know-it-or-not-are-fighting-to-make-the-kind-of-a-world-that-we-should-like"><a href="#We-all-whether-we-know-it-or-not-are-fighting-to-make-the-kind-of-a-world-that-we-should-like" class="headerlink" title="We all, whether we know it or not, are fighting to make the kind of a world that we should like."></a>We all, whether we know it or not, are fighting to make the kind of a world that we should like.</h1><h1 id="不管意识到与否，我们都在为创造一个我们喜欢的世界而奋斗。"><a href="#不管意识到与否，我们都在为创造一个我们喜欢的世界而奋斗。" class="headerlink" title="不管意识到与否，我们都在为创造一个我们喜欢的世界而奋斗。"></a>不管意识到与否，我们都在为创造一个我们喜欢的世界而奋斗。</h1>]]></content>
       <categories>
         <category>每日一句</category>
       </categories>
+      <tags>
+        <tag>English</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hexo博客托管Github</title>
     <url>/2020/07/04/hexo%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h2 id="过段时间填坑"><a href="#过段时间填坑" class="headerlink" title="过段时间填坑"></a><strong>过段时间填坑</strong></h2><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h1 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h1><h1 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h1><h2 id="检验Git是否安装成功"><a href="#检验Git是否安装成功" class="headerlink" title="检验Git是否安装成功"></a>检验Git是否安装成功</h2><h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><h2 id="Hexo-初始化配置"><a href="#Hexo-初始化配置" class="headerlink" title="Hexo 初始化配置"></a>Hexo 初始化配置</h2><h1 id="本地查看效果"><a href="#本地查看效果" class="headerlink" title="本地查看效果"></a>本地查看效果</h1><h1 id="将博客部署到-Github-Pages-上"><a href="#将博客部署到-Github-Pages-上" class="headerlink" title="将博客部署到 Github Pages 上"></a>将博客部署到 Github Pages 上</h1><h2 id="注册-Github-账户"><a href="#注册-Github-账户" class="headerlink" title="注册 Github 账户"></a>注册 Github 账户</h2><h2 id="创建项目代码库"><a href="#创建项目代码库" class="headerlink" title="创建项目代码库"></a>创建项目代码库</h2><h2 id="配置-Git-个人信息"><a href="#配置-Git-个人信息" class="headerlink" title="配置 Git 个人信息"></a>配置 Git 个人信息</h2><h1 id="将本地的-Hexo-文件更新到-Github-的库中"><a href="#将本地的-Hexo-文件更新到-Github-的库中" class="headerlink" title="将本地的 Hexo 文件更新到 Github 的库中"></a>将本地的 Hexo 文件更新到 Github 的库中</h1><h1 id="在博客上发表文章"><a href="#在博客上发表文章" class="headerlink" title="在博客上发表文章"></a>在博客上发表文章</h1><h1 id="为博客更换自己喜欢的主题"><a href="#为博客更换自己喜欢的主题" class="headerlink" title="为博客更换自己喜欢的主题"></a>为博客更换自己喜欢的主题</h1><h1 id="博客美化和实用功能的添加"><a href="#博客美化和实用功能的添加" class="headerlink" title="博客美化和实用功能的添加"></a>博客美化和实用功能的添加</h1><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><h1 id="测试视频功能"><a href="#测试视频功能" class="headerlink" title="测试视频功能"></a>测试视频功能</h1><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"https://yiyi.55zuiday.com/20171217/rq4DLC2E/800kb/hls/index.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+    <content><![CDATA[<h2 id="过段时间填坑"><a href="#过段时间填坑" class="headerlink" title="过段时间填坑"></a><strong>过段时间填坑</strong></h2><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h1 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h1><h1 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h1><h2 id="检验Git是否安装成功"><a href="#检验Git是否安装成功" class="headerlink" title="检验Git是否安装成功"></a>检验Git是否安装成功</h2><h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><h2 id="Hexo-初始化配置"><a href="#Hexo-初始化配置" class="headerlink" title="Hexo 初始化配置"></a>Hexo 初始化配置</h2><h1 id="本地查看效果"><a href="#本地查看效果" class="headerlink" title="本地查看效果"></a>本地查看效果</h1><h1 id="将博客部署到-Github-Pages-上"><a href="#将博客部署到-Github-Pages-上" class="headerlink" title="将博客部署到 Github Pages 上"></a>将博客部署到 Github Pages 上</h1><h2 id="注册-Github-账户"><a href="#注册-Github-账户" class="headerlink" title="注册 Github 账户"></a>注册 Github 账户</h2><h2 id="创建项目代码库"><a href="#创建项目代码库" class="headerlink" title="创建项目代码库"></a>创建项目代码库</h2><h2 id="配置-Git-个人信息"><a href="#配置-Git-个人信息" class="headerlink" title="配置 Git 个人信息"></a>配置 Git 个人信息</h2><h1 id="将本地的-Hexo-文件更新到-Github-的库中"><a href="#将本地的-Hexo-文件更新到-Github-的库中" class="headerlink" title="将本地的 Hexo 文件更新到 Github 的库中"></a>将本地的 Hexo 文件更新到 Github 的库中</h1><h1 id="在博客上发表文章"><a href="#在博客上发表文章" class="headerlink" title="在博客上发表文章"></a>在博客上发表文章</h1><h1 id="为博客更换自己喜欢的主题"><a href="#为博客更换自己喜欢的主题" class="headerlink" title="为博客更换自己喜欢的主题"></a>为博客更换自己喜欢的主题</h1><h1 id="博客美化和实用功能的添加"><a href="#博客美化和实用功能的添加" class="headerlink" title="博客美化和实用功能的添加"></a>博客美化和实用功能的添加</h1><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><h1 id="测试视频功能"><a href="#测试视频功能" class="headerlink" title="测试视频功能"></a>测试视频功能</h1><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"autoplay":true,"theme":"#FADFA3","loop":true,"video":{"url":"https://yiyi.55zuiday.com/20171217/rq4DLC2E/800kb/hls/index.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 <hr>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
