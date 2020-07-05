@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite.com/2020/07/04/2020-7-4/</loc>
+    <loc>http://yoursite.com/2020/07/02/%E9%97%AA%E7%94%B5%E4%BE%A0%E7%AC%AC%E5%9B%9B%E5%AD%A3/</loc>
     <lastmod>2020-07-05</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/07/01/hexo%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2020-07-05</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2020/07/04/%E9%97%AA%E7%94%B5%E4%BE%A0%E7%AC%AC%E5%9B%9B%E5%AD%A3/</loc>
-    <lastmod>2020-07-04</lastmod>
+    <loc>http://yoursite.com/2020/07/04/2020-7-4/</loc>
+    <lastmod>2020-07-05</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2020/07/04/2020-7-3/</loc>
-    <lastmod>2020-07-04</lastmod>
+    <loc>http://yoursite.com/2020/07/05/2020-7-5/</loc>
+    <lastmod>2020-07-05</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/07/02/%E6%88%91%E7%9A%84%E5%86%85%E5%BF%83%E6%89%A7%E7%9D%80/</loc>
+    <lastmod>2020-07-05</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/07/03/2020-7-3/</loc>
+    <lastmod>2020-07-05</lastmod>
   </url>
 </urlset>
