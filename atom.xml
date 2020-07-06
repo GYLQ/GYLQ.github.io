@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-05T12:32:04.770Z</updated>
+  <updated>2020-07-05T23:38:33.596Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>魔王学院的不适格者</title>
+    <link href="http://yoursite.com/2020/07/06/%E9%AD%94%E7%8E%8B%E5%AD%A6%E9%99%A2%E7%9A%84%E4%B8%8D%E9%80%82%E5%90%88%E8%80%85/"/>
+    <id>http://yoursite.com/2020/07/06/%E9%AD%94%E7%8E%8B%E5%AD%A6%E9%99%A2%E7%9A%84%E4%B8%8D%E9%80%82%E5%90%88%E8%80%85/</id>
+    <published>2020-07-05T16:00:00.000Z</published>
+    <updated>2020-07-05T23:38:33.596Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="简介"><a href="#简介" class="headerlink" title="简介:"></a>简介:</h1><p>《魔王学院的不适合者》讲述尽管具备能毁灭人类、精灵，甚至是众神的力量，暴虐魔王阿诺斯却厌倦了永无止尽的斗争，梦想着和平的世界进行转生。然而在两千年后，转生后的他所迎来的，却是适应和平生活而变得过于弱小的子孙们，以及各种衰退至极的魔法。阿诺斯虽然进入了把被认定是魔王转生者的人召集起来“魔王学院”就读，学院却无法看出他的实力，使他被盖上不适任者的烙印。在众人都瞧不起他的环境里，他将唯一亲切对待自己的少女米夏纳为部下，不适任者（魔王）在魔族的阶级制度上迈向巅峰！</p><p>第一集</p><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"autoplay":true,"theme":"#FADFA3","loop":true,"video":{"url":"https://gss3.baidu.com/6LZ0ej3k1Qd3ote6lo7D0j9wehsv/tieba-smallvideo/60_f4bc8119b7e46e5f537b9085d6dd36e7.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="动漫" scheme="http://yoursite.com/categories/%E5%8A%A8%E6%BC%AB/"/>
+    
+    
+      <category term="日漫" scheme="http://yoursite.com/tags/%E6%97%A5%E6%BC%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>每日一句2020-7-5</title>
