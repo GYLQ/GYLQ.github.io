@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-08T02:43:30.164Z</updated>
+  <updated>2020-07-09T02:11:43.053Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Re：从零开始的异世界生活第二季</title>
+    <link href="http://yoursite.com/2020/07/09/Re%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%BC%82%E4%B8%96%E7%95%8C%E7%94%9F%E6%B4%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3/"/>
+    <id>http://yoursite.com/2020/07/09/Re%EF%BC%9A%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%BC%82%E4%B8%96%E7%95%8C%E7%94%9F%E6%B4%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3/</id>
+    <published>2020-07-08T16:00:00.000Z</published>
+    <updated>2020-07-09T02:11:43.053Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="简介"><a href="#简介" class="headerlink" title="简介:"></a>简介:</h1><p>我一定会拯救你。</p><p>菜月昴打倒了魔女教大罪司教“怠惰”担当的贝特鲁吉乌斯·罗曼尼康帝，并与爱蜜莉雅重逢。</p><p>两人在经历苦涩的诀别后终于和解，但那却是新的波澜的开端。</p><p>超乎想像、走投无路的危机，以及无情袭来的现实。</p><p>少年再次面对残酷的命运。</p><p>第一集</p><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"autoplay":true,"theme":"#FADFA3","loop":true,"video":{"url":"https://gss3.baidu.com/6LZ0ej3k1Qd3ote6lo7D0j9wehsv/tieba-smallvideo/60_c1445138ad22849646c22dce6824d079.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="动漫" scheme="http://yoursite.com/categories/%E5%8A%A8%E6%BC%AB/"/>
+    
+    
+      <category term="日漫" scheme="http://yoursite.com/tags/%E6%97%A5%E6%BC%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>每日一句2020-7-8</title>
