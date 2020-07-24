@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gylq.gitee.io/tags/index.html</loc>
+    
+    <lastmod>2020-07-24T07:44:00.809Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gylq.gitee.io/2020/07/03/2020-7-3/</loc>
     
     <lastmod>2020-07-16T04:07:11.151Z</lastmod>
@@ -187,13 +194,6 @@
     <loc>https://gylq.gitee.io/categories/index.html</loc>
     
     <lastmod>2020-07-02T10:01:53.663Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gylq.gitee.io/tags/index.html</loc>
-    
-    <lastmod>2020-07-02T09:58:33.935Z</lastmod>
     
   </url>
   
