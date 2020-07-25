@@ -250,31 +250,6 @@
   </entry>
   
   <entry>
-    <title>母版</title>
-    <link href="https://gylq.gitee.io/2020/07/07/%E6%AF%8D%E7%89%88/"/>
-    <id>https://gylq.gitee.io/2020/07/07/%E6%AF%8D%E7%89%88/</id>
-    <published>2020-07-07T14:00:00.000Z</published>
-    <updated>2020-07-12T12:04:23.680Z</updated>
-    
-    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">Hey, password is required here.</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="eed80f49cb1f385bf6b0135b563d11e88bf82509c8b5ea520f5c3dea8a974503">44e5b1ef36b4cd9de27ae356fcbbabcaa644ea605862cb06a374cbd39f8744bdfbfd5ca6587dd3c3f05decf0ffd99d2f2ec92e3e28b877318646cdc89e8ca1d9a75737e0f44b207982b85272d662ebe2945dbae2a70c8e62ac253e24b035cc2ccdb5256e6ead7e1d77b221b5d3d1fce50df1e546db80d507664a47b6cc15d25bbc6705c615ed4b8b1be1113099e795a2d300b3e525706194e56864b61a74f61f0c9d0d198295271a1c343f10d2c14256a923de6131f142d915b128bd31e66669ba04bdbab6a0854806e144580189654575d27fcaceb104acada90abd66249f27f10a4e5e8f4a0c2484e02184fd26ffbfc3906c443a0fcd7cb6c8f6c7b9d9feb29370716d67fb2e06b4891715eebcb24c8bebd0ba39ea95a5982faf1f36877e59e5acd598680110b8bba320cb02382d138a1de5f1c98c32bc27830999f5f5fd4a2fdd308a47653de76abcaa6f6aa21ac9dbf10ab83f3a643f59701268268fb236f8a816d9fccedde094704e903f493930a1c5858d2618193451b8362acfd7e79a30849a8632acf19c948932ce8a95b48d243f129bc260789ec63e7abe646f2c23690839174b46a9d6af44bb132b41189366cbb913ea9afce57bef4c1b633e2a13eb211a8354f5446845c8fad3f9d39c9444644a3a628bf3cc561c3542ac357e3e6cdb97078e84894fa5c747373e61fe70fb81afe22c0c7636c82dda1e21226feb23216e0eeae92c5d572b838abfdf517922ea56a6f13351e3b188bc5fb5b3795fc02ee8d90094d8604924b4c21a5175722fadf52450c446ba77aec4ffed2fd08fee736ed85effd4c9ab7e709abe35a1abd1e1f77b427e8d68ebb6454b399ea8b8012fde81e01ab426af92497b25ab8b564b875ea144241386775f52d7ff6d71050b81e789c4fd8824b22e46269729acb19ac09f1fa5c3c60b10652777032aa13311d928345f634952dc7478dc8c1762141a8295206da5a5465ab0b278653a1a443a18e907420c051adf2d5c87cd6f22dc909bb73f2887dd612a4b8b3032026de11fd9c5437367c1e7ce3b5e92f2795b8e2e23ad2a3ddc1b35ce6466f490f08caedccf231b335519c50c90a9875e50e3107d09ace97d07b3cea718b096963b4d9007001fd2264945f402db3bb04102c0f1430b1c852ec2f6113bfbd5ee03652aa05047318a15714f1aca72f509f9d8a35f2c2caa9a799aedd8b724e863b120a08922a88d829e20d15d6686be881cd4c05f6f7fe07e8ab51591b2f721fe580e28bd9cccbfa35d49af6de42709c9c74ca1b74899d62a50f747e07ce17f8b7a449dc5ae599cc281c9a3b7bae94c7ce383120896745a7bef3011783ecf02acf4fa4df4573317b39f636533e9333587b75929dadb60dfe3a0bdcfc0b3a0b367871471276f33c0ff30ce7e50781aaf64a5baf285cfcf53e3d6de0f1258e14936842f517fe610ecf9e60dcab396c7879d9bb7974bb2374cee0c20c882e91613edf6a52554bcfbf6274ecc065c77e83dcd7d7dd661ce7c6577524cdab0dda2d7c855f002aa7af848a2fd59e62e67a6a104930701ab00db7e73ef34d3070dfff503a126545b2e01f14a5b03274e1aec7498028a93509fb3ce89216ed27f7dc89836d5630d165ac59a43742fa062999b1f8a946722b238ac078673527c8cd2f35525e13b9662d813e138cfbb08f46b96cc363d7e9e3a548b2e69c010bafd5af65f7f4e5d3dfd2a94849337c8a8d0f53678349ccab0cdc6e8de0b9ee15157d3ff9f03c219d2ea27ecbcfa6e3f0de23a450df00a89b600aa60361c0750c98d966c44fdb77e8e2d76b2a6e5009f1355d3909453361411173f809330fb935a933f463652d790fd93b593cccc40a4529d59d354c8e90e0c037ad49665c5d3c0b81fa06c215af4dbd96a70e0f40c738b6a4d5d073b15bce1517a98bc425fb2d4f9e2979d35ac59a521624ab7ab3ebc2a0570e5a1d38df1a1b1f20707ee11c66765a6eef3211257fbb0f303fc03db8c6a0a1dafc9fc379862e806af77267d9b3e58c0d9a8737d695c2a876cac65aa4bb0bb7936f69f1567d39ad8def91705b65e82be88f36274983e0717a0228b941690574a36b57cd1f2761df81fb3cc7aa545373a9393efccc9cc09a1c0548021502713869e864ba66755173bb39dc3e8d5f945f514f29941f002e6a4c718df3a7892eedd6e616f5bcf11538fe67dc9b06f9393db42305ace8976558ffd8256a5fd5820a1adfd2f0117e4b6ef9078f11074965bff8894b926e50da263f560a7fe65de3a8bae5728c4eb766bd8345411d6ec8acbe26e204ddfe9c6d56043881fd12ea2aa30518caef160bcd742722ac98f43569b98a779229294ac050a9d243a5bf1b22813fc1957564922e1d1c871bba52cbe20b12aadcaa0544ba3543acbfb1b511329baf248402e15b2fd9e546564bc9de34a2e2a9641cd396da5</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-    
-    <summary type="html">
-    
-      使用一些工具代码
-    
-    </summary>
-    
-    
-      <category term="md书写方式" scheme="https://gylq.gitee.io/categories/md%E4%B9%A6%E5%86%99%E6%96%B9%E5%BC%8F/"/>
-    
-    
-      <category term="方式" scheme="https://gylq.gitee.io/tags/%E6%96%B9%E5%BC%8F/"/>
-    
-      <category term="学习" scheme="https://gylq.gitee.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>每日一句2020-7-7</title>
     <link href="https://gylq.gitee.io/2020/07/07/2020-7-7/"/>
     <id>https://gylq.gitee.io/2020/07/07/2020-7-7/</id>
@@ -490,6 +465,32 @@
     
     
       <category term="时间记录" scheme="https://gylq.gitee.io/tags/%E6%97%B6%E9%97%B4%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建小白“启程”</title>
+    <link href="https://gylq.gitee.io/2020/07/01/hexo%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://gylq.gitee.io/2020/07/01/hexo%E5%8D%9A%E5%AE%A2/</id>
+    <published>2020-06-30T16:00:00.000Z</published>
+    <updated>2020-07-25T08:07:20.644Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote><p>这是一篇有关如何使用Gitee Pages和hexo搭建属于自己独立博客的小白教程，这也是我搭建好自己博客之后写的第一篇博客，刚开始在搭建博客的时候也是各种问度娘，所以想要自己写一篇能让大家少走弯路，<strong><em>一条龙服务开始</em></strong>。</p></blockquote><h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><blockquote><p><strong>Gitee Pages</strong> 可以被认为是用户编写的、托管在Gitee上的静态网页。使用Gitee Pages可以为你提供一个免费的服务器，免去了自己搭建服务器和写数据库的麻烦。此外还可以绑定自己的域名。其实也可以使用<strong>Github Pages</strong>，但是<strong>Github Pages</strong>由于是国外的所以国内访问速度太慢，我就安利大家使用<strong>Gitee Pages</strong> 。</p><p><strong>Hexo</strong>是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p></blockquote><h1 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h1><blockquote><p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Nodo.js下载官网</a></p><p>按需下载相应的版本， 默认安装就可以了。</p><p>这是我目前使用的版本</p><p><a href="https://pan.baidu.com/s/1_mLki5Vx5hGdBffc33m5Ag" target="_blank" rel="noopener">百度云盘 </a>提取码: gylq</p></blockquote><h1 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h1><blockquote><p><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git下载官网</a></p><p>按需下载相应的版本， 默认安装就可以了。</p><p>这是我目前使用的版本</p><p><a href="https://pan.baidu.com/s/1qpEfinUDVgRgw2-ryea8gQ" target="_blank" rel="noopener">百度云盘 </a>提取码: gylq</p></blockquote><h2 id="检验Git是否安装成功"><a href="#检验Git是否安装成功" class="headerlink" title="检验Git是否安装成功"></a>检验Git是否安装成功</h2><blockquote><p>同时按下 Win 键和 R 键打开运行窗口,输入 cmd ，然后输入以下命令，有相应版本信息显示则安装成功，若不正确可以卸载软件重新安装，此外若安装成功，在桌面右键鼠标，可以看到菜单里多了 Git GUI Here 和 Git Bash Here两个选项，第一个是图形界面的Git操作，另一个是命令行</p></blockquote><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git --version  </span><br><span class="line">$ node -v  </span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure></div><p><img src="https://s1.ax1x.com/2020/07/25/UzafXt.png" alt="image 20200725133233212"></p><blockquote><p>在<strong>Git Bash Here</strong>中进行上述命令操作</p><p><img src="https://s1.ax1x.com/2020/07/25/UzaW6I.png" alt="image 20200725133347942"></p></blockquote><h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><blockquote><p>安装所有要求后，您可以使用npm安装Hexo：</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div></blockquote><h2 id="Hexo-初始化配置"><a href="#Hexo-初始化配置" class="headerlink" title="Hexo 初始化配置"></a>Hexo 初始化配置</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;文件夹&gt;</span><br></pre></td></tr></table></figure></div><blockquote><p>我使用的&lt;文件夹名&gt;是<strong>blog</strong>，名称随意，稍微等待几分钟估计就好会出现一个文件夹</p><p><img src="https://s1.ax1x.com/2020/07/25/UzBF3Q.png" alt="image"></p><p><strong>红线标注</strong>位置是你刚刚新建的文件夹路径</p><p>Hexo安装完成后，将会在指定文件夹中新建所需要的文件，Hexo 文件夹下的目录如下：</p><p><img src="https://s1.ax1x.com/2020/07/25/UzBUUK.png" alt="image"></p></blockquote><h1 id="本地查看效果"><a href="#本地查看效果" class="headerlink" title="本地查看效果"></a>本地查看效果</h1><blockquote><p>执行以下命令，执行</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s -g</span><br></pre></td></tr></table></figure></div><p>首先使用<strong>cd blog</strong> 进入你的文件夹路径，然后<strong>步骤二</strong>直接使用以上命令。</p><p><img src="https://s1.ax1x.com/2020/07/25/UzDdZq.png" alt="image"></p><p>此时你可以打开预览 <a href="http://localhost:4000/效果了" target="_blank" rel="noopener">http://localhost:4000/效果了</a></p><p><img src="https://s1.ax1x.com/2020/07/25/UzD2LR.png" alt="image"></p><p><strong>此时你已经基本上完成了创建博客的一半</strong></p></blockquote><h1 id="将博客部署到-Gitee-Pages-上"><a href="#将博客部署到-Gitee-Pages-上" class="headerlink" title="将博客部署到 Gitee Pages 上"></a>将博客部署到 Gitee Pages 上</h1><blockquote><p>到目前为止，我们的本地博客就成功搭建了，但是现在我们只能通过本地连接查看博客，我们要做的是让其他人也能够访问我们的博客，这就需要我们将博客部署到Github Pages上</p></blockquote><h2 id="注册-Gitee-账户"><a href="#注册-Gitee-账户" class="headerlink" title="注册 Gitee 账户"></a>注册 Gitee 账户</h2><blockquote><p><a href="https://gitee.com/" target="_blank" rel="noopener">官方gitee注册</a></p></blockquote><h2 id="创建项目代码库"><a href="#创建项目代码库" class="headerlink" title="创建项目代码库"></a>创建项目代码库</h2><h2 id="配置-Git-个人信息"><a href="#配置-Git-个人信息" class="headerlink" title="配置 Git 个人信息"></a>配置 Git 个人信息</h2><h1 id="将本地的-Hexo-文件更新到-Github-的库中"><a href="#将本地的-Hexo-文件更新到-Github-的库中" class="headerlink" title="将本地的 Hexo 文件更新到 Github 的库中"></a>将本地的 Hexo 文件更新到 Github 的库中</h1><h1 id="在博客上发表文章"><a href="#在博客上发表文章" class="headerlink" title="在博客上发表文章"></a>在博客上发表文章</h1><h1 id="为博客更换自己喜欢的主题"><a href="#为博客更换自己喜欢的主题" class="headerlink" title="为博客更换自己喜欢的主题"></a>为博客更换自己喜欢的主题</h1><h1 id="博客美化和实用功能的添加"><a href="#博客美化和实用功能的添加" class="headerlink" title="博客美化和实用功能的添加"></a>博客美化和实用功能的添加</h1><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="hexo博客搭建" scheme="https://gylq.gitee.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="博客搭建" scheme="https://gylq.gitee.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   

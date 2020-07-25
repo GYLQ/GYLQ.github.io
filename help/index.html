@@ -89,7 +89,7 @@
 
 
 
-  <meta name="keywords" content="Hexo个人博客,NexT美化优化,哈林摇,Mac Panel特效,Leaf,北宸,Java程序员,北京,旅行,摄像,Github Pages,搭建教程,demo,博客相册,文章排行榜,网站SEO" />
+  <meta name="keywords" content="母版" />
 
 
 
@@ -102,14 +102,16 @@
 
 
 
-<meta name="description" content="生活分享">
+<meta name="description" content="使用一些工具代码">
 <meta property="og:type" content="website">
-<meta property="og:title" content="孤桜懶契">
-<meta property="og:url" content="https://gylq.gitee.io/page/3/index.html">
+<meta property="og:title" content="help">
+<meta property="og:url" content="https://gylq.gitee.io/help/index.html">
 <meta property="og:site_name" content="孤桜懶契">
-<meta property="og:description" content="生活分享">
+<meta property="og:description" content="使用一些工具代码">
+<meta property="article:published_time" content="2020-07-07T14:00:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T03:34:20.282Z">
 <meta property="article:author" content="孤桜懶契">
-<meta property="article:tag" content="孤桜懶契 动漫">
+<meta property="article:tag" content="母版">
 <meta name="twitter:card" content="summary">
 
 
@@ -140,7 +142,7 @@
 
 
 
-  <link rel="canonical" href="https://gylq.gitee.io/page/3/"/>
+  <link rel="canonical" href="https://gylq.gitee.io/help/"/>
 
 
 
@@ -158,7 +160,7 @@
     })();
 #</script>
 
-  <title>孤桜懶契 - Run</title>
+  <title>help | 孤桜懶契</title>
   
 
 
@@ -189,7 +191,9 @@ var _hmt = _hmt || [];
       <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="/assets/js/DPlayer.min.js"></script></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -200,8 +204,7 @@ var _hmt = _hmt || [];
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <!--fork me from github-->
@@ -378,622 +381,77 @@ var _hmt = _hmt || [];
           <div id="content" class="content">
             
 
-  <!--轮播图-->
-  
-
-<!--
-<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
--->
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap.min.js@3.3.5/bootstrap.min.js"></script>
-
-<style type="text/css">
-
-.glyphicon-chevron-left:before{
-	/* content: "《" */
-}
-.glyphicon-chevron-right:before{
-	/* content: "》" */
-}
-
-.right-siders{
-   border-radius: 5px;
-   /*margin-top: 5px;
-   margin-bottom: 10px;*/
-}
-
-.my-carousel{
-    /*height: 10%;*/
-    margin-bottom: 12px;
-}
-
-.my-carousel:hover{
-  margin-left: 5px;
-  //padding: 5px 1px;
-  border-radius: 5px;
-  transform: scale(1.1);
-  box-shadow: 10px 10px 15px 2px rgba(0,0,0,.12), 0 0 6px 0 rgba(104, 104, 105, 0.1);
-}
-
-@media (max-width: 767px){
-	.rights{
-		display: none;
-	}
-	.carousel{
-		width: 100% !important;
-		height: 100% !important;
-	}
-	.slide{
-		width: 100% !important;
-		height: 100% !important;
-	}
-
-	.carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -10px;
-    font-size: 30px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev {
-    margin-left: -10px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next {
-   /* margin-right: -10px; */
-  }
-
-}
-
-.carousel{
-	width: 65%;
-	height: 100%;
-	position: relative;
-}
-
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
-  -o-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
-}
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  line-height: 1;
-}
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel-inner > .item {
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    -moz-transition: -moz-transform 0.6s ease-in-out;
-    -o-transition: -o-transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    perspective: 1000px;
-  }
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    left: 0;
-  }
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    left: 0;
-  }
-  .carousel-inner > .item.next.left,
-  .carousel-inner > .item.prev.right,
-  .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    left: 0;
-  }
-}
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .active {
-  left: 0;
-}
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.carousel-inner > .next {
-  left: 100%;
-}
-.carousel-inner > .prev {
-  left: -100%;
-}
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-  left: 0;
-}
-.carousel-inner > .active.left {
-  left: -100%;
-}
-.carousel-inner > .active.right {
-  left: 100%;
-}
-.carousel-control {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  /*width: 5%;*/
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0);
-}
-.carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#00000000, GradientType=1);
-}
-.carousel-control.right {
-  left: auto;
-  right: 0;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#80000000, GradientType=1);
-}
-.carousel-control:hover,
-.carousel-control:focus {
-  outline: 0;
-  color: #fff;
-  text-decoration: none;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-.carousel-control .icon-prev,
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-  position: absolute;
-  top: 50%;
-  margin-top: -10px;
-  z-index: 5;
-  display: inline-block;
-}
-/*
-.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left {
-  left: 50%;
-  margin-left: -10px;
-}
-*/
-
-.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left {
-  background: url('/images/icon-slides.png');
-  background-position-y: -20px;
-  left: 9px;
-}
-
-/*
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right {
-  right: 50%;
-  margin-right: -10px;
-}
-*/
-
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right {
-  background: url('/images/icon-slides.png');
-  background-position-x: -50px;
-  background-position-y: -20px;
-  right: 0px;
-}
-
-.carousel-control .icon-prev,
-.carousel-control .icon-next {
-  width: 20px;
-  height: 20px;
-  line-height: 1;
-  font-family: serif;
-}
-
-.carousel-control .icon-prev:before {
-  content: 2039;
-}
-.carousel-control .icon-next:before {
-  content: 203a;
-}
-
-.carousel-indicators {
-  opacity: 0.5;
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  margin-left: -30%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 30px;
-  height: 3px;
-  margin: 5px;
-  text-indent: -999px;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, .24);
-}
-.carousel-indicators .active {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-}
-.carousel-caption {
-  position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-.carousel-caption .btn {
-  text-shadow: none;
-}
-@media screen and (min-width: 768px) {
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -10px;
-    font-size: 30px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev {
-    margin-left: -10px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next {
-   /* margin-right: -10px; */
-  }
-  .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
-  }
-  .carousel-indicators {
-    bottom: -20px;
-  }
-}
-</style>
-
-<div width="100%" height="24%" style="border: 0px; overflow: hidden; border-radius: 10px; margin-bottom: 25px;" scrolling="no">
-
-	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500" style="float:left">
-
-      <!-- 轮播（Carousel）指标 -->
-      <ol class="carousel-indicators">
-      
-      
-        <li data-target="#myCarousel" data-slide-to="0"></li>
-        
-      
-      </ol>
-
-      <!-- 轮播（Carousel）项目 -->
-      <div class="carousel-inner" style="height: 24%; border-radius: 10px; width: 100%;">
-       
-       
-          
-          <a class="item active" href="https://gylq.gitee.io/2020/07/16/2020-7-16/" target="_blank" style="height: 100%;">
-            
-            <img src="https://s1.ax1x.com/2020/07/16/UB8doR.png" class="nofancybox"  style="width: 100%; height: 100%" >
-          </a>
-          
-          
-      
-      </div>
-
-      <!-- 轮播（Carousel）导航 -->
-      <a class="left carousel-control" data-target="#myCarousel" href="javascript:void(0);" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      </a>
-      <a class="right carousel-control" data-target="#myCarousel" href="javascript:void(0);" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      </a>
-
-	  </div>
-
-	<div  class="rights" style="width: 30%; height: 24%; margin-right: 15px;margin-left: 0px;float: right;">
-
-  	   <!-- 天气插件 -->
-  	   <!-- 会有http的链接
-       <iframe width="300px" scrolling="no" height="50px" frameborder="0" allowtransparency="true" src="https://i.tianqi.com/index.php?c=code&id=12&color=%23&bdc=%23&icon=1&py=beijing&num=2&site=12"></iframe>
-       -->
-
-       <!-- https://tianqi.2345.com/plugin/setting.htm -->
-       <!-- <iframe allowtransparency="true" frameborder="0" width="290" height="75" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=2&t=0&v=0&d=2&bd=0&k=000000&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=290&h=75&align=left"></iframe> -->
-       <iframe allowtransparency="true" frameborder="0" width="300" height="55" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=2&d=1&bd=0&k=000000&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=300&h=55&align=left"></iframe>
-
-  	   <!-- 热门新番 -->
-  	   <div class="my-carousel">
-         <a href="https://gylq.gitee.io/categories/新番/" target="_blank">
-            <img class="right-siders nofancybox" src="/images/hot.png" width="100%"/>
-         </a>
-  	   </div>
-
-  	   <!-- 时光留影 -->
-  	   <div class="my-carousel">
-         <a href="http://gylq.gitee.io/daily/" target="_blank">
-           <img class="right-siders nofancybox" src="/images/time.png"/>
-         </a>
-  	   </div>
-
-  	  <!-- 推荐美剧 -->
-  	  <div class="my-carousel">
-        <a href="https://gylq.gitee.io/categories/美剧/" target="_blank">
-          <img class="right-siders nofancybox" src="/images/read.png"/>
-        </a>
-  	  </div>
-
-      <!-- 关注B站 -->
-      <div class="my-carousel">
-        <a href="https://space.bilibili.com/13563835" target="_blank">
-          <img class="right-siders nofancybox" src="/images/subscribe.png"/>
-        </a>
-     </div>
-
-   </div>
-
-</div>
-
-
-
-
-  <section id="posts" class="posts-expand">
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://gylq.gitee.io/2020/07/01/hexo%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="孤桜懶契">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/qq.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="孤桜懶契">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
+	<h2 class="post-title" itemprop="name headline">help</h2>
+
+
+	<div class="post-meta">
+		<div class="post-description">使用一些工具代码</div>
+	</div>
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/01/hexo%E5%8D%9A%E5%AE%A2/" itemprop="url">Hexo博客托管Github</a></h2>
-        
+          <h1 id="YAML格式"><a href="#YAML格式" class="headerlink" title="YAML格式"></a>YAML格式</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">title: 母版</span><br><span class="line">author: 孤桜懶契</span><br><span class="line">avatar: &#39;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;honjun&#x2F;cdn@1.6&#x2F;img&#x2F;custom&#x2F;avatar.jpg&#39;</span><br><span class="line">authorLink: hojun.cn</span><br><span class="line">authorAbout: 一个好奇的人</span><br><span class="line">authorDesc: 一个好奇的人</span><br><span class="line">categories: md书写方式</span><br><span class="line">date: &#39;2020-7-7 22:0:0&#39;</span><br><span class="line">comments: true</span><br><span class="line">tags:</span><br><span class="line"></span><br><span class="line">  - 方式</span><br><span class="line">  - 学习</span><br><span class="line">    keywords: 母版</span><br><span class="line">    description: 使用一些工具代码</span><br><span class="line">    photos: </span><br><span class="line">    #password: gylq</span><br><span class="line">    abbrlink: 45886</span><br></pre></td></tr></table></figure></div>
 
-        <div class="post-meta">
-          <span class="post-time">
 
-             
 
-             
+<h1 id="文章加密说明"><a href="#文章加密说明" class="headerlink" title="文章加密说明"></a><a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">文章加密说明</a></h1><h1 id="视频插入"><a href="#视频插入" class="headerlink" title="视频插入"></a>视频插入</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% dplayer &quot;url&#x3D; https:&#x2F;&#x2F;yiyi.55zuiday.com&#x2F;20171217&#x2F;rq4DLC2E&#x2F;800kb&#x2F;hls&#x2F;index.m3u8&quot;   &quot;loop&#x3D;yes&quot; &quot;theme&#x3D;#FADFA3&quot; &quot;autoplay&#x3D;yes&quot; &quot;token&#x3D;tokendemo&quot; &quot;danmaku.unlimited&#x3D;true&quot; %&#125;</span><br></pre></td></tr></table></figure></div>
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-01T00:00:00+08:00">
-                2020-07-01
-              </time>
-            
+<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"autoplay":true,"theme":"#FADFA3","loop":true,"video":{"url":" https://yiyi.55zuiday.com/20171217/rq4DLC2E/800kb/hls/index.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
-            
 
-            
-          </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo博客搭建</span>
-                  </a>
-                </span>
+<h1 id="音频插入"><a href="#音频插入" class="headerlink" title="音频插入"></a>音频插入</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% aplayer &quot;夜间晨独&quot; &quot;孤桜懶契&quot; &quot;https:&#x2F;&#x2F;aod.cos.tx.xmcdn.com&#x2F;group83&#x2F;M0B&#x2F;76&#x2F;90&#x2F;wKg5I18AjH_BuAogABMURHU58-A586.m4a&quot;  &quot;https:&#x2F;&#x2F;imagev2.xmcdn.com&#x2F;group86&#x2F;M09&#x2F;CD&#x2F;5B&#x2F;wKg5IF7t-Bfy5WGpAAlHhP2jIig963.png!strip&#x3D;1&amp;quality&#x3D;7&amp;magick&#x3D;jpg&amp;op_type&#x3D;5&amp;upload_type&#x3D;cover&amp;name&#x3D;web_large&amp;device_type&#x3D;ios&quot;  %&#125;</span><br></pre></td></tr></table></figure></div>
 
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/07/01/hexo%E5%8D%9A%E5%AE%A2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/01/hexo%E5%8D%9A%E5%AE%A2/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2020/07/01/hexo%E5%8D%9A%E5%AE%A2/" class="leancloud_visitors" data-flag-title="Hexo博客托管Github">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  6
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
+ 
+        <div id="aplayer-arYwUkYe" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
         </div>
-      </header>
-    
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-arYwUkYe"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "夜间晨独",
+              author: "孤桜懶契",
+              url: "https://aod.cos.tx.xmcdn.com/group83/M0B/76/90/wKg5I18AjH_BuAogABMURHU58-A586.m4a",
+              pic: "https://imagev2.xmcdn.com/group86/M09/CD/5B/wKg5IF7t-Bfy5WGpAAlHhP2jIig963.png!strip=1&quality=7&magick=jpg&op_type=5&upload_type=cover&name=web_large&device_type=ios",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+<h1 id="卡片"><a href="#卡片" class="headerlink" title="卡片"></a>卡片</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;gylq.github.io&#x2F;2020&#x2F;07&#x2F;10&#x2F;我的青春恋爱物语果然有问题第三季&#x2F;&quot; class&#x3D;&quot;LinkCard&quot;&gt;我的青春恋爱物语果然有问题第三季&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure></div>
 
-      
-      
+<p><a href="https://gylq.github.io/2020/07/10/我的青春恋爱物语果然有问题第三季/" target="_blank" rel="noopener" class="LinkCard">我的青春恋爱物语果然有问题第三季</a></p>
 
-      
         
-          访问密码
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/07/01/hexo%E5%8D%9A%E5%AE%A2/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+      </div>
+      
+      
       
     </div>
-
-      <!-- 相关文章推荐 -->
-     
-
     
     
     
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
-
 
 
           </div>
@@ -1001,6 +459,13 @@ var _hmt = _hmt || [];
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
 
 
@@ -1025,8 +490,17 @@ var _hmt = _hmt || [];
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1047,7 +521,7 @@ var _hmt = _hmt || [];
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -1058,7 +532,7 @@ var _hmt = _hmt || [];
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1069,7 +543,7 @@ var _hmt = _hmt || [];
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1506,6 +980,22 @@ var _hmt = _hmt || [];
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#YAML格式"><span class="nav-number">1.</span> <span class="nav-text">YAML格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文章加密说明"><span class="nav-number">2.</span> <span class="nav-text">文章加密说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#视频插入"><span class="nav-number">3.</span> <span class="nav-text">视频插入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#音频插入"><span class="nav-number">4.</span> <span class="nav-text">音频插入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#卡片"><span class="nav-number">5.</span> <span class="nav-text">卡片</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -1520,7 +1010,7 @@ var _hmt = _hmt || [];
       <h3 class="widget-title">Tag Cloud</h3>
       <div id="myCanvasContainer" class="widget tagcloud">
           <canvas width="250" height="250" id="resCanvas" style="width=100%">
-              <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%B9%E5%BC%8F/" rel="tag">方式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E6%BC%AB/" rel="tag">日漫</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%B6%E9%97%B4%E8%AE%B0%E5%BD%95/" rel="tag">时间记录</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AA%E7%94%B5%E4%BE%A0%E7%AC%AC%E5%9B%9B%E5%AD%A3/" rel="tag">闪电侠第四季</a><span class="tag-list-count">1</span></li></ul>
+              <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E6%BC%AB/" rel="tag">日漫</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%B6%E9%97%B4%E8%AE%B0%E5%BD%95/" rel="tag">时间记录</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AA%E7%94%B5%E4%BE%A0%E7%AC%AC%E5%9B%9B%E5%AD%A3/" rel="tag">闪电侠第四季</a><span class="tag-list-count">1</span></li></ul>
           </canvas>
       </div>
       </div>
@@ -1552,7 +1042,7 @@ var _hmt = _hmt || [];
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Site words total count">42k</span>
+    <span title="Site words total count">42.8k</span>
   
 </div>
 
@@ -1709,6 +1199,10 @@ var _hmt = _hmt || [];
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -2425,7 +1919,7 @@ return(false);
   
     <script async type="text/javascript">
         var text = "Welcome To Leaface";
-        var date = '2020-07-24';
+        var date = '2020-07-25';
         console.log("%c " + text, "font-size:100px;color:white;border-radius:20px;height:200px; background:-webkit-linear-gradient(yellow,orange,red,green,blue,purple);text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);");
         console.info('\n' + ' %c Leafae Site %c https://www.liaofuzhan.com ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
         console.info('\n' + ' %c Leafae QQ %c 793458585 ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
