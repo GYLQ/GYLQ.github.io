@@ -1,6 +1,395 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>时光留影-分区</title>
+    <url>/2020/09/02/%E5%8D%A1%E7%89%87/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h1><p><a href="https://gylq.gitee.io/daily/" class="LinkCard">时光留影</a></p>
+]]></content>
+      <categories>
+        <category>时光留影</category>
+      </categories>
+      <tags>
+        <tag>分类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>认识JAVA</title>
+    <url>/2020/08/31/%E8%AE%A4%E8%AF%86Java/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="具体内容"><a href="#具体内容" class="headerlink" title="具体内容"></a><strong>具体内容</strong></h1><p>​    Java是现在世界上最流行的编程语言，在服务器端的开发上保持着绝对的优势。例如： 你现在需要进行网购，如果要进行网购肯定要有网络服务器的支持，对于服务器代码的开发，首选的就是Java，实际上如果要考虑到编程语言特点的话，Java、C、C++实际上都是有着非常相似的语法结构，经过了多年的论述之后，这种语法结构是比较清晰的。</p>
+<h1 id="认识Java"><a href="#认识Java" class="headerlink" title="认识Java"></a>认识Java</h1><p>​    Java是现在流行的语言，其前身就是OAK（橡树），实际上最初的OAK编程语言是为了一个GREEN的项目提供服务的，该项目主要是以Email实现对于家电产品的控制（所谓的“万物互联”，这也是早期物联网雏形），但是遗憾的是OAK并没有成功的获得Green项目，如果按照传统的思维模式，这种没有获得投资的项目基本上都属于废弃的产物了，可是在90年代初是属于互联网的时代，尤其是著名的网景公司，对于浏览器的开发非常的到位，于是就缔造了一个上市的神话。OAK吸收了网景公司的产品的想法，产生了一个Hot Java浏览器，一直到了1995年的时候才正式将OAK更名为JAVA，于是就一直延续到了今天，并且随着计算机硬件和网络发展，Java也在不带你的完善。</p>
+<blockquote>
+<p>友情提示：对于Java有如下几个核心的问题：</p>
+<ul>
+<li>​    如果要想判断一门语言的未来是否有持久性，最重要的指标就是在于其是否继续保持着更新，保持着最新的设计理念；</li>
+<li>​    OAK实际上是使用C++开发出来的，但是相比较C++来讲结构上更加的清晰，所以：Java也是C++编写的；</li>
+</ul>
+<p>​    之所以叫OAK主要的原因在于语言的设计师的窗户外面有一颗数（橡树），后来原本是想把Java继续使用OAK，但是由于版权的问题，所以无法继续使用，最终这些开发工程师发现他们天天喝的咖啡味道不错（产自爪哇，于是使用了Java）</p>
+<p>​    Java现在的版权属于Oracle公司，Oracle公司收购了早期的SUN公司。SUN（斯坦福的大学网络，Stanford University Network）公司，这家公司是一家从事与硬件技术的公司（它不是以软件为主，实际上在其被收购之前完全没有通过软件获得任何的利润），这家公司最著名的产品是小型机，并且大量的应用在亚马逊商城上，不过回来由于整个世界上的互联网低潮，SUN公司收到了极大的冲击，所以导致其并没有后续的强劲的生命力了，终于在2007年的时候被Oracle收购（Oracle收购SUN之前最想收购SUN公司是IBM）</p>
+</blockquote>
+<p>​    <strong>比较崩溃的问题</strong>，一个学生去面试（2007年的时候），面试官问他，请问你如何看待Oracle收购SUN的这一举动？<br>​    <strong>收购背后的故事</strong>，现在世界上有三大著名的软件产商：Microsoft、Oracle、Adobe，在商业领域上基本上就是微软（Microsoft）和甲骨文公司（Oracle），这两家公司是直接的竞争关系，但是在整个商业体系之中有四个重要的组成部分：操作系统、数据库、中间件、编程语言；</p>
+<ul>
+<li>Microsoft: Window Server、SQLServer、IIS、.NET;</li>
+<li>Oracle：UNIX、Oracle Database、Bacteriologic(收购)、Java（收购）。</li>
+</ul>
+<p>吐槽：Oracle后来变成了“疯狗”，到处撕咬使用Java开发公司的版权费用，于是Google中招了。</p>
+<p>​    任何的编程语言都有自己擅长和不擅长的领域，Java是一门非常庞大的语言，而且其设计的特点：大而全，相当于所有软件功能的实现都可以使用Java来完成，但是随着后来技术的发展，更多的编程技术出现了，于是很多的使用者就开始使用一些更加简单的语言来实现一些特定的功能，你现在可以见到的大量的会联网产品实际上都是Java开发的。</p>
+<h3 id="Java语言特点"><a href="#Java语言特点" class="headerlink" title="Java语言特点"></a>Java语言特点</h3><p>​    既然Java语言如此的流行，肯定有自己不少独有的特嗲，于是一起分享一下，但是从客观的角度上来讲，Java在这么多年的历史发展中还是出想过许多疲软的时候后，由于技术的阻塞所以导致了许多的不足，但是后来由于版本不断的完善，以及变成语法的不断支持，java也成功的度过了这些疲软期，关键性的问题，Java是一个世界上最流行的编程语言，所以有着大量第三方软件厂商对其进行不断的完善。</p>
+<p>​    早前的Java开发实际上分为三个方向：</p>
+<ul>
+<li><p>JavaSE（在2005年之前被称为”J2SE“）：主要是进行单机版程序的开发，例如：开发一些图形界面等；</p>
+</li>
+<li><p>JavaME（在2005年之前被称为“J2ME”）：主要是进行嵌入式设备的开发，最早期的在“诺基亚（Nokia）”被大量的应用在手机游戏的开发上，而后到了Android时代基本上就被替代掉了；</p>
+</li>
+<li><p>JavaEE（在2005年之前被称为“J2EE”）：主要进行企业平台的搭建，实际上现在许多的互联网就使用的是JavaEE在国内和国外，Java都是最为稳定的服务器端编程首先语言，那么既然是首先语言，就一起来分析它的一些特点：</p>
+<ol>
+<li>Java语言处采用标准的编程语法结构，所以语法结构清晰，而且语法也足够简单；<br><strong>补充</strong>：标准的编程语法结构虽然看起来结构清晰，但是会造成代码过多的问题，简单的特点是相比较C++来讲；</li>
+<li>Java语言虽然使用了C++开发，但是其并没有引入C或C++那样的指针概念，而使用了更加直观的引用来解决内存处理问题，相当于不能够直接进行内存的操作。</li>
+<li>Java是一门面向对象的编程语言，面向对象的编程模式是现代设计的主流，但是并不是所有的开发者都认为面向对象就是最佳的程序设计，很多的开发者依然觉得编写面向过程或者是使用函数式编程会更加的简单，但是毕竟是少数；</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>知识拓展</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>特殊用途的句子</title>
+    <url>/2020/08/18/%E5%BC%BA%E8%B0%83%E5%8F%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="强调句"><a href="#强调句" class="headerlink" title="强调句"></a>强调句</h1><p>句型It is …… that ……</p>
+<p>I want to go to America this summer.</p>
+<p>It is America that I want to go to this summer. </p>
+<h1 id="倒装句"><a href="#倒装句" class="headerlink" title="倒装句"></a>倒装句</h1><p><strong>全部倒装</strong>：<strong>There be 句型 + n + 介词短语</strong></p>
+<p>有……在哪里</p>
+<p>现在 There is a book on the table.</p>
+<p><strong>部分倒装</strong></p>
+<p>相当于把陈述句变成一般疑问句</p>
+<p><strong>否定词 位于句首</strong></p>
+<blockquote>
+<p>not、no、never、hardly、little、scarcely、seldom、not until、not only……</p>
+</blockquote>
+<p>I will never do it.</p>
+<p>never will I do it.</p>
+<p><strong>only 位于句首</strong></p>
+<h1 id="虚拟语气（非真实）"><a href="#虚拟语气（非真实）" class="headerlink" title="虚拟语气（非真实）"></a>虚拟语气（非真实）</h1><p>1、不是真的。</p>
+<p>2、改变时态</p>
+<p>3、虚拟条件句、名词性从句中</p>
+<h3 id="if虚拟条件句"><a href="#if虚拟条件句" class="headerlink" title="if虚拟条件句"></a>if虚拟条件句</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>if从句</th>
+<th>主句</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>假设过去</td>
+<td>had done</td>
+<td>would +have done</td>
+</tr>
+<tr>
+<td>假设现在</td>
+<td>did(were)</td>
+<td>could、should+do</td>
+</tr>
+<tr>
+<td>假设未来</td>
+<td>did(were)<br />were to do <br />should do</td>
+<td>might + do</td>
+</tr>
+</tbody></table>
+<p>If I were to have/had/should have time tomorrow, I would help him.</p>
+<p><img src="https://s1.ax1x.com/2020/08/19/dlySJ0.png" alt="image"></p>
+<p>如果你过去嫁给他，你现在就会是一个加油站服务员的妻子</p>
+<p>If you had married him, you would be the wife of a gas station attendant.</p>
+<h3 id="省略if的虚拟条件句"><a href="#省略if的虚拟条件句" class="headerlink" title="省略if的虚拟条件句"></a>省略if的虚拟条件句</h3><p>if you had joined us, we would have had more fun.</p>
+<p>had you joined us, we would have had more fun. (部分倒装)</p>
+<h3 id="名词性从句的虚拟语气"><a href="#名词性从句的虚拟语气" class="headerlink" title="名词性从句的虚拟语气"></a>名词性从句的虚拟语气</h3><p>表示“建议，要求，命令”v.后的宾语从句虚拟</p>
+<p>从句中用（should）+ do</p>
+<p>He suggested that the system should be changed.</p>
+<blockquote>
+<p>suggest,advise,propose,recommend,</p>
+<p>order,ask,demand,insist,</p>
+<p>require,request……</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>状语从句</title>
+    <url>/2020/08/15/%E7%8A%B6%E8%AF%AD%E4%BB%8E%E5%8F%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="状语从句"><a href="#状语从句" class="headerlink" title="状语从句"></a>状语从句</h1><h2 id="状语从句含义"><a href="#状语从句含义" class="headerlink" title="状语从句含义"></a><strong>状语从句含义</strong></h2><p><strong>含义</strong>一个句子作状语，表达描述性的信息。</p>
+<h2 id="状语从句写法"><a href="#状语从句写法" class="headerlink" title="状语从句写法"></a>状语从句写法</h2><p>一个完整的陈述句，前面加上<strong>从属连词</strong>（不作句子成分，他会表达逻辑关系，说清楚整个句子描述什么的）。</p>
+<p>状语从句共分为9种，主要由<strong>从属连词</strong>来决定。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>从属连词</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>时间状语从句</td>
+<td>when，while，as，（当……时候）<br />before，after，since，until<br />as soon as，no sooner……than（一……就）</td>
+</tr>
+<tr>
+<td>地点状语从句</td>
+<td>where</td>
+</tr>
+<tr>
+<td>原因状语从句</td>
+<td>because，since，as</td>
+</tr>
+<tr>
+<td>结果状语从句</td>
+<td>so/such…… that（太……所以）, so that…… （所以）</td>
+</tr>
+<tr>
+<td>目的状语从句</td>
+<td>so that……， in order that……</td>
+</tr>
+<tr>
+<td>条件状语从句</td>
+<td>if，unless，as long as</td>
+</tr>
+<tr>
+<td>让步状语从句</td>
+<td>although，though，even though，as</td>
+</tr>
+<tr>
+<td>比较状语从句</td>
+<td>than，as</td>
+</tr>
+<tr>
+<td>方式状语从句</td>
+<td>as</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>长难句分析</title>
+    <url>/2020/08/15/%E9%95%BF%E9%9A%BE%E5%8F%A5%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="长难句分析"><a href="#长难句分析" class="headerlink" title="长难句分析"></a>长难句分析</h1><p>基本结构的长难句：</p>
+<p><strong>断开</strong><br>（1）标点<br>（2）连接词：从句开始于连接词，结束于<br>    1，标点，2，下一个连接词前，3，第二个谓语动词前<br>（3）分析主谓</p>
+<p><strong>简化</strong>：去修饰，留核心</p>
+<p>修饰成分有：</p>
+<p><strong>形容词、副词</strong><br><strong>介词短语</strong><br><strong>非谓语动词（doing/done/to do）</strong><br>冠词、数词<br>非限定性定语从句</p>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2020年8月14日下午5点30分</title>
+    <url>/2020/08/14/2020%E5%B9%B48%E6%9C%8814%E6%97%A5%E4%B8%8B%E5%8D%885%E7%82%B930%E5%88%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="实现策划积分制"><a href="#实现策划积分制" class="headerlink" title="实现策划积分制"></a>实现策划积分制</h1><p>目标积分等级300分  1级<br>目标积分等级600分  2级<br>目标积分等级1200分 3级<br>以此类推————</p>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>积分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>打扫家庭卫生</td>
+<td>+20</td>
+</tr>
+<tr>
+<td>运动</td>
+<td>+15</td>
+</tr>
+<tr>
+<td>做饭</td>
+<td>+30</td>
+</tr>
+<tr>
+<td>洗衣、晾衣、收衣</td>
+<td>+30</td>
+</tr>
+<tr>
+<td>整理、摆放</td>
+<td>+20</td>
+</tr>
+<tr>
+<td>保持情绪冷静，提前思考</td>
+<td>+30</td>
+</tr>
+<tr>
+<td>兴趣爱好学习</td>
+<td>+10</td>
+</tr>
+<tr>
+<td>享受读书、听书</td>
+<td>+5</td>
+</tr>
+<tr>
+<td>按时睡觉</td>
+<td>+10</td>
+</tr>
+<tr>
+<td>完成必学知识进程</td>
+<td>+10</td>
+</tr>
+<tr>
+<td>每天以此汇总和感想</td>
+<td>+15</td>
+</tr>
+<tr>
+<td>按时起床</td>
+<td>+10</td>
+</tr>
+<tr>
+<td>做自己喜欢做的事情</td>
+<td>+30</td>
+</tr>
+<tr>
+<td>眼保健操、日行两次</td>
+<td>+20</td>
+</tr>
+</tbody></table>
+<h1 id="夜晚时间表确认"><a href="#夜晚时间表确认" class="headerlink" title="夜晚时间表确认"></a>夜晚时间表确认</h1><ul>
+<li><p>5点30分到到晚上9点半之间的任务确定</p>
+</li>
+<li><input checked="" disabled="" type="checkbox"> <p>首先5点30到6点半之间先将日语的五十音图正式开始入轨 </p>
+</li>
+<li><input disabled="" type="checkbox"> <p>接着进入吃饭时间，限制约为15分钟左右（细嚼慢咽）</p>
+</li>
+<li><input disabled="" type="checkbox"> <p>7点的时候饭已经吃完了，可以进行半小时的听歌散步回家 </p>
+</li>
+<li><input disabled="" type="checkbox"> <p>到了8点将喜马拉雅夜间晨独录制，和英语读书进行确认录制所需时间，用便笺记录下来，然后到九点之前进行今日发生的事情汇总以及感想集合，让我们不断升级和进步吧。 </p>
+</li>
+</ul>
+<p>任务完成之后进行分数汇总。</p>
+]]></content>
+      <categories>
+        <category>策划积分制</category>
+      </categories>
+      <tags>
+        <tag>习惯养成</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>定语从句</title>
+    <url>/2020/08/14/%E5%AE%9A%E8%AF%AD%E4%BB%8E%E5%8F%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="复合句"><a href="#复合句" class="headerlink" title="复合句"></a>复合句</h1><p><strong>定语从句</strong></p>
+<p>写法</p>
+<p>先行词 =  ？ 关系词 =  ？<br>物   ——　which/that</p>
+<p>人   ——    who/whom/that</p>
+<p>人的/物的    ——　whose</p>
+<p>时间     ——      when</p>
+<p>地点    ——      where</p>
+<p>原因    ——    why</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>定语从句每一个关系词都作成分</li>
+<li>which和that没有区别，可以互换</li>
+<li>whom指人作宾语</li>
+<li>who/that指人作任何成分</li>
+<li>定语从句中关系词作宾语可以省略</li>
+</ul>
+<p>I lost the book which/that I borrowed from the library. </p>
+<p>The woman I saw in the park was feeding pigeons.</p>
+<p>The bus I take to school everyday is usually very crowded.</p>
+<p><strong><em>定语从句分类</em></strong></p>
+<p>名词范围不明确需要限定性：<br>I met your friend who is staying in Paris.</p>
+<p>名词的范围明确，非限定性：<br>I met your mother,  who is staying in Paris.</p>
+<blockquote>
+<p>限定性从句<br>1、限定性的定语从句，名词范围不明确<br>2、无逗号隔开<br>3、不能省略</p>
+<p>非限定性从句<br>1、名词的范围明确<br>2、有逗号隔开<br>3、可以省略不影响表达意思。<br>4、只能用which不用that<br>5、做宾语只能用whom</p>
+</blockquote>
+<p>如果关系词位于介词后，介词可以提前，提前就只能使用which.</p>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>名词性从句</title>
+    <url>/2020/08/05/%E5%90%8D%E8%AF%8D%E6%80%A7%E4%BB%8E%E5%8F%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="复合句"><a href="#复合句" class="headerlink" title="复合句"></a>复合句</h1><p><strong>名词性从句</strong></p>
+<ul>
+<li><p><strong>主语从句</strong></p>
+<p> Whether we will go camping depends on the weather.</p>
+<p>It depends on the weather whether we will go camping.</p>
+</li>
+<li><p><strong>宾语从句</strong> （<strong>连接词 + 陈述句</strong>）<br><em>陈述句变宾语从句 You are right.</em><br>I know (that) you are right. (在宾语从句中That不做成分可以省略)</p>
+<p><em>特殊疑问句变宾语从句 What will she say?</em><br>I know what she will say.(疑问变陈述句，主谓顺序)</p>
+<p><em>一般疑问句变宾语从句 Is he happy?</em><br>I know whether/if he is happy.</p>
+</li>
+<li><p><strong>表语从句</strong><br>My concern is that people don’t care about others.</p>
+<p>The question remains whether people will buy it.</p>
+</li>
+<li><p><strong>同位语从句</strong>（<strong>解释说明n.</strong>）</p>
+<p>I have no doubt that he will help me.</p>
+<p>I support the argument that the problem of school buses must be taken seriously.</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>简单句的补充</title>
+    <url>/2020/07/29/%E7%AE%80%E5%8D%95%E5%8F%A5%E7%9A%84%E8%A1%A5%E5%85%85/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="介词短语-介词-prep"><a href="#介词短语-介词-prep" class="headerlink" title="介词短语 -  介词  prep."></a><strong>介词短语 -  介词  prep.</strong></h1><blockquote>
+<p><strong>时间</strong></p>
+<p><strong>before      after</strong> </p>
+<p><strong>since     until</strong></p>
+<p><strong>during</strong></p>
+<p><strong>位置</strong></p>
+<p><strong>between（二者之间） among（三者及以上）</strong></p>
+<p><strong>地点方位</strong></p>
+<p><strong>across(横穿)     through(隧道)</strong></p>
+<p><strong>against</strong></p>
+<p><strong>like as</strong></p>
+</blockquote>
+<h1 id="非谓语动词"><a href="#非谓语动词" class="headerlink" title="非谓语动词"></a><u>非谓语动词</u></h1><ol>
+<li><p><strong>doing（主动）</strong><br>Passing planes can be heard night and day.</p>
+<p>The teacher came into the  classroom, holding a book in his hand.</p>
+</li>
+<li><p><strong>done（被动）</strong><br>He bought a used car.</p>
+<p>The teacher came into the classroom, followed by five students.</p>
+</li>
+<li><p><strong>to do（目的）</strong><br>I am coming to see you.</p>
+<p>I have a lot of homework to do.</p>
+</li>
+</ol>
+<h1 id="同位语-插入语"><a href="#同位语-插入语" class="headerlink" title="同位语/插入语"></a>同位语/插入语</h1><p>My teacher, Mr.Lee, is coming to the meeting.</p>
+<p>My teacher  together with his  colleagues is coming to the meeting.</p>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客搭建小白“启程”</title>
     <url>/2020/07/01/hexo%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -171,395 +560,6 @@
       </categories>
       <tags>
         <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>简单句的补充</title>
-    <url>/2020/07/29/%E7%AE%80%E5%8D%95%E5%8F%A5%E7%9A%84%E8%A1%A5%E5%85%85/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="介词短语-介词-prep"><a href="#介词短语-介词-prep" class="headerlink" title="介词短语 -  介词  prep."></a><strong>介词短语 -  介词  prep.</strong></h1><blockquote>
-<p><strong>时间</strong></p>
-<p><strong>before      after</strong> </p>
-<p><strong>since     until</strong></p>
-<p><strong>during</strong></p>
-<p><strong>位置</strong></p>
-<p><strong>between（二者之间） among（三者及以上）</strong></p>
-<p><strong>地点方位</strong></p>
-<p><strong>across(横穿)     through(隧道)</strong></p>
-<p><strong>against</strong></p>
-<p><strong>like as</strong></p>
-</blockquote>
-<h1 id="非谓语动词"><a href="#非谓语动词" class="headerlink" title="非谓语动词"></a><u>非谓语动词</u></h1><ol>
-<li><p><strong>doing（主动）</strong><br>Passing planes can be heard night and day.</p>
-<p>The teacher came into the  classroom, holding a book in his hand.</p>
-</li>
-<li><p><strong>done（被动）</strong><br>He bought a used car.</p>
-<p>The teacher came into the classroom, followed by five students.</p>
-</li>
-<li><p><strong>to do（目的）</strong><br>I am coming to see you.</p>
-<p>I have a lot of homework to do.</p>
-</li>
-</ol>
-<h1 id="同位语-插入语"><a href="#同位语-插入语" class="headerlink" title="同位语/插入语"></a>同位语/插入语</h1><p>My teacher, Mr.Lee, is coming to the meeting.</p>
-<p>My teacher  together with his  colleagues is coming to the meeting.</p>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>定语从句</title>
-    <url>/2020/08/14/%E5%AE%9A%E8%AF%AD%E4%BB%8E%E5%8F%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="复合句"><a href="#复合句" class="headerlink" title="复合句"></a>复合句</h1><p><strong>定语从句</strong></p>
-<p>写法</p>
-<p>先行词 =  ？ 关系词 =  ？<br>物   ——　which/that</p>
-<p>人   ——    who/whom/that</p>
-<p>人的/物的    ——　whose</p>
-<p>时间     ——      when</p>
-<p>地点    ——      where</p>
-<p>原因    ——    why</p>
-<p><strong>注意：</strong></p>
-<ul>
-<li>定语从句每一个关系词都作成分</li>
-<li>which和that没有区别，可以互换</li>
-<li>whom指人作宾语</li>
-<li>who/that指人作任何成分</li>
-<li>定语从句中关系词作宾语可以省略</li>
-</ul>
-<p>I lost the book which/that I borrowed from the library. </p>
-<p>The woman I saw in the park was feeding pigeons.</p>
-<p>The bus I take to school everyday is usually very crowded.</p>
-<p><strong><em>定语从句分类</em></strong></p>
-<p>名词范围不明确需要限定性：<br>I met your friend who is staying in Paris.</p>
-<p>名词的范围明确，非限定性：<br>I met your mother,  who is staying in Paris.</p>
-<blockquote>
-<p>限定性从句<br>1、限定性的定语从句，名词范围不明确<br>2、无逗号隔开<br>3、不能省略</p>
-<p>非限定性从句<br>1、名词的范围明确<br>2、有逗号隔开<br>3、可以省略不影响表达意思。<br>4、只能用which不用that<br>5、做宾语只能用whom</p>
-</blockquote>
-<p>如果关系词位于介词后，介词可以提前，提前就只能使用which.</p>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2020年8月14日下午5点30分</title>
-    <url>/2020/08/14/2020%E5%B9%B48%E6%9C%8814%E6%97%A5%E4%B8%8B%E5%8D%885%E7%82%B930%E5%88%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="实现策划积分制"><a href="#实现策划积分制" class="headerlink" title="实现策划积分制"></a>实现策划积分制</h1><p>目标积分等级300分  1级<br>目标积分等级600分  2级<br>目标积分等级1200分 3级<br>以此类推————</p>
-<table>
-<thead>
-<tr>
-<th>任务</th>
-<th>积分</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>打扫家庭卫生</td>
-<td>+20</td>
-</tr>
-<tr>
-<td>运动</td>
-<td>+15</td>
-</tr>
-<tr>
-<td>做饭</td>
-<td>+30</td>
-</tr>
-<tr>
-<td>洗衣、晾衣、收衣</td>
-<td>+30</td>
-</tr>
-<tr>
-<td>整理、摆放</td>
-<td>+20</td>
-</tr>
-<tr>
-<td>保持情绪冷静，提前思考</td>
-<td>+30</td>
-</tr>
-<tr>
-<td>兴趣爱好学习</td>
-<td>+10</td>
-</tr>
-<tr>
-<td>享受读书、听书</td>
-<td>+5</td>
-</tr>
-<tr>
-<td>按时睡觉</td>
-<td>+10</td>
-</tr>
-<tr>
-<td>完成必学知识进程</td>
-<td>+10</td>
-</tr>
-<tr>
-<td>每天以此汇总和感想</td>
-<td>+15</td>
-</tr>
-<tr>
-<td>按时起床</td>
-<td>+10</td>
-</tr>
-<tr>
-<td>做自己喜欢做的事情</td>
-<td>+30</td>
-</tr>
-<tr>
-<td>眼保健操、日行两次</td>
-<td>+20</td>
-</tr>
-</tbody></table>
-<h1 id="夜晚时间表确认"><a href="#夜晚时间表确认" class="headerlink" title="夜晚时间表确认"></a>夜晚时间表确认</h1><ul>
-<li><p>5点30分到到晚上9点半之间的任务确定</p>
-</li>
-<li><input checked="" disabled="" type="checkbox"> <p>首先5点30到6点半之间先将日语的五十音图正式开始入轨 </p>
-</li>
-<li><input disabled="" type="checkbox"> <p>接着进入吃饭时间，限制约为15分钟左右（细嚼慢咽）</p>
-</li>
-<li><input disabled="" type="checkbox"> <p>7点的时候饭已经吃完了，可以进行半小时的听歌散步回家 </p>
-</li>
-<li><input disabled="" type="checkbox"> <p>到了8点将喜马拉雅夜间晨独录制，和英语读书进行确认录制所需时间，用便笺记录下来，然后到九点之前进行今日发生的事情汇总以及感想集合，让我们不断升级和进步吧。 </p>
-</li>
-</ul>
-<p>任务完成之后进行分数汇总。</p>
-]]></content>
-      <categories>
-        <category>策划积分制</category>
-      </categories>
-      <tags>
-        <tag>习惯养成</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>时光留影-分区</title>
-    <url>/2020/09/02/%E5%8D%A1%E7%89%87/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h1><p><a href="https://gylq.gitee.io/daily/" class="LinkCard">时光留影</a></p>
-]]></content>
-      <categories>
-        <category>时光留影</category>
-      </categories>
-      <tags>
-        <tag>分类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>状语从句</title>
-    <url>/2020/08/15/%E7%8A%B6%E8%AF%AD%E4%BB%8E%E5%8F%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="状语从句"><a href="#状语从句" class="headerlink" title="状语从句"></a>状语从句</h1><h2 id="状语从句含义"><a href="#状语从句含义" class="headerlink" title="状语从句含义"></a><strong>状语从句含义</strong></h2><p><strong>含义</strong>一个句子作状语，表达描述性的信息。</p>
-<h2 id="状语从句写法"><a href="#状语从句写法" class="headerlink" title="状语从句写法"></a>状语从句写法</h2><p>一个完整的陈述句，前面加上<strong>从属连词</strong>（不作句子成分，他会表达逻辑关系，说清楚整个句子描述什么的）。</p>
-<p>状语从句共分为9种，主要由<strong>从属连词</strong>来决定。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>从属连词</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>时间状语从句</td>
-<td>when，while，as，（当……时候）<br />before，after，since，until<br />as soon as，no sooner……than（一……就）</td>
-</tr>
-<tr>
-<td>地点状语从句</td>
-<td>where</td>
-</tr>
-<tr>
-<td>原因状语从句</td>
-<td>because，since，as</td>
-</tr>
-<tr>
-<td>结果状语从句</td>
-<td>so/such…… that（太……所以）, so that…… （所以）</td>
-</tr>
-<tr>
-<td>目的状语从句</td>
-<td>so that……， in order that……</td>
-</tr>
-<tr>
-<td>条件状语从句</td>
-<td>if，unless，as long as</td>
-</tr>
-<tr>
-<td>让步状语从句</td>
-<td>although，though，even though，as</td>
-</tr>
-<tr>
-<td>比较状语从句</td>
-<td>than，as</td>
-</tr>
-<tr>
-<td>方式状语从句</td>
-<td>as</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>名词性从句</title>
-    <url>/2020/08/05/%E5%90%8D%E8%AF%8D%E6%80%A7%E4%BB%8E%E5%8F%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="复合句"><a href="#复合句" class="headerlink" title="复合句"></a>复合句</h1><p><strong>名词性从句</strong></p>
-<ul>
-<li><p><strong>主语从句</strong></p>
-<p> Whether we will go camping depends on the weather.</p>
-<p>It depends on the weather whether we will go camping.</p>
-</li>
-<li><p><strong>宾语从句</strong> （<strong>连接词 + 陈述句</strong>）<br><em>陈述句变宾语从句 You are right.</em><br>I know (that) you are right. (在宾语从句中That不做成分可以省略)</p>
-<p><em>特殊疑问句变宾语从句 What will she say?</em><br>I know what she will say.(疑问变陈述句，主谓顺序)</p>
-<p><em>一般疑问句变宾语从句 Is he happy?</em><br>I know whether/if he is happy.</p>
-</li>
-<li><p><strong>表语从句</strong><br>My concern is that people don’t care about others.</p>
-<p>The question remains whether people will buy it.</p>
-</li>
-<li><p><strong>同位语从句</strong>（<strong>解释说明n.</strong>）</p>
-<p>I have no doubt that he will help me.</p>
-<p>I support the argument that the problem of school buses must be taken seriously.</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>认识JAVA</title>
-    <url>/2020/08/31/%E8%AE%A4%E8%AF%86Java/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="具体内容"><a href="#具体内容" class="headerlink" title="具体内容"></a><strong>具体内容</strong></h1><p>​    Java是现在世界上最流行的编程语言，在服务器端的开发上保持着绝对的优势。例如： 你现在需要进行网购，如果要进行网购肯定要有网络服务器的支持，对于服务器代码的开发，首选的就是Java，实际上如果要考虑到编程语言特点的话，Java、C、C++实际上都是有着非常相似的语法结构，经过了多年的论述之后，这种语法结构是比较清晰的。</p>
-<h1 id="认识Java"><a href="#认识Java" class="headerlink" title="认识Java"></a>认识Java</h1><p>​    Java是现在流行的语言，其前身就是OAK（橡树），实际上最初的OAK编程语言是为了一个GREEN的项目提供服务的，该项目主要是以Email实现对于家电产品的控制（所谓的“万物互联”，这也是早期物联网雏形），但是遗憾的是OAK并没有成功的获得Green项目，如果按照传统的思维模式，这种没有获得投资的项目基本上都属于废弃的产物了，可是在90年代初是属于互联网的时代，尤其是著名的网景公司，对于浏览器的开发非常的到位，于是就缔造了一个上市的神话。OAK吸收了网景公司的产品的想法，产生了一个Hot Java浏览器，一直到了1995年的时候才正式将OAK更名为JAVA，于是就一直延续到了今天，并且随着计算机硬件和网络发展，Java也在不带你的完善。</p>
-<blockquote>
-<p>友情提示：对于Java有如下几个核心的问题：</p>
-<ul>
-<li>​    如果要想判断一门语言的未来是否有持久性，最重要的指标就是在于其是否继续保持着更新，保持着最新的设计理念；</li>
-<li>​    OAK实际上是使用C++开发出来的，但是相比较C++来讲结构上更加的清晰，所以：Java也是C++编写的；</li>
-</ul>
-<p>​    之所以叫OAK主要的原因在于语言的设计师的窗户外面有一颗数（橡树），后来原本是想把Java继续使用OAK，但是由于版权的问题，所以无法继续使用，最终这些开发工程师发现他们天天喝的咖啡味道不错（产自爪哇，于是使用了Java）</p>
-<p>​    Java现在的版权属于Oracle公司，Oracle公司收购了早期的SUN公司。SUN（斯坦福的大学网络，Stanford University Network）公司，这家公司是一家从事与硬件技术的公司（它不是以软件为主，实际上在其被收购之前完全没有通过软件获得任何的利润），这家公司最著名的产品是小型机，并且大量的应用在亚马逊商城上，不过回来由于整个世界上的互联网低潮，SUN公司收到了极大的冲击，所以导致其并没有后续的强劲的生命力了，终于在2007年的时候被Oracle收购（Oracle收购SUN之前最想收购SUN公司是IBM）</p>
-</blockquote>
-<p>​    <strong>比较崩溃的问题</strong>，一个学生去面试（2007年的时候），面试官问他，请问你如何看待Oracle收购SUN的这一举动？<br>​    <strong>收购背后的故事</strong>，现在世界上有三大著名的软件产商：Microsoft、Oracle、Adobe，在商业领域上基本上就是微软（Microsoft）和甲骨文公司（Oracle），这两家公司是直接的竞争关系，但是在整个商业体系之中有四个重要的组成部分：操作系统、数据库、中间件、编程语言；</p>
-<ul>
-<li>Microsoft: Window Server、SQLServer、IIS、.NET;</li>
-<li>Oracle：UNIX、Oracle Database、Bacteriologic(收购)、Java（收购）。</li>
-</ul>
-<p>吐槽：Oracle后来变成了“疯狗”，到处撕咬使用Java开发公司的版权费用，于是Google中招了。</p>
-<p>​    任何的编程语言都有自己擅长和不擅长的领域，Java是一门非常庞大的语言，而且其设计的特点：大而全，相当于所有软件功能的实现都可以使用Java来完成，但是随着后来技术的发展，更多的编程技术出现了，于是很多的使用者就开始使用一些更加简单的语言来实现一些特定的功能，你现在可以见到的大量的会联网产品实际上都是Java开发的。</p>
-<h3 id="Java语言特点"><a href="#Java语言特点" class="headerlink" title="Java语言特点"></a>Java语言特点</h3><p>​    既然Java语言如此的流行，肯定有自己不少独有的特嗲，于是一起分享一下，但是从客观的角度上来讲，Java在这么多年的历史发展中还是出想过许多疲软的时候后，由于技术的阻塞所以导致了许多的不足，但是后来由于版本不断的完善，以及变成语法的不断支持，java也成功的度过了这些疲软期，关键性的问题，Java是一个世界上最流行的编程语言，所以有着大量第三方软件厂商对其进行不断的完善。</p>
-<p>​    早前的Java开发实际上分为三个方向：</p>
-<ul>
-<li><p>JavaSE（在2005年之前被称为”J2SE“）：主要是进行单机版程序的开发，例如：开发一些图形界面等；</p>
-</li>
-<li><p>JavaME（在2005年之前被称为“J2ME”）：主要是进行嵌入式设备的开发，最早期的在“诺基亚（Nokia）”被大量的应用在手机游戏的开发上，而后到了Android时代基本上就被替代掉了；</p>
-</li>
-<li><p>JavaEE（在2005年之前被称为“J2EE”）：主要进行企业平台的搭建，实际上现在许多的互联网就使用的是JavaEE在国内和国外，Java都是最为稳定的服务器端编程首先语言，那么既然是首先语言，就一起来分析它的一些特点：</p>
-<ol>
-<li>Java语言处采用标准的编程语法结构，所以语法结构清晰，而且语法也足够简单；<br><strong>补充</strong>：标准的编程语法结构虽然看起来结构清晰，但是会造成代码过多的问题，简单的特点是相比较C++来讲；</li>
-<li>Java语言虽然使用了C++开发，但是其并没有引入C或C++那样的指针概念，而使用了更加直观的引用来解决内存处理问题，相当于不能够直接进行内存的操作。</li>
-<li>Java是一门面向对象的编程语言，面向对象的编程模式是现代设计的主流，但是并不是所有的开发者都认为面向对象就是最佳的程序设计，很多的开发者依然觉得编写面向过程或者是使用函数式编程会更加的简单，但是毕竟是少数；</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>知识拓展</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>长难句分析</title>
-    <url>/2020/08/15/%E9%95%BF%E9%9A%BE%E5%8F%A5%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="长难句分析"><a href="#长难句分析" class="headerlink" title="长难句分析"></a>长难句分析</h1><p>基本结构的长难句：</p>
-<p><strong>断开</strong><br>（1）标点<br>（2）连接词：从句开始于连接词，结束于<br>    1，标点，2，下一个连接词前，3，第二个谓语动词前<br>（3）分析主谓</p>
-<p><strong>简化</strong>：去修饰，留核心</p>
-<p>修饰成分有：</p>
-<p><strong>形容词、副词</strong><br><strong>介词短语</strong><br><strong>非谓语动词（doing/done/to do）</strong><br>冠词、数词<br>非限定性定语从句</p>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>特殊用途的句子</title>
-    <url>/2020/08/18/%E5%BC%BA%E8%B0%83%E5%8F%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="强调句"><a href="#强调句" class="headerlink" title="强调句"></a>强调句</h1><p>句型It is …… that ……</p>
-<p>I want to go to America this summer.</p>
-<p>It is America that I want to go to this summer. </p>
-<h1 id="倒装句"><a href="#倒装句" class="headerlink" title="倒装句"></a>倒装句</h1><p><strong>全部倒装</strong>：<strong>There be 句型 + n + 介词短语</strong></p>
-<p>有……在哪里</p>
-<p>现在 There is a book on the table.</p>
-<p><strong>部分倒装</strong></p>
-<p>相当于把陈述句变成一般疑问句</p>
-<p><strong>否定词 位于句首</strong></p>
-<blockquote>
-<p>not、no、never、hardly、little、scarcely、seldom、not until、not only……</p>
-</blockquote>
-<p>I will never do it.</p>
-<p>never will I do it.</p>
-<p><strong>only 位于句首</strong></p>
-<h1 id="虚拟语气（非真实）"><a href="#虚拟语气（非真实）" class="headerlink" title="虚拟语气（非真实）"></a>虚拟语气（非真实）</h1><p>1、不是真的。</p>
-<p>2、改变时态</p>
-<p>3、虚拟条件句、名词性从句中</p>
-<h3 id="if虚拟条件句"><a href="#if虚拟条件句" class="headerlink" title="if虚拟条件句"></a>if虚拟条件句</h3><table>
-<thead>
-<tr>
-<th></th>
-<th>if从句</th>
-<th>主句</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>假设过去</td>
-<td>had done</td>
-<td>would +have done</td>
-</tr>
-<tr>
-<td>假设现在</td>
-<td>did(were)</td>
-<td>could、should+do</td>
-</tr>
-<tr>
-<td>假设未来</td>
-<td>did(were)<br />were to do <br />should do</td>
-<td>might + do</td>
-</tr>
-</tbody></table>
-<p>If I were to have/had/should have time tomorrow, I would help him.</p>
-<p><img src="https://s1.ax1x.com/2020/08/19/dlySJ0.png" alt="image"></p>
-<p>如果你过去嫁给他，你现在就会是一个加油站服务员的妻子</p>
-<p>If you had married him, you would be the wife of a gas station attendant.</p>
-<h3 id="省略if的虚拟条件句"><a href="#省略if的虚拟条件句" class="headerlink" title="省略if的虚拟条件句"></a>省略if的虚拟条件句</h3><p>if you had joined us, we would have had more fun.</p>
-<p>had you joined us, we would have had more fun. (部分倒装)</p>
-<h3 id="名词性从句的虚拟语气"><a href="#名词性从句的虚拟语气" class="headerlink" title="名词性从句的虚拟语气"></a>名词性从句的虚拟语气</h3><p>表示“建议，要求，命令”v.后的宾语从句虚拟</p>
-<p>从句中用（should）+ do</p>
-<p>He suggested that the system should be changed.</p>
-<blockquote>
-<p>suggest,advise,propose,recommend,</p>
-<p>order,ask,demand,insist,</p>
-<p>require,request……</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
       </tags>
   </entry>
 </search>
