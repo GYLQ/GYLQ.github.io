@@ -1,15 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>时光留影-分区</title>
-    <url>/2020/09/02/%E5%8D%A1%E7%89%87/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h1><p><a href="https://gylq.gitee.io/daily/" class="LinkCard">时光留影</a></p>
+    <title>JAVA代码集合</title>
+    <url>/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="JAVA代码集合"><a href="#JAVA代码集合" class="headerlink" title="JAVA代码集合"></a>JAVA代码集合</h1><p>(1)</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public class Hello&#123;</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
 ]]></content>
       <categories>
-        <category>时光留影</category>
+        <category>Java</category>
       </categories>
       <tags>
-        <tag>分类</tag>
+        <tag>知识拓展</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA编程起步</title>
+    <url>/2020/08/31/JAVA%E7%BC%96%E7%A8%8B%E8%B5%B7%E6%AD%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="具体内容"><a href="#具体内容" class="headerlink" title="具体内容"></a><strong>具体内容</strong></h1><p>​    Java是现在世界上最流行的编程语言，在服务器端的开发上保持着绝对的优势。例如： 你现在需要进行网购，如果要进行网购肯定要有网络服务器的支持，对于服务器代码的开发，首选的就是Java，实际上如果要考虑到编程语言特点的话，Java、C、C++实际上都是有着非常相似的语法结构，经过了多年的论述之后，这种语法结构是比较清晰的。</p>
+<h1 id="认识Java"><a href="#认识Java" class="headerlink" title="认识Java"></a>认识Java</h1><p>​    Java是现在流行的语言，其前身就是OAK（橡树），实际上最初的OAK编程语言是为了一个GREEN的项目提供服务的，该项目主要是以Email实现对于家电产品的控制（所谓的“万物互联”，这也是早期物联网雏形），但是遗憾的是OAK并没有成功的获得Green项目，如果按照传统的思维模式，这种没有获得投资的项目基本上都属于废弃的产物了，可是在90年代初是属于互联网的时代，尤其是著名的网景公司，对于浏览器的开发非常的到位，于是就缔造了一个上市的神话。OAK吸收了网景公司的产品的想法，产生了一个Hot Java浏览器，一直到了1995年的时候才正式将OAK更名为JAVA，于是就一直延续到了今天，并且随着计算机硬件和网络发展，Java也在不带你的完善。</p>
+<blockquote>
+<p>友情提示：对于Java有如下几个核心的问题：</p>
+<ul>
+<li>​    如果要想判断一门语言的未来是否有持久性，最重要的指标就是在于其是否继续保持着更新，保持着最新的设计理念；</li>
+<li>​    OAK实际上是使用C++开发出来的，但是相比较C++来讲结构上更加的清晰，所以：Java也是C++编写的；</li>
+</ul>
+<p>​    之所以叫OAK主要的原因在于语言的设计师的窗户外面有一颗数（橡树），后来原本是想把Java继续使用OAK，但是由于版权的问题，所以无法继续使用，最终这些开发工程师发现他们天天喝的咖啡味道不错（产自爪哇，于是使用了Java）</p>
+<p>​    Java现在的版权属于Oracle公司，Oracle公司收购了早期的SUN公司。SUN（斯坦福的大学网络，Stanford University Network）公司，这家公司是一家从事与硬件技术的公司（它不是以软件为主，实际上在其被收购之前完全没有通过软件获得任何的利润），这家公司最著名的产品是小型机，并且大量的应用在亚马逊商城上，不过回来由于整个世界上的互联网低潮，SUN公司收到了极大的冲击，所以导致其并没有后续的强劲的生命力了，终于在2007年的时候被Oracle收购（Oracle收购SUN之前最想收购SUN公司是IBM）</p>
+</blockquote>
+<p>​    <strong>比较崩溃的问题</strong>，一个学生去面试（2007年的时候），面试官问他，请问你如何看待Oracle收购SUN的这一举动？<br>​    <strong>收购背后的故事</strong>，现在世界上有三大著名的软件产商：Microsoft、Oracle、Adobe，在商业领域上基本上就是微软（Microsoft）和甲骨文公司（Oracle），这两家公司是直接的竞争关系，但是在整个商业体系之中有四个重要的组成部分：操作系统、数据库、中间件、编程语言；</p>
+<ul>
+<li>Microsoft: Window Server、SQLServer、IIS、.NET;</li>
+<li>Oracle：UNIX、Oracle Database、Bacteriologic(收购)、Java（收购）。</li>
+</ul>
+<p>吐槽：Oracle后来变成了“疯狗”，到处撕咬使用Java开发公司的版权费用，于是Google中招了。</p>
+<p>​    任何的编程语言都有自己擅长和不擅长的领域，Java是一门非常庞大的语言，而且其设计的特点：大而全，相当于所有软件功能的实现都可以使用Java来完成，但是随着后来技术的发展，更多的编程技术出现了，于是很多的使用者就开始使用一些更加简单的语言来实现一些特定的功能，你现在可以见到的大量的会联网产品实际上都是Java开发的。</p>
+<h3 id="Java语言特点"><a href="#Java语言特点" class="headerlink" title="Java语言特点"></a>Java语言特点</h3><p>​    既然Java语言如此的流行，肯定有自己不少独有的特嗲，于是一起分享一下，但是从客观的角度上来讲，Java在这么多年的历史发展中还是出想过许多疲软的时候后，由于技术的阻塞所以导致了许多的不足，但是后来由于版本不断的完善，以及变成语法的不断支持，java也成功的度过了这些疲软期，关键性的问题，Java是一个世界上最流行的编程语言，所以有着大量第三方软件厂商对其进行不断的完善。</p>
+<p>​    早前的Java开发实际上分为三个方向：</p>
+<ul>
+<li><p>JavaSE（在2005年之前被称为”J2SE“）：主要是进行单机版程序的开发，例如：开发一些图形界面等；</p>
+</li>
+<li><p>JavaME（在2005年之前被称为“J2ME”）：主要是进行嵌入式设备的开发，最早期的在“诺基亚（Nokia）”被大量的应用在手机游戏的开发上，而后到了Android时代基本上就被替代掉了；</p>
+</li>
+<li><p>JavaEE（在2005年之前被称为“J2EE”）：主要进行企业平台的搭建，实际上现在许多的互联网就使用的是JavaEE在国内和国外，Java都是最为稳定的服务器端编程首先语言，那么既然是首先语言，就一起来分析它的一些特点：</p>
+<ol>
+<li><p>Java语言处采用标准的编程语法结构，所以语法结构清晰，而且语法也足够简单；<br><strong>补充</strong>：标准的编程语法结构虽然看起来结构清晰，但是会造成代码过多的问题，简单的特点是相比较C++来讲；</p>
+</li>
+<li><p>Java语言虽然使用了C++开发，但是其并没有引入C或C++那样的指针概念，而使用了更加直观的引用来解决内存处理问题，相当于不能够直接进行内存的操作。</p>
+</li>
+<li><p>Java是一门面向对象的编程语言，面向对象的编程模式是现代设计的主流，但是并不是所有的开发者都认为面向对象就是最佳的程序设计，很多的开发者依然觉得编写面向过程或者是使用函数式编程会更加的简单，但是毕竟是少数；</p>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="编程起步"><a href="#编程起步" class="headerlink" title="编程起步"></a>编程起步</h1><p><strong>第一个代码</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public class Hello&#123;</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>编译程序</strong>：javac Hello.java ——  <strong>解释程序</strong>：java Hello</p>
+<p><strong>类结构</strong>：java是以类的形式运行的，所以任何的程序都必须放在一个类之中才可以执行，在java中进行类定义的时候有一个明确的要求，所有类的名称首字母必须大写，例如“<strong>D</strong>emo”、“<strong>Y</strong>ootk<strong>D</strong>emo”、“<strong>H</strong>ello<strong>D</strong>emo”，在java程序里面针对于类有两种定义模式：</p>
+<p>​    <strong>形式一</strong>：public class类名称，此时要求文件名称和类名称保持一致，如果不一致则会出现编译错误，由于文件名称只有一个，所以在任何一个Java源代码程序文件里面只允许有一个public class 定义。、</p>
+<p>当前程序的文件名称是“Hello.java”</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public class Demo&#123;</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">Hello.java:1: 错误: 类 Demo 是公共的, 应在名为 Demo.java 的文件中声明</span><br><span class="line">public class Demo&#123;</span><br></pre></td></tr></table></figure></div>
+
+<p>​    </p>
+<p><strong>形式二</strong>：class类名称，由于使用class不要求类名称与文件名称保持一致，所以这个时候就可以再一个“*.java”源代码文件里面定义有若干个class。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">class Demo&#123;</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>可以正常的编译通过</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">2020&#x2F;09&#x2F;19  08:38    &lt;DIR&gt;          .</span><br><span class="line">2020&#x2F;09&#x2F;19  08:38    &lt;DIR&gt;          ..</span><br><span class="line">2020&#x2F;09&#x2F;19  08:38               415 Demo.class</span><br><span class="line">2020&#x2F;09&#x2F;19  08:38                99 Hello.java</span><br><span class="line">2020&#x2F;09&#x2F;19  08:34               106 Hello.java.bak</span><br><span class="line">               3 个文件            620 字节</span><br><span class="line">               2 个目录 130,474,803,200 可用字节</span><br></pre></td></tr></table></figure></div>
+
+<p>此时生成的是Demo.class，也就是说这个时候是根据class类名称来定义的生成的“*.class”文件名称</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">D:\yootk&gt;java Demo</span><br><span class="line">Hello world!</span><br></pre></td></tr></table></figure></div>
+
+<p>此时得使用Java Demo 才可以正常执行Hello程序。</p>
+<p><strong>主方法</strong>：主方法是一个程序的起点，所有的程序都是通过主方法去执行的，在Java里面住主方法定义比较长：</p>
+<p><strong>官方推荐：</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public static void main(String args[])、public static void main(String [] args)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>个性化定义：</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public static void main(String yootk[])</span><br></pre></td></tr></table></figure></div>
+
+<p>考虑 后期学习对于知识层次的讲解，所以对于主方法的定义有一个明确的说明：把主方法所在的类将其称为“主类（MainClass）”，而主类全部使用“public class”来进行声明，后面的代码里面主类名称就是文件名称。</p>
+<p>屏幕输出：</p>
+<p>【输出后追加换行】System.out.println()、</p>
+<p>【输出后不追加换行】System.out.print()</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>知识拓展</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CLASSPATH环境属性</title>
+    <url>/2020/09/19/CLASSPATH%E7%8E%AF%E5%A2%83%E5%B1%9E%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="ClassPath环境属性"><a href="#ClassPath环境属性" class="headerlink" title="ClassPath环境属性"></a>ClassPath环境属性</h2><p>所有的java程序在进行执行的时候一般都需要经过两个过程：、</p>
+<p>​    Java程序编译过程：是要得到字节码文件，而字节码就是程序执行的主要的二进制文件；</p>
+<p>​    java解释执行过程：是在虚拟机上进行解释。</p>
+<p>实际上在真个java编译和运行的过程之中都存在有一个非常重要的环境属性“classpath”，利用classpath可以设置第三方程序的加载路径，同时也可以改变java解释的的时候后程序的执行路径。</p>
+<p>​    java之所以可以持续的发展，最主要的原因在于，java里面有大量的第三方程序支持，那么既然要有很多的第三方程序支持，就一定需要提供有一种标准的机制来方便的引用这些第三方组件包（是为了进行程序的编译处理）。</p>
+<p>​    ClassPath还可以进行程序加载路径的变更，每当使用java命令进行程序执行的时候后，实际上都会牵扯到一个类的加载路径，每一台java虚拟机在默认的情况下都会在当前目录下进行程序类的加载。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">D:\yootk&gt;javac Hello.java</span><br><span class="line"></span><br><span class="line">D:\yootk&gt;java Hello</span><br><span class="line">Hello world!</span><br></pre></td></tr></table></figure></div>
+
+<p>若将盘符切到了C盘</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">C:\Users\23242&gt;java Hello</span><br><span class="line">错误: 找不到或无法加载主类 Hello（提示文字）</span><br><span class="line">原因: java.lang.ClassNotFoundException: Hello</span><br></pre></td></tr></table></figure></div>
+
+<p>此时的路径下并没有提供hello.class文件此时会出现如上的错误提示：</p>
+<blockquote>
+<p><strong>ClassNotFoundException: Hello</strong></p>
+</blockquote>
+<p>​    如果说现在要想执行它，那么最简单的做法是直接设置一个类的加载路径，就直接告诉JVM，每一次进行类加载的时候你需要通过我设置的路径来进行“*.class”文件的加载（如果没有告诉JVM这个问题，则JVM会在当前所在的路径下进行加载）。</p>
+<p><strong>范例：设置CLASSPATH</strong></p>
+<p>设置命令：SET CLASSPATH=类加载路径</p>
+<p>设置CLASSPATH： D:\yootk</p>
+<p>CLASSPATH是一个系统的环境属性，在Windows系统里面，所有的环境属性都是通过”SET”命令实现的定义；</p>
+<blockquote>
+<p><strong>C:\Users\23242&gt;set classpath=D:\yootk</strong></p>
+<p><strong>C:\Users\23242&gt;java Hello</strong><br><strong>Hello world!</strong></p>
+</blockquote>
+<p>此时就可以直接执行。</p>
+<p>还原成默认形式</p>
+<blockquote>
+<p>SET classpath=.</p>
+</blockquote>
+<blockquote>
+<p>D:\yootk&gt;java Hello<br>Hello world!</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>知识拓展</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JShell交互式工具</title>
+    <url>/2020/09/18/JShell%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Jshell交互式工具"><a href="#Jshell交互式工具" class="headerlink" title="Jshell交互式工具"></a>Jshell交互式工具</h1><p>​    在Java的历史版本之中，实际上从来都没有过这种交互式工具的出现，但那是现在很多的开发语言里面都有交互式编程环境，这样可以便于程序的执行以及程序的简化操作，所以很多的新手是非常喜欢这种交互式编程模型的，于是在JDK 1.9（为什么JDK 1.8没有jshell命令？）之后，开发者只要配置好了JDK的PATH环境属性，那么就可以直接在命令行下面通过“jshell”命令启动交互式编程环境。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200921090545192.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTM4NjIx,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>这种交互式的编程环境，仅仅是对一些开发的操作支持有了改善，但是从整体的角度来讲，于实际的项目开发还是由着非常大的茶杯，作为一个游戏的编程应用是非常不错的，但是如果要作为实际的开发，那么就太痛苦了，针对于JShell仅仅是简化了一些程序结构，那么如果有需要也可以将一些程序的代码直接定义在一些文本文件里面，现在“d:\yootk\yootknam.stat”.</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">System.out.println(&quot;技术学生：董先生&quot;);</span><br></pre></td></tr></table></figure></div>
+
+<p>那么随后肯定是希望可以在jshell环境下main去加载这些文件中的代码，那么就可以通过一个”/open”的命令完成：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200921091153411.png#pic_center" alt="在这里插入图片描述"></p>
+<p><strong>Jshell输入程序文件代码加载</strong></p>
+<h1 id="JShell的退出"><a href="#JShell的退出" class="headerlink" title="JShell的退出"></a>JShell的退出</h1><p>如果已经打开了jshell交互式编程环境，并且突然后悔了，不想继续使用了那么此时你可以直接关闭窗口，或者输入退出命令“/exit”。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200921091407674.png#pic_center" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>知识拓展</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySql数据库</title>
+    <url>/2020/09/16/MySql%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="表的结构"><a href="#表的结构" class="headerlink" title="表的结构"></a>表的结构</h1><blockquote>
+<p>+——————-+<br>| Tables_in_dongjun |<br>+——————-+<br>| dept              |   （部门表）<br>| emp               |   （员工表）<br>| salgrade          |   （工资等级表）</p>
+</blockquote>
+<blockquote>
+<p>表的结构mysql&gt; desc dept;<br>+——–+————-+——+—–+———+——-+<br>| Field  | Type        | Null | Key | Default | Extra |<br>+——–+————-+——+—–+———+——-+<br>| DEPTNO | int(2)      | NO   | PRI | NULL    |       |<br>| DNAME  | varchar(14) | YES  |     | NULL    |       |<br>| LOC    | varchar(13) | YES  |     | NULL    |       |<br>+——–+————-+——+—–+———+——-+</p>
+</blockquote>
+<p>表中的数据</p>
+<blockquote>
+<p>mysql&gt; select * from emp;<br>+——-+——–+———–+——+————+———+———+——–+<br>| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |<br>+——-+——–+———–+——+————+———+———+——–+<br>|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800.00 |    NULL |     20 |<br>|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |<br>|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |<br>|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975.00 |    NULL |     20 |<br>|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |<br>|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |<br>|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |<br>|  7788 | SCOTT  | ANALYST   | 7566 | 1987-04-19 | 3000.00 |    NULL |     20 |<br>|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |<br>|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |<br>|  7876 | ADAMS  | CLERK     | 7788 | 1987-05-23 | 1100.00 |    NULL |     20 |<br>|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |<br>|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000.00 |    NULL |     20 |<br>|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |<br>+——-+——–+———–+——+————+———+———+——–+</p>
+</blockquote>
+<h1 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h1><p>（略）</p>
+<h1 id="排序（升序、降序）"><a href="#排序（升序、降序）" class="headerlink" title="排序（升序、降序）"></a>排序（升序、降序）</h1><p>题目：按照工资升序排序，找出员工名和薪资。<br>select ename, sal from emp order by sal;</p>
+<blockquote>
+<p>+——–+———+<br>| ename  | sal     |<br>+——–+———+<br>| SMITH  |  800.00 |<br>| JAMES  |  950.00 |<br>| ADAMS  | 1100.00 |<br>| WARD   | 1250.00 |<br>| MARTIN | 1250.00 |<br>| MILLER | 1300.00 |<br>| TURNER | 1500.00 |<br>| ALLEN  | 1600.00 |<br>| CLARK  | 2450.00 |<br>| BLAKE  | 2850.00 |<br>| JONES  | 2975.00 |<br>| SCOTT  | 3000.00 |<br>| FORD   | 3000.00 |<br>| KING   | 5000.00 |</p>
+</blockquote>
+<p><strong>注意：默认是升序asc表示升序、desc表示降序</strong>  </p>
+<p>select ename, sal from emp order by sal;<br>select ename, sal from emp order by sal asc; 指定升序<br>select ename, sal from emp order by sal desc; 指定降序</p>
+<p>题目：按照工资的降序排列，当工资相同的时候再按照名字的升序排列。</p>
+<p>select ename,sal from emp order by sal desc , ename asc;</p>
+<blockquote>
+<p>+——–+———+<br>| ename  | sal     |<br>+——–+———+<br>| KING   | 5000.00 |<br>| FORD   | 3000.00 |<br>| SCOTT  | 3000.00 |<br>| JONES  | 2975.00 |<br>| BLAKE  | 2850.00 |<br>| CLARK  | 2450.00 |<br>| ALLEN  | 1600.00 |<br>| TURNER | 1500.00 |<br>| MILLER | 1300.00 |<br>| MARTIN | 1250.00 |<br>| WARD   | 1250.00 |<br>| ADAMS  | 1100.00 |<br>| JAMES  |  950.00 |<br>| SMITH  |  800.00 |<br>+——–+———+</p>
+</blockquote>
+<p><strong>注意</strong>：越靠前的字段越能起到主导作用。只有当前面的字段无法完成排序的时候后，才会启用后面的字段。</p>
+<p>select ename, sal from emp order by 2;</p>
+<blockquote>
+<p>+——–+———+<br>| ename  | sal     |<br>+——–+———+<br>| SMITH  |  800.00 |<br>| JAMES  |  950.00 |<br>| ADAMS  | 1100.00 |<br>| WARD   | 1250.00 |<br>| MARTIN | 1250.00 |<br>| MILLER | 1300.00 |<br>| TURNER | 1500.00 |<br>| ALLEN  | 1600.00 |<br>| CLARK  | 2450.00 |<br>| BLAKE  | 2850.00 |<br>| JONES  | 2975.00 |<br>| SCOTT  | 3000.00 |<br>| FORD   | 3000.00 |<br>| KING   | 5000.00 |<br>+——–+———+</p>
+<p><strong>注意：</strong>“2”代表的是第几列。</p>
+<p><strong>select * from emp order by 6;</strong></p>
+<p>+——-+——–+———–+——+————+———+———+——–+<br>| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |<br>+——-+——–+———–+——+————+———+———+——–+<br>|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800.00 |    NULL |     20 |<br>|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |<br>|  7876 | ADAMS  | CLERK     | 7788 | 1987-05-23 | 1100.00 |    NULL |     20 |<br>|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |<br>|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |<br>|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |<br>|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |<br>|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |<br>|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |<br>|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |<br>|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975.00 |    NULL |     20 |<br>|  7788 | SCOTT  | ANALYST   | 7566 | 1987-04-19 | 3000.00 |    NULL |     20 |<br>|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000.00 |    NULL |     20 |<br>|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |<br>+——-+——–+———–+——+————+———+———+——–+</p>
+</blockquote>
+<p><strong>建议写成</strong></p>
+<p><strong>select * from emp order by sal;</strong></p>
+<p>题目：找出工作岗位是salesman的员工，并且要求按照薪资的降序排列。</p>
+<p><strong>select ename, sal, job from emp where job = ‘salesman’ order by sal desc;</strong></p>
+<blockquote>
+<p>+——–+———+———-+<br>| ename  | sal     | job      |<br>+——–+———+———-+<br>| ALLEN  | 1600.00 | SALESMAN |<br>| TURNER | 1500.00 | SALESMAN |<br>| WARD   | 1250.00 | SALESMAN |<br>| MARTIN | 1250.00 | SALESMAN |</p>
+</blockquote>
+<p><strong>语句格式与执行顺序</strong></p>
+<blockquote>
+<p>select</p>
+<p>​    *     3</p>
+<p>from  </p>
+<p>​    tablename     1</p>
+<p>where</p>
+<p>​    条件      2</p>
+<p>order by      4</p>
+<p>​    ……</p>
+</blockquote>
+<p>order by 是最后执行的</p>
+<p><strong>select ename,sal as salary from emp order by salary;</strong></p>
+<blockquote>
+<p>+——–+———+<br>| ename  | salary  |<br>+——–+———+<br>| SMITH  |  800.00 |<br>| JAMES  |  950.00 |<br>| ADAMS  | 1100.00 |<br>| WARD   | 1250.00 |<br>| MARTIN | 1250.00 |<br>| MILLER | 1300.00 |<br>| TURNER | 1500.00 |<br>| ALLEN  | 1600.00 |<br>| CLARK  | 2450.00 |<br>| BLAKE  | 2850.00 |<br>| JONES  | 2975.00 |<br>| SCOTT  | 3000.00 |<br>| FORD   | 3000.00 |<br>| KING   | 5000.00 |<br>+——–+———+</p>
+</blockquote>
+<h1 id="分组函数"><a href="#分组函数" class="headerlink" title="分组函数"></a><strong>分组函数</strong></h1><p>count 计数<br>sum 求和<br>avg 平均值<br>max 最大值<br>min 最小值</p>
+<p>记住：所有分组的函数都是对“某一组”数据进行操作的。</p>
+<p>题目：找出员工工资总和</p>
+<p>select sum(sal) sal from emp;<br>select max(sal) sal from emp;<br>select min(sal) sal from emp;<br>select avg(sal) sal from emp;<br>select count(ename) ename from emp;</p>
+<blockquote>
+<p>+———+<br>| sal     |<br>+———+<br>| 5000.00 |<br>+———+<br>1 row in set (0.01 sec)</p>
+<p>+——–+<br>| sal    |<br>+——–+<br>| 800.00 |<br>+——–+<br>1 row in set (0.00 sec)</p>
+<p>+————-+<br>| sal         |<br>+————-+<br>| 2073.214286 |<br>+————-+<br>1 row in set (0.00 sec)</p>
+<p>+——-+<br>| ename |<br>+——-+<br>|    14 |<br>+——-+</p>
+</blockquote>
+<p>分组函数一共五个，还有另一个名字：多行处理函数。<br>多行处理函数的特点：输入多行，最终输出的结果是一行。</p>
+<p>分组函数自动忽略NULL。<br>select count(comm) from emp;</p>
+<blockquote>
+<p>+————-+<br>| count(comm) |<br>+————-+<br>|           4 |<br>+————-+</p>
+</blockquote>
+<h1 id="单行处理函数"><a href="#单行处理函数" class="headerlink" title="单行处理函数"></a>单行处理函数</h1><p><strong>输入一行，输出一行</strong></p>
+<p>计算每个员工的年薪？<br>select ename, (sal+comm) * 12 as yearsal from emp;<br>重点：所有数据库明文规定只要有NULL参与运算的运算结果一定是NULL</p>
+<p><strong>ifnull()</strong>空处理函数？<br>    ifnull(可能为NULL的数据，被当做什么处理)</p>
+<p>select ename, (sal+(ifnull(comm,0))) * 12 as yearsal from emp;</p>
+<blockquote>
+<p>+——–+———-+<br>| ename  | yearsal  |<br>+——–+———-+<br>| SMITH  |  9600.00 |<br>| ALLEN  | 22800.00 |<br>| WARD   | 21000.00 |<br>| JONES  | 35700.00 |<br>| MARTIN | 31800.00 |<br>| BLAKE  | 34200.00 |<br>| CLARK  | 29400.00 |<br>| SCOTT  | 36000.00 |<br>| KING   | 60000.00 |<br>| TURNER | 18000.00 |<br>| ADAMS  | 13200.00 |<br>| JAMES  | 11400.00 |<br>| FORD   | 36000.00 |<br>| MILLER | 15600.00 |<br>+——–+———-+</p>
+</blockquote>
+<p>题目：找出工资高于平均工资的员工。</p>
+<p>select ename, sal from emp where sal &gt; avg(sal);</p>
+<p>报错：ERROR 1111 (HY000): Invalid use of group function</p>
+<p>select avg(sal) from emp;</p>
+<p>+————-+<br>| avg(sal)    |<br>+————-+<br>| 2073.214286 |<br>+————-+</p>
+<p>SQL语法当中有一个语法规则，分组函数不可直接使用在where子句当中。</p>
+<p> count(*)和count(具体的某个字段)，他们有什么区别？</p>
+<p>​    count(*)：不是统计某个字段中数据的个数，而是统计总记录条数</p>
+<p>​    count(comm)：表示统计comm字段中不为NULL的数据总数量。</p>
+<p>select count(*) from emp;</p>
+<p>select count(comm) from emp;</p>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>知识拓展</tag>
       </tags>
   </entry>
   <entry>
@@ -147,532 +390,15 @@
       </tags>
   </entry>
   <entry>
-    <title>程序注释</title>
-    <url>/2020/09/21/%E7%A8%8B%E5%BA%8F%E6%B3%A8%E9%87%8A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="程序注释"><a href="#程序注释" class="headerlink" title="程序注释"></a><strong>程序注释</strong></h1><p>​    任何一套程序代码里面实际上都会由大量的程序逻辑所组成，但是如果要想对一套代码进行长期的维护，就需要编写大量的注释，对一些程序的代码功能要进行详细的解释，这样不仅为自己铺平道路，实际上也为后来接手的工程师铺平道路。</p>
-<blockquote>
-<p>关于注释的笑话：有一位程序员到一家新的公司进行项目开发，突然有一天老板说，某一个功能执行的速度实在是太慢了，让这位程序员修改一下，后来这个程序员找到了相关源代码，里面写上了一个注释“后面的兄弟，悠着点，我在这里吗让代码延迟了3秒，别一下子改的太快了，给后面的兄弟留点发挥空间”，于是这位工程师根据前辈的注释进行了修改，将原始的延迟3秒，修改为了延迟2.5秒，速度变快了，老板给了奖金。</p>
-</blockquote>
-<p>​    在Java程序里面针对于代码的注释一共提供了三种注释形式：</p>
-<ul>
-<li><p>​        单行注释：“// 注释内容”;（考虑到开发工具的代码格式化问题）</p>
-</li>
-<li><p>​        多行注释：“/*… 注释内容 … */“;</p>
-</li>
-<li><p>​        文档注释：“/** … 文档注释的特定语法标记进行注释的编写 …… */”，这种注释往往可以结合开发工具使用</p>
-</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public class YootkDemo&#123; &#x2F;&#x2F; 【单行注释】定义程序的执行主类</span><br><span class="line">	public static void main(String args[])&#123;&#x2F;&#x2F; 【单行注释】程序的执行起点，主方法</span><br><span class="line">		&#x2F;*【多行注释】</span><br><span class="line">			以下的程序代码是在屏幕上进行一些提示信息的输出，如果有需要则可以再里面进行多行的定义	</span><br><span class="line">		*&#x2F;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;); </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-<p>​    既然所有的注释文字不会自己进行代码的编译处理，所以在实际项目开发之中可以将一些暂时不需要的代码通过注释的形式让其失效，这种形式要比直接删除代码更高效。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public class YootkDemo&#123; &#x2F;&#x2F; 【单行注释】定义程序的执行主类</span><br><span class="line">	public static void main(String args[])&#123;&#x2F;&#x2F; 【单行注释】程序的执行起点，主方法</span><br><span class="line">		&#x2F;*【多行注释】</span><br><span class="line">			以下的程序代码是在屏幕上进行一些提示信息的输出，如果有需要则可以再里面进行多行的定义	</span><br><span class="line">		*&#x2F;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;); </span><br><span class="line">		&#x2F;&#x2F; 【代码失效】 System.out.println(&quot;江湖上称我为&quot;); </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-<p>在以后进行项目开发的时候，一些暂时不需要的代码就可以利用注释进行关闭。</p>
+    <title>时光留影-分区</title>
+    <url>/2020/09/02/%E5%8D%A1%E7%89%87/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h1><p><a href="https://gylq.gitee.io/daily/" class="LinkCard">时光留影</a></p>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>时光留影</category>
       </categories>
       <tags>
-        <tag>知识拓展</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CLASSPATH环境属性</title>
-    <url>/2020/09/19/CLASSPATH%E7%8E%AF%E5%A2%83%E5%B1%9E%E6%80%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="ClassPath环境属性"><a href="#ClassPath环境属性" class="headerlink" title="ClassPath环境属性"></a>ClassPath环境属性</h2><p>所有的java程序在进行执行的时候一般都需要经过两个过程：、</p>
-<p>​    Java程序编译过程：是要得到字节码文件，而字节码就是程序执行的主要的二进制文件；</p>
-<p>​    java解释执行过程：是在虚拟机上进行解释。</p>
-<p>实际上在真个java编译和运行的过程之中都存在有一个非常重要的环境属性“classpath”，利用classpath可以设置第三方程序的加载路径，同时也可以改变java解释的的时候后程序的执行路径。</p>
-<p>​    java之所以可以持续的发展，最主要的原因在于，java里面有大量的第三方程序支持，那么既然要有很多的第三方程序支持，就一定需要提供有一种标准的机制来方便的引用这些第三方组件包（是为了进行程序的编译处理）。</p>
-<p>​    ClassPath还可以进行程序加载路径的变更，每当使用java命令进行程序执行的时候后，实际上都会牵扯到一个类的加载路径，每一台java虚拟机在默认的情况下都会在当前目录下进行程序类的加载。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">D:\yootk&gt;javac Hello.java</span><br><span class="line"></span><br><span class="line">D:\yootk&gt;java Hello</span><br><span class="line">Hello world!</span><br></pre></td></tr></table></figure></div>
-
-<p>若将盘符切到了C盘</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">C:\Users\23242&gt;java Hello</span><br><span class="line">错误: 找不到或无法加载主类 Hello（提示文字）</span><br><span class="line">原因: java.lang.ClassNotFoundException: Hello</span><br></pre></td></tr></table></figure></div>
-
-<p>此时的路径下并没有提供hello.class文件此时会出现如上的错误提示：</p>
-<blockquote>
-<p><strong>ClassNotFoundException: Hello</strong></p>
-</blockquote>
-<p>​    如果说现在要想执行它，那么最简单的做法是直接设置一个类的加载路径，就直接告诉JVM，每一次进行类加载的时候你需要通过我设置的路径来进行“*.class”文件的加载（如果没有告诉JVM这个问题，则JVM会在当前所在的路径下进行加载）。</p>
-<p><strong>范例：设置CLASSPATH</strong></p>
-<p>设置命令：SET CLASSPATH=类加载路径</p>
-<p>设置CLASSPATH： D:\yootk</p>
-<p>CLASSPATH是一个系统的环境属性，在Windows系统里面，所有的环境属性都是通过”SET”命令实现的定义；</p>
-<blockquote>
-<p><strong>C:\Users\23242&gt;set classpath=D:\yootk</strong></p>
-<p><strong>C:\Users\23242&gt;java Hello</strong><br><strong>Hello world!</strong></p>
-</blockquote>
-<p>此时就可以直接执行。</p>
-<p>还原成默认形式</p>
-<blockquote>
-<p>SET classpath=.</p>
-</blockquote>
-<blockquote>
-<p>D:\yootk&gt;java Hello<br>Hello world!</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>知识拓展</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA代码集合</title>
-    <url>/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="JAVA代码集合"><a href="#JAVA代码集合" class="headerlink" title="JAVA代码集合"></a>JAVA代码集合</h1><p>(1)</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public class Hello&#123;</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>知识拓展</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JShell交互式工具</title>
-    <url>/2020/09/18/JShell%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Jshell交互式工具"><a href="#Jshell交互式工具" class="headerlink" title="Jshell交互式工具"></a>Jshell交互式工具</h1><p>​    在Java的历史版本之中，实际上从来都没有过这种交互式工具的出现，但那是现在很多的开发语言里面都有交互式编程环境，这样可以便于程序的执行以及程序的简化操作，所以很多的新手是非常喜欢这种交互式编程模型的，于是在JDK 1.9（为什么JDK 1.8没有jshell命令？）之后，开发者只要配置好了JDK的PATH环境属性，那么就可以直接在命令行下面通过“jshell”命令启动交互式编程环境。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200921090545192.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTM4NjIx,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>这种交互式的编程环境，仅仅是对一些开发的操作支持有了改善，但是从整体的角度来讲，于实际的项目开发还是由着非常大的茶杯，作为一个游戏的编程应用是非常不错的，但是如果要作为实际的开发，那么就太痛苦了，针对于JShell仅仅是简化了一些程序结构，那么如果有需要也可以将一些程序的代码直接定义在一些文本文件里面，现在“d:\yootk\yootknam.stat”.</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">System.out.println(&quot;技术学生：董先生&quot;);</span><br></pre></td></tr></table></figure></div>
-
-<p>那么随后肯定是希望可以在jshell环境下main去加载这些文件中的代码，那么就可以通过一个”/open”的命令完成：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200921091153411.png#pic_center" alt="在这里插入图片描述"></p>
-<p><strong>Jshell输入程序文件代码加载</strong></p>
-<h1 id="JShell的退出"><a href="#JShell的退出" class="headerlink" title="JShell的退出"></a>JShell的退出</h1><p>如果已经打开了jshell交互式编程环境，并且突然后悔了，不想继续使用了那么此时你可以直接关闭窗口，或者输入退出命令“/exit”。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200921091407674.png#pic_center" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>知识拓展</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySql数据库</title>
-    <url>/2020/09/16/MySql%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="表的结构"><a href="#表的结构" class="headerlink" title="表的结构"></a>表的结构</h1><blockquote>
-<p>+——————-+<br>| Tables_in_dongjun |<br>+——————-+<br>| dept              |   （部门表）<br>| emp               |   （员工表）<br>| salgrade          |   （工资等级表）</p>
-</blockquote>
-<blockquote>
-<p>表的结构mysql&gt; desc dept;<br>+——–+————-+——+—–+———+——-+<br>| Field  | Type        | Null | Key | Default | Extra |<br>+——–+————-+——+—–+———+——-+<br>| DEPTNO | int(2)      | NO   | PRI | NULL    |       |<br>| DNAME  | varchar(14) | YES  |     | NULL    |       |<br>| LOC    | varchar(13) | YES  |     | NULL    |       |<br>+——–+————-+——+—–+———+——-+</p>
-</blockquote>
-<p>表中的数据</p>
-<blockquote>
-<p>mysql&gt; select * from emp;<br>+——-+——–+———–+——+————+———+———+——–+<br>| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |<br>+——-+——–+———–+——+————+———+———+——–+<br>|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800.00 |    NULL |     20 |<br>|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |<br>|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |<br>|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975.00 |    NULL |     20 |<br>|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |<br>|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |<br>|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |<br>|  7788 | SCOTT  | ANALYST   | 7566 | 1987-04-19 | 3000.00 |    NULL |     20 |<br>|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |<br>|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |<br>|  7876 | ADAMS  | CLERK     | 7788 | 1987-05-23 | 1100.00 |    NULL |     20 |<br>|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |<br>|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000.00 |    NULL |     20 |<br>|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |<br>+——-+——–+———–+——+————+———+———+——–+</p>
-</blockquote>
-<h1 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h1><p>（略）</p>
-<h1 id="排序（升序、降序）"><a href="#排序（升序、降序）" class="headerlink" title="排序（升序、降序）"></a>排序（升序、降序）</h1><p>题目：按照工资升序排序，找出员工名和薪资。<br>select ename, sal from emp order by sal;</p>
-<blockquote>
-<p>+——–+———+<br>| ename  | sal     |<br>+——–+———+<br>| SMITH  |  800.00 |<br>| JAMES  |  950.00 |<br>| ADAMS  | 1100.00 |<br>| WARD   | 1250.00 |<br>| MARTIN | 1250.00 |<br>| MILLER | 1300.00 |<br>| TURNER | 1500.00 |<br>| ALLEN  | 1600.00 |<br>| CLARK  | 2450.00 |<br>| BLAKE  | 2850.00 |<br>| JONES  | 2975.00 |<br>| SCOTT  | 3000.00 |<br>| FORD   | 3000.00 |<br>| KING   | 5000.00 |</p>
-</blockquote>
-<p><strong>注意：默认是升序asc表示升序、desc表示降序</strong>  </p>
-<p>select ename, sal from emp order by sal;<br>select ename, sal from emp order by sal asc; 指定升序<br>select ename, sal from emp order by sal desc; 指定降序</p>
-<p>题目：按照工资的降序排列，当工资相同的时候再按照名字的升序排列。</p>
-<p>select ename,sal from emp order by sal desc , ename asc;</p>
-<blockquote>
-<p>+——–+———+<br>| ename  | sal     |<br>+——–+———+<br>| KING   | 5000.00 |<br>| FORD   | 3000.00 |<br>| SCOTT  | 3000.00 |<br>| JONES  | 2975.00 |<br>| BLAKE  | 2850.00 |<br>| CLARK  | 2450.00 |<br>| ALLEN  | 1600.00 |<br>| TURNER | 1500.00 |<br>| MILLER | 1300.00 |<br>| MARTIN | 1250.00 |<br>| WARD   | 1250.00 |<br>| ADAMS  | 1100.00 |<br>| JAMES  |  950.00 |<br>| SMITH  |  800.00 |<br>+——–+———+</p>
-</blockquote>
-<p><strong>注意</strong>：越靠前的字段越能起到主导作用。只有当前面的字段无法完成排序的时候后，才会启用后面的字段。</p>
-<p>select ename, sal from emp order by 2;</p>
-<blockquote>
-<p>+——–+———+<br>| ename  | sal     |<br>+——–+———+<br>| SMITH  |  800.00 |<br>| JAMES  |  950.00 |<br>| ADAMS  | 1100.00 |<br>| WARD   | 1250.00 |<br>| MARTIN | 1250.00 |<br>| MILLER | 1300.00 |<br>| TURNER | 1500.00 |<br>| ALLEN  | 1600.00 |<br>| CLARK  | 2450.00 |<br>| BLAKE  | 2850.00 |<br>| JONES  | 2975.00 |<br>| SCOTT  | 3000.00 |<br>| FORD   | 3000.00 |<br>| KING   | 5000.00 |<br>+——–+———+</p>
-<p><strong>注意：</strong>“2”代表的是第几列。</p>
-<p><strong>select * from emp order by 6;</strong></p>
-<p>+——-+——–+———–+——+————+———+———+——–+<br>| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |<br>+——-+——–+———–+——+————+———+———+——–+<br>|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800.00 |    NULL |     20 |<br>|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |<br>|  7876 | ADAMS  | CLERK     | 7788 | 1987-05-23 | 1100.00 |    NULL |     20 |<br>|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |<br>|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |<br>|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |<br>|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |<br>|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |<br>|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |<br>|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |<br>|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975.00 |    NULL |     20 |<br>|  7788 | SCOTT  | ANALYST   | 7566 | 1987-04-19 | 3000.00 |    NULL |     20 |<br>|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000.00 |    NULL |     20 |<br>|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |<br>+——-+——–+———–+——+————+———+———+——–+</p>
-</blockquote>
-<p><strong>建议写成</strong></p>
-<p><strong>select * from emp order by sal;</strong></p>
-<p>题目：找出工作岗位是salesman的员工，并且要求按照薪资的降序排列。</p>
-<p><strong>select ename, sal, job from emp where job = ‘salesman’ order by sal desc;</strong></p>
-<blockquote>
-<p>+——–+———+———-+<br>| ename  | sal     | job      |<br>+——–+———+———-+<br>| ALLEN  | 1600.00 | SALESMAN |<br>| TURNER | 1500.00 | SALESMAN |<br>| WARD   | 1250.00 | SALESMAN |<br>| MARTIN | 1250.00 | SALESMAN |</p>
-</blockquote>
-<p><strong>语句格式与执行顺序</strong></p>
-<blockquote>
-<p>select</p>
-<p>​    *     3</p>
-<p>from  </p>
-<p>​    tablename     1</p>
-<p>where</p>
-<p>​    条件      2</p>
-<p>order by      4</p>
-<p>​    ……</p>
-</blockquote>
-<p>order by 是最后执行的</p>
-<p><strong>select ename,sal as salary from emp order by salary;</strong></p>
-<blockquote>
-<p>+——–+———+<br>| ename  | salary  |<br>+——–+———+<br>| SMITH  |  800.00 |<br>| JAMES  |  950.00 |<br>| ADAMS  | 1100.00 |<br>| WARD   | 1250.00 |<br>| MARTIN | 1250.00 |<br>| MILLER | 1300.00 |<br>| TURNER | 1500.00 |<br>| ALLEN  | 1600.00 |<br>| CLARK  | 2450.00 |<br>| BLAKE  | 2850.00 |<br>| JONES  | 2975.00 |<br>| SCOTT  | 3000.00 |<br>| FORD   | 3000.00 |<br>| KING   | 5000.00 |<br>+——–+———+</p>
-</blockquote>
-<h1 id="分组函数"><a href="#分组函数" class="headerlink" title="分组函数"></a><strong>分组函数</strong></h1><p>count 计数<br>sum 求和<br>avg 平均值<br>max 最大值<br>min 最小值</p>
-<p>记住：所有分组的函数都是对“某一组”数据进行操作的。</p>
-<p>题目：找出员工工资总和</p>
-<p>select sum(sal) sal from emp;<br>select max(sal) sal from emp;<br>select min(sal) sal from emp;<br>select avg(sal) sal from emp;<br>select count(ename) ename from emp;</p>
-<blockquote>
-<p>+———+<br>| sal     |<br>+———+<br>| 5000.00 |<br>+———+<br>1 row in set (0.01 sec)</p>
-<p>+——–+<br>| sal    |<br>+——–+<br>| 800.00 |<br>+——–+<br>1 row in set (0.00 sec)</p>
-<p>+————-+<br>| sal         |<br>+————-+<br>| 2073.214286 |<br>+————-+<br>1 row in set (0.00 sec)</p>
-<p>+——-+<br>| ename |<br>+——-+<br>|    14 |<br>+——-+</p>
-</blockquote>
-<p>分组函数一共五个，还有另一个名字：多行处理函数。<br>多行处理函数的特点：输入多行，最终输出的结果是一行。</p>
-<p>分组函数自动忽略NULL。<br>select count(comm) from emp;</p>
-<blockquote>
-<p>+————-+<br>| count(comm) |<br>+————-+<br>|           4 |<br>+————-+</p>
-</blockquote>
-<h1 id="单行处理函数"><a href="#单行处理函数" class="headerlink" title="单行处理函数"></a>单行处理函数</h1><p><strong>输入一行，输出一行</strong></p>
-<p>计算每个员工的年薪？<br>select ename, (sal+comm) * 12 as yearsal from emp;<br>重点：所有数据库明文规定只要有NULL参与运算的运算结果一定是NULL</p>
-<p><strong>ifnull()</strong>空处理函数？<br>    ifnull(可能为NULL的数据，被当做什么处理)</p>
-<p>select ename, (sal+(ifnull(comm,0))) * 12 as yearsal from emp;</p>
-<blockquote>
-<p>+——–+———-+<br>| ename  | yearsal  |<br>+——–+———-+<br>| SMITH  |  9600.00 |<br>| ALLEN  | 22800.00 |<br>| WARD   | 21000.00 |<br>| JONES  | 35700.00 |<br>| MARTIN | 31800.00 |<br>| BLAKE  | 34200.00 |<br>| CLARK  | 29400.00 |<br>| SCOTT  | 36000.00 |<br>| KING   | 60000.00 |<br>| TURNER | 18000.00 |<br>| ADAMS  | 13200.00 |<br>| JAMES  | 11400.00 |<br>| FORD   | 36000.00 |<br>| MILLER | 15600.00 |<br>+——–+———-+</p>
-</blockquote>
-<p>题目：找出工资高于平均工资的员工。</p>
-<p>select ename, sal from emp where sal &gt; avg(sal);</p>
-<p>报错：ERROR 1111 (HY000): Invalid use of group function</p>
-<p>select avg(sal) from emp;</p>
-<p>+————-+<br>| avg(sal)    |<br>+————-+<br>| 2073.214286 |<br>+————-+</p>
-<p>SQL语法当中有一个语法规则，分组函数不可直接使用在where子句当中。</p>
-<p> count(*)和count(具体的某个字段)，他们有什么区别？</p>
-<p>​    count(*)：不是统计某个字段中数据的个数，而是统计总记录条数</p>
-<p>​    count(comm)：表示统计comm字段中不为NULL的数据总数量。</p>
-<p>select count(*) from emp;</p>
-<p>select count(comm) from emp;</p>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>知识拓展</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>简单句的补充</title>
-    <url>/2020/09/02/%E7%AE%80%E5%8D%95%E5%8F%A5%E7%9A%84%E8%A1%A5%E5%85%85/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="介词短语-介词-prep"><a href="#介词短语-介词-prep" class="headerlink" title="介词短语 -  介词  prep."></a><strong>介词短语 -  介词  prep.</strong></h1><blockquote>
-<p><strong>时间</strong></p>
-<p><strong>before      after</strong> </p>
-<p><strong>since     until</strong></p>
-<p><strong>during</strong></p>
-<p><strong>位置</strong></p>
-<p><strong>between（二者之间） among（三者及以上）</strong></p>
-<p><strong>地点方位</strong></p>
-<p><strong>across(横穿)     through(隧道)</strong></p>
-<p><strong>against</strong></p>
-<p><strong>like as</strong></p>
-</blockquote>
-<h1 id="非谓语动词"><a href="#非谓语动词" class="headerlink" title="非谓语动词"></a><u>非谓语动词</u></h1><ol>
-<li><p><strong>doing（主动）</strong><br>Passing planes can be heard night and day.</p>
-<p>The teacher came into the  classroom, holding a book in his hand.</p>
-</li>
-<li><p><strong>done（被动）</strong><br>He bought a used car.</p>
-<p>The teacher came into the classroom, followed by five students.</p>
-</li>
-<li><p><strong>to do（目的）</strong><br>I am coming to see you.</p>
-<p>I have a lot of homework to do.</p>
-</li>
-</ol>
-<h1 id="同位语-插入语"><a href="#同位语-插入语" class="headerlink" title="同位语/插入语"></a>同位语/插入语</h1><p>My teacher, Mr.Lee, is coming to the meeting.</p>
-<p>My teacher  together with his  colleagues is coming to the meeting.</p>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>状语从句</title>
-    <url>/2020/09/02/%E7%8A%B6%E8%AF%AD%E4%BB%8E%E5%8F%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="状语从句"><a href="#状语从句" class="headerlink" title="状语从句"></a>状语从句</h1><h2 id="状语从句含义"><a href="#状语从句含义" class="headerlink" title="状语从句含义"></a><strong>状语从句含义</strong></h2><p><strong>含义</strong>一个句子作状语，表达描述性的信息。</p>
-<h2 id="状语从句写法"><a href="#状语从句写法" class="headerlink" title="状语从句写法"></a>状语从句写法</h2><p>一个完整的陈述句，前面加上<strong>从属连词</strong>（不作句子成分，他会表达逻辑关系，说清楚整个句子描述什么的）。</p>
-<p>状语从句共分为9种，主要由<strong>从属连词</strong>来决定。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>从属连词</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>时间状语从句</td>
-<td>when，while，as，（当……时候）<br />before，after，since，until<br />as soon as，no sooner……than（一……就）</td>
-</tr>
-<tr>
-<td>地点状语从句</td>
-<td>where</td>
-</tr>
-<tr>
-<td>原因状语从句</td>
-<td>because，since，as</td>
-</tr>
-<tr>
-<td>结果状语从句</td>
-<td>so/such…… that（太……所以）, so that…… （所以）</td>
-</tr>
-<tr>
-<td>目的状语从句</td>
-<td>so that……， in order that……</td>
-</tr>
-<tr>
-<td>条件状语从句</td>
-<td>if，unless，as long as</td>
-</tr>
-<tr>
-<td>让步状语从句</td>
-<td>although，though，even though，as</td>
-</tr>
-<tr>
-<td>比较状语从句</td>
-<td>than，as</td>
-</tr>
-<tr>
-<td>方式状语从句</td>
-<td>as</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>定语从句</title>
-    <url>/2020/09/02/%E5%AE%9A%E8%AF%AD%E4%BB%8E%E5%8F%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="复合句"><a href="#复合句" class="headerlink" title="复合句"></a>复合句</h1><p><strong>定语从句</strong></p>
-<p>写法</p>
-<p>先行词 =  ？ 关系词 =  ？<br>物   ——　which/that</p>
-<p>人   ——    who/whom/that</p>
-<p>人的/物的    ——　whose</p>
-<p>时间     ——      when</p>
-<p>地点    ——      where</p>
-<p>原因    ——    why</p>
-<p><strong>注意：</strong></p>
-<ul>
-<li>定语从句每一个关系词都作成分</li>
-<li>which和that没有区别，可以互换</li>
-<li>whom指人作宾语</li>
-<li>who/that指人作任何成分</li>
-<li>定语从句中关系词作宾语可以省略</li>
-</ul>
-<p>I lost the book which/that I borrowed from the library. </p>
-<p>The woman I saw in the park was feeding pigeons.</p>
-<p>The bus I take to school everyday is usually very crowded.</p>
-<p><strong><em>定语从句分类</em></strong></p>
-<p>名词范围不明确需要限定性：<br>I met your friend who is staying in Paris.</p>
-<p>名词的范围明确，非限定性：<br>I met your mother,  who is staying in Paris.</p>
-<blockquote>
-<p>限定性从句<br>1、限定性的定语从句，名词范围不明确<br>2、无逗号隔开<br>3、不能省略</p>
-<p>非限定性从句<br>1、名词的范围明确<br>2、有逗号隔开<br>3、可以省略不影响表达意思。<br>4、只能用which不用that<br>5、做宾语只能用whom</p>
-</blockquote>
-<p>如果关系词位于介词后，介词可以提前，提前就只能使用which.</p>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>名词性从句</title>
-    <url>/2020/09/02/%E5%90%8D%E8%AF%8D%E6%80%A7%E4%BB%8E%E5%8F%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="复合句"><a href="#复合句" class="headerlink" title="复合句"></a>复合句</h1><p><strong>名词性从句</strong></p>
-<ul>
-<li><p><strong>主语从句</strong></p>
-<p> Whether we will go camping depends on the weather.</p>
-<p>It depends on the weather whether we will go camping.</p>
-</li>
-<li><p><strong>宾语从句</strong> （<strong>连接词 + 陈述句</strong>）<br><em>陈述句变宾语从句 You are right.</em><br>I know (that) you are right. (在宾语从句中That不做成分可以省略)</p>
-<p><em>特殊疑问句变宾语从句 What will she say?</em><br>I know what she will say.(疑问变陈述句，主谓顺序)</p>
-<p><em>一般疑问句变宾语从句 Is he happy?</em><br>I know whether/if he is happy.</p>
-</li>
-<li><p><strong>表语从句</strong><br>My concern is that people don’t care about others.</p>
-<p>The question remains whether people will buy it.</p>
-</li>
-<li><p><strong>同位语从句</strong>（<strong>解释说明n.</strong>）</p>
-<p>I have no doubt that he will help me.</p>
-<p>I support the argument that the problem of school buses must be taken seriously.</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA编程起步</title>
-    <url>/2020/08/31/JAVA%E7%BC%96%E7%A8%8B%E8%B5%B7%E6%AD%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="具体内容"><a href="#具体内容" class="headerlink" title="具体内容"></a><strong>具体内容</strong></h1><p>​    Java是现在世界上最流行的编程语言，在服务器端的开发上保持着绝对的优势。例如： 你现在需要进行网购，如果要进行网购肯定要有网络服务器的支持，对于服务器代码的开发，首选的就是Java，实际上如果要考虑到编程语言特点的话，Java、C、C++实际上都是有着非常相似的语法结构，经过了多年的论述之后，这种语法结构是比较清晰的。</p>
-<h1 id="认识Java"><a href="#认识Java" class="headerlink" title="认识Java"></a>认识Java</h1><p>​    Java是现在流行的语言，其前身就是OAK（橡树），实际上最初的OAK编程语言是为了一个GREEN的项目提供服务的，该项目主要是以Email实现对于家电产品的控制（所谓的“万物互联”，这也是早期物联网雏形），但是遗憾的是OAK并没有成功的获得Green项目，如果按照传统的思维模式，这种没有获得投资的项目基本上都属于废弃的产物了，可是在90年代初是属于互联网的时代，尤其是著名的网景公司，对于浏览器的开发非常的到位，于是就缔造了一个上市的神话。OAK吸收了网景公司的产品的想法，产生了一个Hot Java浏览器，一直到了1995年的时候才正式将OAK更名为JAVA，于是就一直延续到了今天，并且随着计算机硬件和网络发展，Java也在不带你的完善。</p>
-<blockquote>
-<p>友情提示：对于Java有如下几个核心的问题：</p>
-<ul>
-<li>​    如果要想判断一门语言的未来是否有持久性，最重要的指标就是在于其是否继续保持着更新，保持着最新的设计理念；</li>
-<li>​    OAK实际上是使用C++开发出来的，但是相比较C++来讲结构上更加的清晰，所以：Java也是C++编写的；</li>
-</ul>
-<p>​    之所以叫OAK主要的原因在于语言的设计师的窗户外面有一颗数（橡树），后来原本是想把Java继续使用OAK，但是由于版权的问题，所以无法继续使用，最终这些开发工程师发现他们天天喝的咖啡味道不错（产自爪哇，于是使用了Java）</p>
-<p>​    Java现在的版权属于Oracle公司，Oracle公司收购了早期的SUN公司。SUN（斯坦福的大学网络，Stanford University Network）公司，这家公司是一家从事与硬件技术的公司（它不是以软件为主，实际上在其被收购之前完全没有通过软件获得任何的利润），这家公司最著名的产品是小型机，并且大量的应用在亚马逊商城上，不过回来由于整个世界上的互联网低潮，SUN公司收到了极大的冲击，所以导致其并没有后续的强劲的生命力了，终于在2007年的时候被Oracle收购（Oracle收购SUN之前最想收购SUN公司是IBM）</p>
-</blockquote>
-<p>​    <strong>比较崩溃的问题</strong>，一个学生去面试（2007年的时候），面试官问他，请问你如何看待Oracle收购SUN的这一举动？<br>​    <strong>收购背后的故事</strong>，现在世界上有三大著名的软件产商：Microsoft、Oracle、Adobe，在商业领域上基本上就是微软（Microsoft）和甲骨文公司（Oracle），这两家公司是直接的竞争关系，但是在整个商业体系之中有四个重要的组成部分：操作系统、数据库、中间件、编程语言；</p>
-<ul>
-<li>Microsoft: Window Server、SQLServer、IIS、.NET;</li>
-<li>Oracle：UNIX、Oracle Database、Bacteriologic(收购)、Java（收购）。</li>
-</ul>
-<p>吐槽：Oracle后来变成了“疯狗”，到处撕咬使用Java开发公司的版权费用，于是Google中招了。</p>
-<p>​    任何的编程语言都有自己擅长和不擅长的领域，Java是一门非常庞大的语言，而且其设计的特点：大而全，相当于所有软件功能的实现都可以使用Java来完成，但是随着后来技术的发展，更多的编程技术出现了，于是很多的使用者就开始使用一些更加简单的语言来实现一些特定的功能，你现在可以见到的大量的会联网产品实际上都是Java开发的。</p>
-<h3 id="Java语言特点"><a href="#Java语言特点" class="headerlink" title="Java语言特点"></a>Java语言特点</h3><p>​    既然Java语言如此的流行，肯定有自己不少独有的特嗲，于是一起分享一下，但是从客观的角度上来讲，Java在这么多年的历史发展中还是出想过许多疲软的时候后，由于技术的阻塞所以导致了许多的不足，但是后来由于版本不断的完善，以及变成语法的不断支持，java也成功的度过了这些疲软期，关键性的问题，Java是一个世界上最流行的编程语言，所以有着大量第三方软件厂商对其进行不断的完善。</p>
-<p>​    早前的Java开发实际上分为三个方向：</p>
-<ul>
-<li><p>JavaSE（在2005年之前被称为”J2SE“）：主要是进行单机版程序的开发，例如：开发一些图形界面等；</p>
-</li>
-<li><p>JavaME（在2005年之前被称为“J2ME”）：主要是进行嵌入式设备的开发，最早期的在“诺基亚（Nokia）”被大量的应用在手机游戏的开发上，而后到了Android时代基本上就被替代掉了；</p>
-</li>
-<li><p>JavaEE（在2005年之前被称为“J2EE”）：主要进行企业平台的搭建，实际上现在许多的互联网就使用的是JavaEE在国内和国外，Java都是最为稳定的服务器端编程首先语言，那么既然是首先语言，就一起来分析它的一些特点：</p>
-<ol>
-<li><p>Java语言处采用标准的编程语法结构，所以语法结构清晰，而且语法也足够简单；<br><strong>补充</strong>：标准的编程语法结构虽然看起来结构清晰，但是会造成代码过多的问题，简单的特点是相比较C++来讲；</p>
-</li>
-<li><p>Java语言虽然使用了C++开发，但是其并没有引入C或C++那样的指针概念，而使用了更加直观的引用来解决内存处理问题，相当于不能够直接进行内存的操作。</p>
-</li>
-<li><p>Java是一门面向对象的编程语言，面向对象的编程模式是现代设计的主流，但是并不是所有的开发者都认为面向对象就是最佳的程序设计，很多的开发者依然觉得编写面向过程或者是使用函数式编程会更加的简单，但是毕竟是少数；</p>
-</li>
-</ol>
-</li>
-</ul>
-<h1 id="编程起步"><a href="#编程起步" class="headerlink" title="编程起步"></a>编程起步</h1><p><strong>第一个代码</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public class Hello&#123;</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-<p><strong>编译程序</strong>：javac Hello.java ——  <strong>解释程序</strong>：java Hello</p>
-<p><strong>类结构</strong>：java是以类的形式运行的，所以任何的程序都必须放在一个类之中才可以执行，在java中进行类定义的时候有一个明确的要求，所有类的名称首字母必须大写，例如“<strong>D</strong>emo”、“<strong>Y</strong>ootk<strong>D</strong>emo”、“<strong>H</strong>ello<strong>D</strong>emo”，在java程序里面针对于类有两种定义模式：</p>
-<p>​    <strong>形式一</strong>：public class类名称，此时要求文件名称和类名称保持一致，如果不一致则会出现编译错误，由于文件名称只有一个，所以在任何一个Java源代码程序文件里面只允许有一个public class 定义。、</p>
-<p>当前程序的文件名称是“Hello.java”</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public class Demo&#123;</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">Hello.java:1: 错误: 类 Demo 是公共的, 应在名为 Demo.java 的文件中声明</span><br><span class="line">public class Demo&#123;</span><br></pre></td></tr></table></figure></div>
-
-<p>​    </p>
-<p><strong>形式二</strong>：class类名称，由于使用class不要求类名称与文件名称保持一致，所以这个时候就可以再一个“*.java”源代码文件里面定义有若干个class。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">class Demo&#123;</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-<p>可以正常的编译通过</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">2020&#x2F;09&#x2F;19  08:38    &lt;DIR&gt;          .</span><br><span class="line">2020&#x2F;09&#x2F;19  08:38    &lt;DIR&gt;          ..</span><br><span class="line">2020&#x2F;09&#x2F;19  08:38               415 Demo.class</span><br><span class="line">2020&#x2F;09&#x2F;19  08:38                99 Hello.java</span><br><span class="line">2020&#x2F;09&#x2F;19  08:34               106 Hello.java.bak</span><br><span class="line">               3 个文件            620 字节</span><br><span class="line">               2 个目录 130,474,803,200 可用字节</span><br></pre></td></tr></table></figure></div>
-
-<p>此时生成的是Demo.class，也就是说这个时候是根据class类名称来定义的生成的“*.class”文件名称</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">D:\yootk&gt;java Demo</span><br><span class="line">Hello world!</span><br></pre></td></tr></table></figure></div>
-
-<p>此时得使用Java Demo 才可以正常执行Hello程序。</p>
-<p><strong>主方法</strong>：主方法是一个程序的起点，所有的程序都是通过主方法去执行的，在Java里面住主方法定义比较长：</p>
-<p><strong>官方推荐：</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public static void main(String args[])、public static void main(String [] args)</span><br></pre></td></tr></table></figure></div>
-
-<p><strong>个性化定义：</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public static void main(String yootk[])</span><br></pre></td></tr></table></figure></div>
-
-<p>考虑 后期学习对于知识层次的讲解，所以对于主方法的定义有一个明确的说明：把主方法所在的类将其称为“主类（MainClass）”，而主类全部使用“public class”来进行声明，后面的代码里面主类名称就是文件名称。</p>
-<p>屏幕输出：</p>
-<p>【输出后追加换行】System.out.println()、</p>
-<p>【输出后不追加换行】System.out.print()</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>知识拓展</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>特殊用途的句子</title>
-    <url>/2020/08/18/%E5%BC%BA%E8%B0%83%E5%8F%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="强调句"><a href="#强调句" class="headerlink" title="强调句"></a>强调句</h1><p>句型It is …… that ……</p>
-<p>I want to go to America this summer.</p>
-<p>It is America that I want to go to this summer. </p>
-<h1 id="倒装句"><a href="#倒装句" class="headerlink" title="倒装句"></a>倒装句</h1><p><strong>全部倒装</strong>：<strong>There be 句型 + n + 介词短语</strong></p>
-<p>有……在哪里</p>
-<p>现在 There is a book on the table.</p>
-<p><strong>部分倒装</strong></p>
-<p>相当于把陈述句变成一般疑问句</p>
-<p><strong>否定词 位于句首</strong></p>
-<blockquote>
-<p>not、no、never、hardly、little、scarcely、seldom、not until、not only……</p>
-</blockquote>
-<p>I will never do it.</p>
-<p>never will I do it.</p>
-<p><strong>only 位于句首</strong></p>
-<h1 id="虚拟语气（非真实）"><a href="#虚拟语气（非真实）" class="headerlink" title="虚拟语气（非真实）"></a>虚拟语气（非真实）</h1><p>1、不是真的。</p>
-<p>2、改变时态</p>
-<p>3、虚拟条件句、名词性从句中</p>
-<h3 id="if虚拟条件句"><a href="#if虚拟条件句" class="headerlink" title="if虚拟条件句"></a>if虚拟条件句</h3><table>
-<thead>
-<tr>
-<th></th>
-<th>if从句</th>
-<th>主句</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>假设过去</td>
-<td>had done</td>
-<td>would +have done</td>
-</tr>
-<tr>
-<td>假设现在</td>
-<td>did(were)</td>
-<td>could、should+do</td>
-</tr>
-<tr>
-<td>假设未来</td>
-<td>did(were)<br />were to do <br />should do</td>
-<td>might + do</td>
-</tr>
-</tbody></table>
-<p>If I were to have/had/should have time tomorrow, I would help him.</p>
-<p><img src="https://s1.ax1x.com/2020/08/19/dlySJ0.png" alt="image"></p>
-<p>如果你过去嫁给他，你现在就会是一个加油站服务员的妻子</p>
-<p>If you had married him, you would be the wife of a gas station attendant.</p>
-<h3 id="省略if的虚拟条件句"><a href="#省略if的虚拟条件句" class="headerlink" title="省略if的虚拟条件句"></a>省略if的虚拟条件句</h3><p>if you had joined us, we would have had more fun.</p>
-<p>had you joined us, we would have had more fun. (部分倒装)</p>
-<h3 id="名词性从句的虚拟语气"><a href="#名词性从句的虚拟语气" class="headerlink" title="名词性从句的虚拟语气"></a>名词性从句的虚拟语气</h3><p>表示“建议，要求，命令”v.后的宾语从句虚拟</p>
-<p>从句中用（should）+ do</p>
-<p>He suggested that the system should be changed.</p>
-<blockquote>
-<p>suggest,advise,propose,recommend,</p>
-<p>order,ask,demand,insist,</p>
-<p>require,request……</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>长难句分析</title>
-    <url>/2020/08/15/%E9%95%BF%E9%9A%BE%E5%8F%A5%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="长难句分析"><a href="#长难句分析" class="headerlink" title="长难句分析"></a>长难句分析</h1><p>基本结构的长难句：</p>
-<p><strong>断开</strong><br>（1）标点<br>（2）连接词：从句开始于连接词，结束于<br>    1，标点，2，下一个连接词前，3，第二个谓语动词前<br>（3）分析主谓</p>
-<p><strong>简化</strong>：去修饰，留核心</p>
-<p>修饰成分有：</p>
-<p><strong>形容词、副词</strong><br><strong>介词短语</strong><br><strong>非谓语动词（doing/done/to do）</strong><br>冠词、数词<br>非限定性定语从句</p>
-]]></content>
-      <categories>
-        <category>知识积累</category>
-      </categories>
-      <tags>
-        <tag>英语四级</tag>
+        <tag>分类</tag>
       </tags>
   </entry>
   <entry>
@@ -846,6 +572,280 @@
       </categories>
       <tags>
         <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>定语从句</title>
+    <url>/2020/09/02/%E5%AE%9A%E8%AF%AD%E4%BB%8E%E5%8F%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="复合句"><a href="#复合句" class="headerlink" title="复合句"></a>复合句</h1><p><strong>定语从句</strong></p>
+<p>写法</p>
+<p>先行词 =  ？ 关系词 =  ？<br>物   ——　which/that</p>
+<p>人   ——    who/whom/that</p>
+<p>人的/物的    ——　whose</p>
+<p>时间     ——      when</p>
+<p>地点    ——      where</p>
+<p>原因    ——    why</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>定语从句每一个关系词都作成分</li>
+<li>which和that没有区别，可以互换</li>
+<li>whom指人作宾语</li>
+<li>who/that指人作任何成分</li>
+<li>定语从句中关系词作宾语可以省略</li>
+</ul>
+<p>I lost the book which/that I borrowed from the library. </p>
+<p>The woman I saw in the park was feeding pigeons.</p>
+<p>The bus I take to school everyday is usually very crowded.</p>
+<p><strong><em>定语从句分类</em></strong></p>
+<p>名词范围不明确需要限定性：<br>I met your friend who is staying in Paris.</p>
+<p>名词的范围明确，非限定性：<br>I met your mother,  who is staying in Paris.</p>
+<blockquote>
+<p>限定性从句<br>1、限定性的定语从句，名词范围不明确<br>2、无逗号隔开<br>3、不能省略</p>
+<p>非限定性从句<br>1、名词的范围明确<br>2、有逗号隔开<br>3、可以省略不影响表达意思。<br>4、只能用which不用that<br>5、做宾语只能用whom</p>
+</blockquote>
+<p>如果关系词位于介词后，介词可以提前，提前就只能使用which.</p>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>特殊用途的句子</title>
+    <url>/2020/08/18/%E5%BC%BA%E8%B0%83%E5%8F%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="强调句"><a href="#强调句" class="headerlink" title="强调句"></a>强调句</h1><p>句型It is …… that ……</p>
+<p>I want to go to America this summer.</p>
+<p>It is America that I want to go to this summer. </p>
+<h1 id="倒装句"><a href="#倒装句" class="headerlink" title="倒装句"></a>倒装句</h1><p><strong>全部倒装</strong>：<strong>There be 句型 + n + 介词短语</strong></p>
+<p>有……在哪里</p>
+<p>现在 There is a book on the table.</p>
+<p><strong>部分倒装</strong></p>
+<p>相当于把陈述句变成一般疑问句</p>
+<p><strong>否定词 位于句首</strong></p>
+<blockquote>
+<p>not、no、never、hardly、little、scarcely、seldom、not until、not only……</p>
+</blockquote>
+<p>I will never do it.</p>
+<p>never will I do it.</p>
+<p><strong>only 位于句首</strong></p>
+<h1 id="虚拟语气（非真实）"><a href="#虚拟语气（非真实）" class="headerlink" title="虚拟语气（非真实）"></a>虚拟语气（非真实）</h1><p>1、不是真的。</p>
+<p>2、改变时态</p>
+<p>3、虚拟条件句、名词性从句中</p>
+<h3 id="if虚拟条件句"><a href="#if虚拟条件句" class="headerlink" title="if虚拟条件句"></a>if虚拟条件句</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>if从句</th>
+<th>主句</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>假设过去</td>
+<td>had done</td>
+<td>would +have done</td>
+</tr>
+<tr>
+<td>假设现在</td>
+<td>did(were)</td>
+<td>could、should+do</td>
+</tr>
+<tr>
+<td>假设未来</td>
+<td>did(were)<br />were to do <br />should do</td>
+<td>might + do</td>
+</tr>
+</tbody></table>
+<p>If I were to have/had/should have time tomorrow, I would help him.</p>
+<p><img src="https://s1.ax1x.com/2020/08/19/dlySJ0.png" alt="image"></p>
+<p>如果你过去嫁给他，你现在就会是一个加油站服务员的妻子</p>
+<p>If you had married him, you would be the wife of a gas station attendant.</p>
+<h3 id="省略if的虚拟条件句"><a href="#省略if的虚拟条件句" class="headerlink" title="省略if的虚拟条件句"></a>省略if的虚拟条件句</h3><p>if you had joined us, we would have had more fun.</p>
+<p>had you joined us, we would have had more fun. (部分倒装)</p>
+<h3 id="名词性从句的虚拟语气"><a href="#名词性从句的虚拟语气" class="headerlink" title="名词性从句的虚拟语气"></a>名词性从句的虚拟语气</h3><p>表示“建议，要求，命令”v.后的宾语从句虚拟</p>
+<p>从句中用（should）+ do</p>
+<p>He suggested that the system should be changed.</p>
+<blockquote>
+<p>suggest,advise,propose,recommend,</p>
+<p>order,ask,demand,insist,</p>
+<p>require,request……</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>名词性从句</title>
+    <url>/2020/09/02/%E5%90%8D%E8%AF%8D%E6%80%A7%E4%BB%8E%E5%8F%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="复合句"><a href="#复合句" class="headerlink" title="复合句"></a>复合句</h1><p><strong>名词性从句</strong></p>
+<ul>
+<li><p><strong>主语从句</strong></p>
+<p> Whether we will go camping depends on the weather.</p>
+<p>It depends on the weather whether we will go camping.</p>
+</li>
+<li><p><strong>宾语从句</strong> （<strong>连接词 + 陈述句</strong>）<br><em>陈述句变宾语从句 You are right.</em><br>I know (that) you are right. (在宾语从句中That不做成分可以省略)</p>
+<p><em>特殊疑问句变宾语从句 What will she say?</em><br>I know what she will say.(疑问变陈述句，主谓顺序)</p>
+<p><em>一般疑问句变宾语从句 Is he happy?</em><br>I know whether/if he is happy.</p>
+</li>
+<li><p><strong>表语从句</strong><br>My concern is that people don’t care about others.</p>
+<p>The question remains whether people will buy it.</p>
+</li>
+<li><p><strong>同位语从句</strong>（<strong>解释说明n.</strong>）</p>
+<p>I have no doubt that he will help me.</p>
+<p>I support the argument that the problem of school buses must be taken seriously.</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>状语从句</title>
+    <url>/2020/09/02/%E7%8A%B6%E8%AF%AD%E4%BB%8E%E5%8F%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="状语从句"><a href="#状语从句" class="headerlink" title="状语从句"></a>状语从句</h1><h2 id="状语从句含义"><a href="#状语从句含义" class="headerlink" title="状语从句含义"></a><strong>状语从句含义</strong></h2><p><strong>含义</strong>一个句子作状语，表达描述性的信息。</p>
+<h2 id="状语从句写法"><a href="#状语从句写法" class="headerlink" title="状语从句写法"></a>状语从句写法</h2><p>一个完整的陈述句，前面加上<strong>从属连词</strong>（不作句子成分，他会表达逻辑关系，说清楚整个句子描述什么的）。</p>
+<p>状语从句共分为9种，主要由<strong>从属连词</strong>来决定。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>从属连词</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>时间状语从句</td>
+<td>when，while，as，（当……时候）<br />before，after，since，until<br />as soon as，no sooner……than（一……就）</td>
+</tr>
+<tr>
+<td>地点状语从句</td>
+<td>where</td>
+</tr>
+<tr>
+<td>原因状语从句</td>
+<td>because，since，as</td>
+</tr>
+<tr>
+<td>结果状语从句</td>
+<td>so/such…… that（太……所以）, so that…… （所以）</td>
+</tr>
+<tr>
+<td>目的状语从句</td>
+<td>so that……， in order that……</td>
+</tr>
+<tr>
+<td>条件状语从句</td>
+<td>if，unless，as long as</td>
+</tr>
+<tr>
+<td>让步状语从句</td>
+<td>although，though，even though，as</td>
+</tr>
+<tr>
+<td>比较状语从句</td>
+<td>than，as</td>
+</tr>
+<tr>
+<td>方式状语从句</td>
+<td>as</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>长难句分析</title>
+    <url>/2020/08/15/%E9%95%BF%E9%9A%BE%E5%8F%A5%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="长难句分析"><a href="#长难句分析" class="headerlink" title="长难句分析"></a>长难句分析</h1><p>基本结构的长难句：</p>
+<p><strong>断开</strong><br>（1）标点<br>（2）连接词：从句开始于连接词，结束于<br>    1，标点，2，下一个连接词前，3，第二个谓语动词前<br>（3）分析主谓</p>
+<p><strong>简化</strong>：去修饰，留核心</p>
+<p>修饰成分有：</p>
+<p><strong>形容词、副词</strong><br><strong>介词短语</strong><br><strong>非谓语动词（doing/done/to do）</strong><br>冠词、数词<br>非限定性定语从句</p>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>程序注释</title>
+    <url>/2020/09/21/%E7%A8%8B%E5%BA%8F%E6%B3%A8%E9%87%8A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="程序注释"><a href="#程序注释" class="headerlink" title="程序注释"></a><strong>程序注释</strong></h1><p>​    任何一套程序代码里面实际上都会由大量的程序逻辑所组成，但是如果要想对一套代码进行长期的维护，就需要编写大量的注释，对一些程序的代码功能要进行详细的解释，这样不仅为自己铺平道路，实际上也为后来接手的工程师铺平道路。</p>
+<blockquote>
+<p>关于注释的笑话：有一位程序员到一家新的公司进行项目开发，突然有一天老板说，某一个功能执行的速度实在是太慢了，让这位程序员修改一下，后来这个程序员找到了相关源代码，里面写上了一个注释“后面的兄弟，悠着点，我在这里吗让代码延迟了3秒，别一下子改的太快了，给后面的兄弟留点发挥空间”，于是这位工程师根据前辈的注释进行了修改，将原始的延迟3秒，修改为了延迟2.5秒，速度变快了，老板给了奖金。</p>
+</blockquote>
+<p>​    在Java程序里面针对于代码的注释一共提供了三种注释形式：</p>
+<ul>
+<li><p>​        单行注释：“// 注释内容”;（考虑到开发工具的代码格式化问题）</p>
+</li>
+<li><p>​        多行注释：“/*… 注释内容 … */“;</p>
+</li>
+<li><p>​        文档注释：“/** … 文档注释的特定语法标记进行注释的编写 …… */”，这种注释往往可以结合开发工具使用</p>
+</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public class YootkDemo&#123; &#x2F;&#x2F; 【单行注释】定义程序的执行主类</span><br><span class="line">	public static void main(String args[])&#123;&#x2F;&#x2F; 【单行注释】程序的执行起点，主方法</span><br><span class="line">		&#x2F;*【多行注释】</span><br><span class="line">			以下的程序代码是在屏幕上进行一些提示信息的输出，如果有需要则可以再里面进行多行的定义	</span><br><span class="line">		*&#x2F;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;); </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>​    既然所有的注释文字不会自己进行代码的编译处理，所以在实际项目开发之中可以将一些暂时不需要的代码通过注释的形式让其失效，这种形式要比直接删除代码更高效。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">public class YootkDemo&#123; &#x2F;&#x2F; 【单行注释】定义程序的执行主类</span><br><span class="line">	public static void main(String args[])&#123;&#x2F;&#x2F; 【单行注释】程序的执行起点，主方法</span><br><span class="line">		&#x2F;*【多行注释】</span><br><span class="line">			以下的程序代码是在屏幕上进行一些提示信息的输出，如果有需要则可以再里面进行多行的定义	</span><br><span class="line">		*&#x2F;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;); </span><br><span class="line">		&#x2F;&#x2F; 【代码失效】 System.out.println(&quot;江湖上称我为&quot;); </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>在以后进行项目开发的时候，一些暂时不需要的代码就可以利用注释进行关闭。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>知识拓展</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>简单句的补充</title>
+    <url>/2020/09/02/%E7%AE%80%E5%8D%95%E5%8F%A5%E7%9A%84%E8%A1%A5%E5%85%85/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="介词短语-介词-prep"><a href="#介词短语-介词-prep" class="headerlink" title="介词短语 -  介词  prep."></a><strong>介词短语 -  介词  prep.</strong></h1><blockquote>
+<p><strong>时间</strong></p>
+<p><strong>before      after</strong> </p>
+<p><strong>since     until</strong></p>
+<p><strong>during</strong></p>
+<p><strong>位置</strong></p>
+<p><strong>between（二者之间） among（三者及以上）</strong></p>
+<p><strong>地点方位</strong></p>
+<p><strong>across(横穿)     through(隧道)</strong></p>
+<p><strong>against</strong></p>
+<p><strong>like as</strong></p>
+</blockquote>
+<h1 id="非谓语动词"><a href="#非谓语动词" class="headerlink" title="非谓语动词"></a><u>非谓语动词</u></h1><ol>
+<li><p><strong>doing（主动）</strong><br>Passing planes can be heard night and day.</p>
+<p>The teacher came into the  classroom, holding a book in his hand.</p>
+</li>
+<li><p><strong>done（被动）</strong><br>He bought a used car.</p>
+<p>The teacher came into the classroom, followed by five students.</p>
+</li>
+<li><p><strong>to do（目的）</strong><br>I am coming to see you.</p>
+<p>I have a lot of homework to do.</p>
+</li>
+</ol>
+<h1 id="同位语-插入语"><a href="#同位语-插入语" class="headerlink" title="同位语/插入语"></a>同位语/插入语</h1><p>My teacher, Mr.Lee, is coming to the meeting.</p>
+<p>My teacher  together with his  colleagues is coming to the meeting.</p>
+]]></content>
+      <categories>
+        <category>知识积累</category>
+      </categories>
+      <tags>
+        <tag>英语四级</tag>
       </tags>
   </entry>
 </search>
