@@ -102,14 +102,14 @@
 
 
 
-<meta name="description" content="JAVA代码集合(1) 12345public class Hello&amp;#123;	public static void main(String args[])&amp;#123;		System.out.println(&quot;Hello world!&quot;);	&amp;#125;&amp;#125;">
+<meta name="description" content="group by 和 havinggroup by ：按照某个字段或者某些字段进行分组。having ：是对分组之后的数据进行再次过滤。 案例：找出每个工作岗位的最高薪资。select max(sal),job from emp group by job; 注意：分组函数一般都会和group by 联合使用，这也是为什么它被称作分组函数的原因，并且任何一个分组函数（count sum avg ma">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA代码集合">
-<meta property="og:url" content="https://gylq.gitee.io/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/index.html">
+<meta property="og:title" content="分组查询 Group By">
+<meta property="og:url" content="https://gylq.gitee.io/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%20Group%20By/index.html">
 <meta property="og:site_name" content="孤桜懶契">
-<meta property="og:description" content="JAVA代码集合(1) 12345public class Hello&amp;#123;	public static void main(String args[])&amp;#123;		System.out.println(&quot;Hello world!&quot;);	&amp;#125;&amp;#125;">
-<meta property="article:published_time" content="2020-09-19T00:33:12.053Z">
-<meta property="article:modified_time" content="2020-09-21T00:59:14.588Z">
+<meta property="og:description" content="group by 和 havinggroup by ：按照某个字段或者某些字段进行分组。having ：是对分组之后的数据进行再次过滤。 案例：找出每个工作岗位的最高薪资。select max(sal),job from emp group by job; 注意：分组函数一般都会和group by 联合使用，这也是为什么它被称作分组函数的原因，并且任何一个分组函数（count sum avg ma">
+<meta property="article:published_time" content="2020-10-04T01:37:04.288Z">
+<meta property="article:modified_time" content="2020-10-05T02:47:46.647Z">
 <meta property="article:author" content="孤桜懶契">
 <meta property="article:tag" content="知识拓展">
 <meta name="twitter:card" content="summary">
@@ -142,7 +142,7 @@
 
 
 
-  <link rel="canonical" href="https://gylq.gitee.io/2020/09/19/JAVA代码集合/"/>
+  <link rel="canonical" href="https://gylq.gitee.io/2020/10/04/分组查询 Group By/"/>
 
 
 
@@ -160,7 +160,7 @@
     })();
 </script>
 
-  <title>JAVA代码集合 | 孤桜懶契</title>
+  <title>分组查询 Group By | 孤桜懶契</title>
   
 
 
@@ -393,7 +393,7 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://gylq.gitee.io/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/">
+    <link itemprop="mainEntityOfPage" href="https://gylq.gitee.io/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%20Group%20By/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="孤桜懶契">
@@ -410,7 +410,7 @@ var _hmt = _hmt || [];
 
         
         
-          <h2 class="post-title" itemprop="name headline">JAVA代码集合</h2>
+          <h2 class="post-title" itemprop="name headline">分组查询 Group By</h2>
         
 
         <div class="post-meta">
@@ -425,8 +425,8 @@ var _hmt = _hmt || [];
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-19T08:33:12+08:00">
-                2020-09-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-10-04T09:37:04+08:00">
+                2020-10-04
               </time>
             
 
@@ -446,8 +446,8 @@ var _hmt = _hmt || [];
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
                   </a>
                 </span>
 
@@ -464,8 +464,8 @@ var _hmt = _hmt || [];
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/" itemprop="commentCount"></span>
+                <a href="/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%20Group%20By/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%20Group%20By/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -473,7 +473,7 @@ var _hmt = _hmt || [];
 
           
           
-             <span id="/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/" class="leancloud_visitors" data-flag-title="JAVA代码集合">
+             <span id="/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%20Group%20By/" class="leancloud_visitors" data-flag-title="分组查询 Group By">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -498,7 +498,7 @@ var _hmt = _hmt || [];
                 </span>
                 
                 <span title="字数">
-                  26
+                  690
                 </span>
               
 
@@ -525,9 +525,30 @@ var _hmt = _hmt || [];
       
 
       
-        <h1 id="JAVA代码集合"><a href="#JAVA代码集合" class="headerlink" title="JAVA代码集合"></a>JAVA代码集合</h1><p>(1)</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Hello&#123;</span><br><span class="line">	public static void main(String args[])&#123;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
+        <h1 id="group-by-和-having"><a href="#group-by-和-having" class="headerlink" title="group by 和 having"></a>group by 和 having</h1><p><strong>group by</strong> ：按照某个字段或者某些字段进行分组。<br><strong>having</strong> ：是对分组之后的数据进行再次过滤。</p>
+<p>案例：找出每个工作岗位的最高薪资。<br>select max(sal),job from emp group by job;</p>
+<p><strong>注意</strong>：分组函数一般都会和group by 联合使用，这也是为什么它被称作分组函数的原因，并且任何一个分组函数（count sum avg max min）都是在group by 语句执行结束之后才会执行。当一条sql语句没有group by 的话。整张表的数据会自成一组。（group by 是在where执行之后才会执行的。）</p>
+<p>找出工资高于平均工资的员工。<br> select ename,sal from emp where sal&gt;(select avg(sal) from emp);</p>
+<p> select ename,max(sal),job from emp group by job;<br>以上在mysql当中，查询结果是有的，但是结果没有意义。在oracle数据库中会报语法错误。oracle的语法规则比mysql语法规则严谨。<br>记住一个规则当一条语句中有group by的话，select后面只能跟分组函数和参与分组的字段。</p>
+<p><strong>每个工作岗位的平均薪资</strong></p>
+<p>select avg(sal),job from emp group by job;</p>
+<p>+————-+———–+<br>| avg(sal)    | job       |<br>+————-+———–+<br>| 3000.000000 | ANALYST   |<br>| 1037.500000 | CLERK     |<br>| 2758.333333 | MANAGER   |<br>| 5000.000000 | PRESIDENT |<br>| 1400.000000 | SALESMAN  |</p>
+<p>多个字段能不能联合起来一块分组？</p>
+<p><strong>找出每个部门不同工作岗位的最高薪资。</strong><br>select<br>    deptno,job,max(sal)<br>from<br>    emp<br>group by<br>    deptno,job;</p>
+<p>+——–+———–+———-+<br>| deptno | job       | max(sal) |<br>+——–+———–+———-+<br>|     10 | CLERK     |  1300.00 |<br>|     10 | MANAGER   |  2450.00 |<br>|     10 | PRESIDENT |  5000.00 |<br>|     20 | ANALYST   |  3000.00 |<br>|     20 | CLERK     |  1100.00 |<br>|     20 | MANAGER   |  2975.00 |<br>|     30 | CLERK     |   950.00 |<br>|     30 | MANAGER   |  2850.00 |<br>|     30 | SALESMAN  |  1600.00 |<br>+——–+———–+———-+<br>9 rows in set (0.00 sec)</p>
+<p><strong>找出每个部门的最高薪资，要求显示薪资大于2900的数据。</strong><br>第一步：每个部门的最高薪资<br>select deptno,max(sal) from emp group by deptno;</p>
+<p>+——–+———-+<br>| deptno | max(sal) |<br>+——–+———-+<br>|     10 |  5000.00 |<br>|     20 |  3000.00 |<br>|     30 |  2850.00 |</p>
+<p>第二步：薪资大于2900的数据<br>select * from emp where sal&gt;2900;</p>
+<p>+——-+——-+———–+——+————+———+——+——–+<br>| EMPNO | ENAME | JOB       | MGR  | HIREDATE   | SAL     | COMM | DEPTNO |<br>+——-+——-+———–+——+————+———+——+——–+<br>|  7566 | JONES | MANAGER   | 7839 | 1981-04-02 | 2975.00 | NULL |     20 |<br>|  7698 | BLAKE | MANAGER   | 7839 | 1981-05-01 | 2850.00 | NULL |     30 |<br>|  7788 | SCOTT | ANALYST   | 7566 | 1987-04-19 | 3000.00 | NULL |     20 |<br>|  7839 | KING  | PRESIDENT | NULL | 1981-11-17 | 5000.00 | NULL |     10 |<br>|  7902 | FORD  | ANALYST   | 7566 | 1981-12-03 | 3000.00 | NULL |     20 |<br>+——-+——-+———–+——+————+———+——+——–+</p>
+<p><strong>最后合并</strong></p>
+<p>select deptno,max(sal) from emp where sal&gt;2900 group by deptno;</p>
+<p>+——–+———-+<br>| deptno | max(sal) |<br>+——–+———-+<br>|     10 |  5000.00 |<br>|     20 |  3000.00 |<br>+——–+———-+<br>2 rows in set (0.00 sec)</p>
+<p><strong>找出每个部门的平均薪资，要求显示薪资大于2000的数据。</strong><br>第一步：<br>select deptno,avg(sal) 平均薪资 from emp group by deptno;</p>
+<p>+——–+————-+<br>| deptno | 平均薪资    |<br>+——–+————-+<br>|     10 | 2916.666667 |<br>|     20 | 2175.000000 |<br>|     30 | 1566.666667 |</p>
+<p>第二步：<br>select deptno,avg(sal) 平均薪资 from emp group by deptno having 平均薪资&gt;2000;</p>
+<p>+——–+————-+<br>| deptno | 平均薪资    |<br>+——–+————-+<br>|     10 | 2916.666667 |<br>|     20 | 2175.000000 |<br>+——–+————-+</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>一个完整的DQL语句怎么写?</p>
+<p>select 5<br>    ··<br>from 1<br>    ··<br>where 2<br>    ··<br>group by 3<br>    ··<br>having 4<br>    ··<br>order by 6<br>    ··</p>
 
 
         
@@ -555,12 +576,12 @@ var _hmt = _hmt || [];
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/">JAVA代码集合</a></p>
+  <p><span>本文标题:</span><a href="/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%20Group%20By/">分组查询 Group By</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 孤桜懶契 的个人博客">孤桜懶契</a></p>
-  <p><span>发布时间:</span>2020年09月19日 - 08:33:12</p>
-  <p><span>最后更新:</span>2020年09月21日 - 08:59:14</p>
-  <p><span>原始链接:</span><a href="/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/" title="JAVA代码集合">https://gylq.gitee.io/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://gylq.gitee.io/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2020年10月04日 - 09:37:04</p>
+  <p><span>最后更新:</span>2020年10月05日 - 10:47:46</p>
+  <p><span>原始链接:</span><a href="/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%20Group%20By/" title="分组查询 Group By">https://gylq.gitee.io/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%20Group%20By/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://gylq.gitee.io/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%20Group%20By/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -645,8 +666,8 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/09/19/CLASSPATH%E7%8E%AF%E5%A2%83%E5%B1%9E%E6%80%A7/" rel="prev" title="CLASSPATH环境属性">
-                <i class="fa fa-chevron-left"></i> CLASSPATH环境属性
+              <a href="/2020/10/05/%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2/" rel="prev" title="连接查询">
+                <i class="fa fa-chevron-left"></i> 连接查询
               </a>
             
           </div>
@@ -655,8 +676,8 @@ var _hmt = _hmt || [];
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/09/18/JShell%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%B7%A5%E5%85%B7/" rel="next" title="JShell交互式工具">
-                JShell交互式工具 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/09/21/MySql%E8%A1%A8%E7%9A%84%E7%BB%93%E6%9E%84/" rel="next" title="MySql表的结构">
+                MySql表的结构 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1231,7 +1252,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JAVA代码集合"><span class="nav-number">1.</span> <span class="nav-text">JAVA代码集合</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#group-by-和-having"><span class="nav-number">1.</span> <span class="nav-text">group by 和 having</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>

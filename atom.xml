@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gylq.gitee.io/"/>
-  <updated>2020-10-04T12:19:45.510Z</updated>
+  <updated>2020-10-05T02:59:38.250Z</updated>
   <id>https://gylq.gitee.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>分组查询group by</title>
-    <link href="https://gylq.gitee.io/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2group%20by/"/>
-    <id>https://gylq.gitee.io/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2group%20by/</id>
+    <title>连接查询</title>
+    <link href="https://gylq.gitee.io/2020/10/05/%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2/"/>
+    <id>https://gylq.gitee.io/2020/10/05/%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2/</id>
+    <published>2020-10-05T02:48:27.973Z</published>
+    <updated>2020-10-05T02:59:38.250Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h1><p><strong>1、关于查询结果集的去重？</strong>（<strong>distinct关键字去除重复记录</strong>）</p><blockquote><p><strong>mysql&gt; select distinct job from emp;</strong><br>+———–+<br>| job       |<br>+———–+<br>| CLERK     |<br>| SALESMAN  |<br>| MANAGER   |<br>| ANALYST   |<br>| PRESIDENT |<br>+———–+</p></blockquote><blockquote><p><strong>select ename,distinct job from emp;</strong></p><p>以上的sql语句是错误的。<br>记住：distinct只能出现在所有字段的最前面。</p></blockquote><blockquote><p><strong>mysql&gt; select distinct deptno,job from emp order by deptno;</strong><br>+——–+———–+<br>| deptno | job       |<br>+——–+———–+<br>|     10 | CLERK     |<br>|     10 | MANAGER   |<br>|     10 | PRESIDENT |<br>|     20 | ANALYST   |<br>|     20 | CLERK     |<br>|     20 | MANAGER   |<br>|     30 | CLERK     |<br>|     30 | MANAGER   |<br>|     30 | SALESMAN  |<br>+——–+———–+</p></blockquote><p><strong>案例:统计岗位的数量？</strong></p><blockquote><p>mysql&gt; select count(distinct job) from emp;**<br>+———————+<br>| count(distinct job) |<br>+———————+<br>|                   5 |<br>+———————+<br>1 row in set (0.00 sec)</p></blockquote><p>2、连接查询</p><p><strong>什么是连接查询？</strong><br>    <strong>在实际开发中，大部分的情况下都不是从单表中查询数据，一般都是多张表联合查询取出最终的结果。</strong><br>    <strong>在实际开发中，一般一个业务都会对应多张表，比如：学生和班级，起码两张表。</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="MySQL" scheme="https://gylq.gitee.io/categories/MySQL/"/>
+    
+    
+      <category term="知识拓展" scheme="https://gylq.gitee.io/tags/%E7%9F%A5%E8%AF%86%E6%8B%93%E5%B1%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分组查询 Group By</title>
+    <link href="https://gylq.gitee.io/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%20Group%20By/"/>
+    <id>https://gylq.gitee.io/2020/10/04/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%20Group%20By/</id>
     <published>2020-10-04T01:37:04.288Z</published>
-    <updated>2020-10-04T12:19:45.510Z</updated>
+    <updated>2020-10-05T02:47:46.647Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="group-by-和-having"><a href="#group-by-和-having" class="headerlink" title="group by 和 having"></a>group by 和 having</h1><p><strong>group by</strong> ：按照某个字段或者某些字段进行分组。<br><strong>having</strong> ：是对分组之后的数据进行再次过滤。</p><p>案例：找出每个工作岗位的最高薪资。<br>select max(sal),job from emp group by job;</p><p><strong>注意</strong>：分组函数一般都会和group by 联合使用，这也是为什么它被称作分组函数的原因，并且任何一个分组函数（count sum avg max min）都是在group by 语句执行结束之后才会执行。当一条sql语句没有group by 的话。整张表的数据会自成一组。（group by 是在where执行之后才会执行的。）</p><p>找出工资高于平均工资的员工。<br> select ename,sal from emp where sal&gt;(select avg(sal) from emp);</p><p> select ename,max(sal),job from emp group by job;<br>以上在mysql当中，查询结果是有的，但是结果没有意义。在oracle数据库中会报语法错误。oracle的语法规则比mysql语法规则严谨。<br>记住一个规则当一条语句中有group by的话，select后面只能跟分组函数和参与分组的字段。</p><p><strong>每个工作岗位的平均薪资</strong></p><p>select avg(sal),job from emp group by job;</p><p>+————-+———–+<br>| avg(sal)    | job       |<br>+————-+———–+<br>| 3000.000000 | ANALYST   |<br>| 1037.500000 | CLERK     |<br>| 2758.333333 | MANAGER   |<br>| 5000.000000 | PRESIDENT |<br>| 1400.000000 | SALESMAN  |</p><p>多个字段能不能联合起来一块分组？</p><p><strong>找出每个部门不同工作岗位的最高薪资。</strong><br>select<br>    deptno,job,max(sal)<br>from<br>    emp<br>group by<br>    deptno,job;</p><p>+——–+———–+———-+<br>| deptno | job       | max(sal) |<br>+——–+———–+———-+<br>|     10 | CLERK     |  1300.00 |<br>|     10 | MANAGER   |  2450.00 |<br>|     10 | PRESIDENT |  5000.00 |<br>|     20 | ANALYST   |  3000.00 |<br>|     20 | CLERK     |  1100.00 |<br>|     20 | MANAGER   |  2975.00 |<br>|     30 | CLERK     |   950.00 |<br>|     30 | MANAGER   |  2850.00 |<br>|     30 | SALESMAN  |  1600.00 |<br>+——–+———–+———-+<br>9 rows in set (0.00 sec)</p><p><strong>找出每个部门的最高薪资，要求显示薪资大于2900的数据。</strong><br>第一步：每个部门的最高薪资<br>select deptno,max(sal) from emp group by deptno;</p><p>+——–+———-+<br>| deptno | max(sal) |<br>+——–+———-+<br>|     10 |  5000.00 |<br>|     20 |  3000.00 |<br>|     30 |  2850.00 |</p><p>第二步：薪资大于2900的数据<br>select * from emp where sal&gt;2900;</p><p>+——-+——-+———–+——+————+———+——+——–+<br>| EMPNO | ENAME | JOB       | MGR  | HIREDATE   | SAL     | COMM | DEPTNO |<br>+——-+——-+———–+——+————+———+——+——–+<br>|  7566 | JONES | MANAGER   | 7839 | 1981-04-02 | 2975.00 | NULL |     20 |<br>|  7698 | BLAKE | MANAGER   | 7839 | 1981-05-01 | 2850.00 | NULL |     30 |<br>|  7788 | SCOTT | ANALYST   | 7566 | 1987-04-19 | 3000.00 | NULL |     20 |<br>|  7839 | KING  | PRESIDENT | NULL | 1981-11-17 | 5000.00 | NULL |     10 |<br>|  7902 | FORD  | ANALYST   | 7566 | 1981-12-03 | 3000.00 | NULL |     20 |<br>+——-+——-+———–+——+————+———+——+——–+</p><p><strong>最后合并</strong></p><p>select deptno,max(sal) from emp where sal&gt;2900 group by deptno;</p><p>+——–+———-+<br>| deptno | max(sal) |<br>+——–+———-+<br>|     10 |  5000.00 |<br>|     20 |  3000.00 |<br>+——–+———-+<br>2 rows in set (0.00 sec)</p><p><strong>找出每个部门的平均薪资，要求显示薪资大于2000的数据。</strong><br>第一步：<br>select deptno,avg(sal) 平均薪资 from emp group by deptno;</p><p>+——–+————-+<br>| deptno | 平均薪资    |<br>+——–+————-+<br>|     10 | 2916.666667 |<br>|     20 | 2175.000000 |<br>|     30 | 1566.666667 |</p><p>第二步：<br>select deptno,avg(sal) 平均薪资 from emp group by deptno having 平均薪资&gt;2000;</p><p>+——–+————-+<br>| deptno | 平均薪资    |<br>+——–+————-+<br>|     10 | 2916.666667 |<br>|     20 | 2175.000000 |<br>+——–+————-+</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>一个完整的DQL语句怎么写?</p><p>select 5<br>    ··<br>from 1<br>    ··<br>where 2<br>    ··<br>group by 3<br>    ··<br>having 4<br>    ··<br>order by 6<br>    ··</p>]]></content>
     
