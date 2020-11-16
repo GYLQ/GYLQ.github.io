@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://gylq.gitee.io/2020/09/21/JAVASE/</loc>
+    <lastmod>2020-11-16</lastmod>
+  </url>  <url>
+    <loc>https://gylq.gitee.io/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/</loc>
+    <lastmod>2020-11-09</lastmod>
+  </url>  <url>
+    <loc>https://gylq.gitee.io/2020/10/26/Monster%E7%9A%84%E5%8F%A3%E8%AF%AD%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2020-10-28</lastmod>
+  </url>  <url>
     <loc>https://gylq.gitee.io/2020/10/27/%E6%8B%8D%E6%91%84/</loc>
     <lastmod>2020-10-27</lastmod>
   </url>  <url>
-    <loc>https://gylq.gitee.io/2020/10/26/Monster%E7%AC%AC%E4%B8%80%E5%A4%A9/</loc>
-    <lastmod>2020-10-26</lastmod>
-  </url>  <url>
     <loc>https://gylq.gitee.io/2020/08/15/%E9%95%BF%E9%9A%BE%E5%8F%A5%E5%88%86%E6%9E%90/</loc>
     <lastmod>2020-10-26</lastmod>
-  </url>  <url>
-    <loc>https://gylq.gitee.io/2020/09/21/JAVASE/</loc>
-    <lastmod>2020-10-22</lastmod>
   </url>  <url>
     <loc>https://gylq.gitee.io/2020/10/15/MYSQL%E2%80%94%E2%80%9427%E9%81%93%E7%BB%83%E4%B9%A0%E9%A2%98/</loc>
     <lastmod>2020-10-21</lastmod>
@@ -29,9 +32,6 @@
     <lastmod>2020-09-30</lastmod>
   </url>  <url>
     <loc>https://gylq.gitee.io/2020/09/18/JShell%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2020-09-21</lastmod>
-  </url>  <url>
-    <loc>https://gylq.gitee.io/2020/09/19/JAVA%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/</loc>
     <lastmod>2020-09-21</lastmod>
   </url>  <url>
     <loc>https://gylq.gitee.io/2020/09/19/CLASSPATH%E7%8E%AF%E5%A2%83%E5%B1%9E%E6%80%A7/</loc>

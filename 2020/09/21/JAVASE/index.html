@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="孤桜懶契">
 <meta property="og:description" content="程序注释​    任何一套程序代码里面实际上都会由大量的程序逻辑所组成，但是如果要想对一套代码进行长期的维护，就需要编写大量的注释，对一些程序的代码功能要进行详细的解释，这样不仅为自己铺平道路，实际上也为后来接手的工程师铺平道路。  关于注释的笑话：有一位程序员到一家新的公司进行项目开发，突然有一天老板说，某一个功能执行的速度实在是太慢了，让这位程序员修改一下，后来这个程序员找到了相关源代码，里面">
 <meta property="article:published_time" content="2020-09-21T01:18:27.429Z">
-<meta property="article:modified_time" content="2020-10-22T03:15:26.278Z">
+<meta property="article:modified_time" content="2020-11-16T12:21:35.068Z">
 <meta property="article:author" content="孤桜懶契">
 <meta property="article:tag" content="知识拓展">
 <meta name="twitter:card" content="summary">
@@ -498,7 +498,7 @@ var _hmt = _hmt || [];
                 </span>
                 
                 <span title="字数">
-                  814
+                  9.1k
                 </span>
               
 
@@ -545,7 +545,387 @@ var _hmt = _hmt || [];
 
 <p>在以后进行项目开发的时候，一些暂时不需要的代码就可以利用注释进行关闭。</p>
 <h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><p>　　<strong>在任何一个程序里面都一定会有大量的名称进行一些特定结构的声明，例如：在Java程序里面一直强调，每一个程序都是一个类，那么所有的类就一定要有类的名称，这就是属于一个标识符，所有的程序编译器都是依据这个名称来进行代码结构管理的，既然要进行管理，对于名称就有它的命名要求。</strong></p>
+<pre><code>在java之中所有的标识符由字母、数字、下划线（_）以及“$”所组成的，其中不能使用数字开头，不能够使用java关键字（保留字）进行标识符定义。
+顺便说一下：正常的标识符里面一般都要求有具体的严格意义，例如：你在程序里面定义了a、b、c一系列的标识符，那么这些意义不明确，所以代码
+阅读起来是非常困难的。另外对于标识符定义中的“$”也不要去直接使用，因为其有特殊的含义，所以一般来讲标识符的组成就是字母、下划线、数字
+所组成的，建议使用字母开头。</code></pre><blockquote>
+<p><strong>yootk_name,YootkDemo,teacherLee,num_110</strong>(正确形式)</p>
+</blockquote>
+<blockquote>
+<p><em>110_No.1</em>(使用数字开头、并且使用了“.”作为了标识符的组成)<br><em>abc#hello</em>(使用了非法的“#”符号作为了标识符)<br><em>class</em>(使用了程序中的关键字（保留字），那么这种标识符也是错误的。)</p>
+</blockquote>
+<p>　　<strong>任何的编程语言里面都会提供有大量的关键字，这些关键字往往都具有特殊的含义，java中的关键字会随着每次版本的更新而有所扩充。</strong></p>
+<blockquote>
+<p>很多的语言里面都有许多相同的关键字（java、C、++是一个系列的）：for,if,else,swich,while、……；<br>java有两个未使用到的关键字：goto（代码调试的万恶之手）、const(定义常量，被final所取代)；<br>有三个特殊含义的标记（严格来讲不属于关键字）：null、true、false；<br>JDK1.4之后更新了assert关键字，用于断言操作；<br>JDK1.5之后扩充了enum关键字，用于进行枚举定义；<br>JDK1.10之后扩充var关键字，用于进行匹配类型变量的定义；<br>JDK1.13之后扩充yield关键字，进行局部返回。</p>
+</blockquote>
+<p><em>除了以上的标识符定义要求之外，实际上java也考虑到中国的地位，也推出了一些比较神奇的做法，可以直接使用中文进行标识符的定义。</em></p>
+<p><strong>范例：使用中文标识符</strong></p>
+<pre><code>    public class 优拓公开课{ // 【单行注释】定义程序的执行主类
+    public static void main(String args[]){// 【单行注释】程序的执行起点，主方法
+        /*【多行注释】
+            以下的程序代码是在屏幕上进行一些提示信息的输出，如果有需要则可以再里面进行多行的定义    
+        */
+        int 年龄 = 18;//中文定义
+        System.out.println(&quot;Hello world!&quot;); 
+        // 【代码失效】 System.out.println(&quot;江湖上称我为&quot;); 
+    }
+}</code></pre><p>​    这种定义的形式可以作为娱乐，但是正常的开发者一般都不会采用这样的形式来进行标识符的定义，还应该使用传统的字母、数字之类的进行定义，除了标识符的组成要求之外，在Java里面或者是在实际的工作之中还会有一些命名规范的出现，命名规范都要求遵循标识符的组成原则，但是对于大小写的定义是有描述的，例如：类名称每个单词的首字母大写（例如：YootkDemo）,这些具体的描述可以根据不同的公司来动态调整。</p>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="具体内容"><a href="#具体内容" class="headerlink" title="具体内容"></a>具体内容</h2><p><strong>任何的程序设计语言本身就属于一场数字的游戏，如果说我们的人生就是一部自我完善的坚史，那么编程语言既然是一种现实物理和数学的抽象，其背后就是数字的一场游戏（计算机的组成的核心本质只有数字：“0”、“1”），那么既然要进行数字的操作，则需要进行数据的存储，所以任何的编程语言里面都会设计有一系列的数据类型，利用不同的数据类型保存相应的类型</strong></p>
+<p><em>例如：如果要是描述年龄，那么肯定要使用整数。如果要进行折扣处理的话，往往就希望这个小数点越小越好，所以就需要浮点型。所以任何一门完善的编程语言其数据类型的支持程序都是异常丰富的。</em><br>　　<strong>在java程序的内部对于数据类型实际上分为两大类型：</strong></p>
+<blockquote>
+<p>【分类】基本数据类型：所有的数据操作都是采用值传递，相当于把数据给了对方一个副本信息，副本信息的修改不影响原始的数据内容，这些基本数据类型也是构成程序开发的基本环节；</p>
+</blockquote>
+<pre><code>|-【子分类】整型：byte、short、int、long;        --&gt;默认值：0
+|-【子分类】浮点型（有小数点=小数）：float、double;    --&gt;默认值:0.0
+|-【子分类】字符型：char;                --&gt;默认值:&apos;\u0000&apos;(十六进制)
+|-【子分类】布尔型：boolean.                --&gt;默认值:false(特殊意义的关键字)</code></pre><p>​    </p>
+<blockquote>
+<p>【分类】引用数据类型：是进行内存的数据操作，给的内存使用权。是所有初学者最难理解的部分；</p>
+</blockquote>
+<pre><code>|-有三种引用数据类型：数组、类、接口。            --&gt;默认值:null(特殊意义的关键字)
 
+提示：整个的Java编程语言之中由于对C、C++进行了结构上的优化(Java是基于C++开发出来的),在整个的C、C++里面最让人头疼的部分就是指针，而java为了解决这个问题，取消了指针的定义，而使用了更加简单的引用数据类型来进行代替，在后面进行面向对象讲解开始的时候将对引用数据类型做出全面的分析</code></pre><p>　　<strong>在java开发过程之中，对于基本数据类型（最为核心的数据类型）默认一共提供有八种类型，其中有7种类型是由明确的数据存储范围（计算机里面所有的数据内容都是通过二进制的形式保存的，所有的数据都有一个保存的上限&amp;下限）</strong></p>
+<pre><code>-byte: 描述的是字节，在进行网络数据传输一定是字节数据处理，也会用在编码转换上；（1字节）
+-int：描述的是整型，例如：定义年龄；（4字节）
+-long：描述的是长整型（范围比int广），用在进行文件大小描述、日期时间的描述上；（8个字节）
+-double：描述小数，例如：要进行工资的定义，则肯定是小数；（8个字节）
+-char：主要是进行中文处理；（2个字节）
+-*boolean*：进行逻辑表述。</code></pre><h1 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h1><p>  <strong>变量与常量是在整个程序计算过程之中主要使用的两个数据的存储形式，其中所有给定的不可能修改的内容我们将其称为常量，而所有可以修改的内容就将其称为变量。</strong></p>
+<p><em>范例：观察变量</em></p>
+<pre><code>public class DongJun{ 
+public static void main(String DongJun[]){
+    //10是一个数字，既然已经定义好了10，那么就意味着这个内容无法修改了
+    System.out.println(10); //常量
+}
+}</code></pre><blockquote>
+<p>程序执行结果:10</p>
+</blockquote>
+<p><strong>在上学的时候学校经常会用一种方式去惩戒哪些所谓的“调皮的学生”，就是将你的行为和处分决定记录在你的档案里面，这些内容将持续陪伴你，并且不会变更，那么就可以将这些记录定义为你个人的常量</strong><br><em>变量顾名思义就是内容可以改变的标记，所有的变量都一定要有其对应的数据类型，例如:int,double都属于数据类型，每一种变量可以根据其定义的数据类型进行内容的修改。</em></p>
+<blockquote>
+<p> <strong>如果要想使用变量则必须进行定义，而变量的定义语法形式为：“数据类型 变量名称 = 默认值”，而这个变量名称实际上就是之前讲解的标识符的组成，相当于你自己定义的有意义的名称。</strong></p>
+</blockquote>
+<p><em>范例：定义变量</em></p>
+<pre><code>public class DongJun{ 
+public static void main(String DongJun[]){
+    //所有程序语言最后一定要使用;作为结尾
+    int age = 10;//定义一个整型变量，并且设置了默认值
+    System.out.println(age); //输出变量内容
+    age = 19; //赋值
+    System.out.println(age); //输出变量内容
+}
+}    </code></pre><blockquote>
+<p>程序执行结果： 18<br>       19</p>
+</blockquote>
+<p><strong>按照正常的设计来讲每一种数据类型即便不设置默认值，那么也应该使用其对应数据类型的默认值进行定义，但是如果你的代码写成如下的形式，则执行的时候一定是错误的</strong></p>
+<pre><code>public class DongJun{ 
+    public static void main(String DongJun[]){
+        int age ;//如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+        System.out.println(age);
+    }
+}</code></pre><blockquote>
+<p>D:\yootk&gt;javac DongJun.java<br>DongJun.java:4: 错误: 可能尚未初始化变量age<br>                  System.out.println(age);</p>
+</blockquote>
+<p><strong>本次主要是观察变量声明和赋值在不同的JDk版本里面所带来的流程上的区别。</strong><br><em>范例：在JDK1.4及以前的版本</em></p>
+<blockquote>
+<p>要求在主方法中定义变量的同事一定要为其设置默认值，如果不设置就出错；</p>
+</blockquote>
+<p><em>范例：在JDK1.5及以及以后</em></p>
+<blockquote>
+<p>在主方法中定义变量的时候可以不设置默认值，但是在其使用之前一定要进行默认值设置，否则会出现编译错误</p>
+</blockquote>
+<p><strong>如果把常量比喻为不同的咖啡：美式、拿铁、卡布奇诺，这些调制好了的东西一般是不会发生改变的，而如果是变量那么就好比是你的咖啡杯，咖啡杯可以装不同咖啡，但是当你需要更换咖啡的时候，那么就意味着你原始的咖啡就没了，而盛的咖啡就是新的。</strong></p>
+<h1 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h1><p><strong>在现实的生活里面数学上一般都会存在有整数的概念，整数实际上描述就是没有小数点的内容，是一个完整的十进制的数值。</strong><br><em>例如：如果要想表示一个人的年龄肯定要使用整数，如果要想去描述住房楼层肯定也使用整数，在Java程序里面，对于整数的数据类型一共有四种支持：Byte、short、int、long。</em><br>　　在给定的这四种整型数据类型里面，最为常用的数据类型就是Int型，在java程序之中任何的一个整型数字的常量默认对应的类型全部都是整型。<br><strong>定义int变量</strong></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        //数据类型 变量名称 = 常量、整数常量的默认类型为 int
+        int number = 10; //定义一个整型变量
+        // int变量-=  int变量数值 + 20 常量（int类型）
+        number = number + 20; // 进行变量的加法计算
+        System.out.println(number);
+    }
+}    </code></pre><blockquote>
+<p>程序执行结果：30</p>
+</blockquote>
+<p><em>虽然int 可以解决大部分的整型的数据操作问题，但是从另外的角度来讲，对于当前程序开发来说，int本身是由其长度范围(-2147483648-2147483647),那么如果说超过了这个计算范围，则就有可能出错。</em></p>
+<pre><code>public class DongJun{ 
+static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+public static void main(String DongJun[]){
+    //数据类型 变量名称 = 常量、整数常量的默认类型为 int
+    int max = 2147483647; //定义一个整型变量
+    // int变量-=  int变量数值 + 20 常量（int类型）
+    max = max + 1; // 进行变量的加法计算
+    System.out.println(max);
+}
+}</code></pre><blockquote>
+<p>程序执行结果-2147483648</p>
+</blockquote>
+<p>这里面就存在了计算机之中的基本概念：二进制的数据计算问题了。在程序之中所有的数据都是被二进制的操作进行管理的，但是由于Java编程语言属于高级编程语言，所以对于一些底层的细节就由编程语言自己来处理。</p>
+<pre><code>专业描述：Java之中int数据类型一共有32位，第一位属于符号位，其余的位数属于数据位。每一次进行所谓的加或减的时候实际上都是在底层进行了二进制数据计算，当已经最大值的似乎还“011111”，如果再进行加1的处理，符号位就会发生改变，所以就变为了最小值。</code></pre><p>　　<em>对于以上的问题在程序开发之中可以理解为数据的溢出，数据溢出采用的是一种循环的模式进行处理的。</em></p>
+<p><strong>如果要想解决这种数据溢出的问题，那么最佳的做法就是扩大使用的数据范围，比int范围更大的数据范围就是long，所有的编程语言里面对于数据范围的扩大都使用自动的扩大的形式，例如：如果现在是一个int型变量和一个long型变量进行加法操作，那么必定要先进行数据类型的统一，而这种统一的操作过程就是将int类型自动转为long的类型。从而形成最终的两个long型变量的计算操作。</strong><br>范例：通过long数据类型解决int的溢出问题</p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        //数据类型 变量名称 = 常量、整数常量的默认类型为 int
+        int max = 2147483647; //定义一个整型变量
+        // int变量-=  int变量数值 + 20 常量（int类型）
+        System.out.println(max+1L);
+    }
+}</code></pre><blockquote>
+<p>程序执行结果2147483648</p>
+</blockquote>
+<blockquote>
+<p>由于默认的整数对应的类型为int,<em>所以如果要想将其变为long的常量则可以使用“整数L”、“整数l”（“小写L”比较坑）因为其长的和1很相似（如果你没有受过一定的训练是看不出的）</em><br><strong>结论：如果要想解决数据溢出问题，肯定要使用更大的数据类型来进行处理。</strong></p>
+</blockquote>
+<p>　　<em>这个时候就会出现一个新的概念：数据类型的转换，不同的数据类型之间是可以进行转换的，但是在进行转换的处理过程之中一般都会使用如下的两个转换原则。</em></p>
+<blockquote>
+<p>自动类型转换：保存数据范围小的数据类型如果遇见了保存范围数据大的数据类型，则范围小的数据类型自动转换为范围大的数据类型后再进行计算，之前的程序就属于这种自动转换。</p>
+</blockquote>
+<p><em>范例：数据类型的自动转换</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        //数据类型 变量名称 = 常量、整数常量的默认类型为 int
+        int num_a = 10 ;
+        long num_b = 20;
+        //num_a这个int变量由于其数据类型的位数不足，所以将自己转换为long类型后在于num_b进行加法计算
+        lonmg result = num_a + num_b;
+        System.out.println(result);
+    }
+}</code></pre><p>​    </p>
+<blockquote>
+<p>强制类型转换:将保存数据范围大的数据类型强制的变为保存数据范围小的数据类型，这种转换由于需要缩小数据类型的保存位数，所以就有可能产生数据溢出问（数据出错）</p>
+</blockquote>
+<p><em>范例：数据类型的强制转换</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        //数据类型 变量名称 = 常量、整数常量的默认类型为 int
+        //此时必须强制性的将整型常量转为long类型才可以正常保存在long变量之中
+        long num = 2147483677L; //该类型已经超过了int的最大内容
+        System.out.println(num);
+        System.out.println((int)num);
+    }
+}</code></pre><blockquote>
+<p>2147483677<br>-2147483619</p>
+</blockquote>
+<p><em>*所以这种数据范围的强制转型所带来的最为严重的问题就是有可能会有数据的溢出情况出现，所以如果你非要进行强制性类型转型，那么一定要注意其最终的目标数据类型是否可以包含下当前的数据内容。</em><br>    　　<em>通过以上的分析实际上就可以得到一个最为重要的结论：在进行不同数据类型操作的过程之中，一定会首发发送自动的扩大类型的转型操作，而后再进行计算，但是一般不建议使用强制的类型转换，因为有可能会有数据溢出的问题。</em></p>
+<p><strong>既然有了整型的概念，就必须重点分析一下byte数据类型问题</strong></p>
+<pre><code>回顾：针对于不同数据类型的使用
+    byte：主要用于网络传输、二进制数据处理、编码转换（在讲解IO和网络编程会使用到）
+    int：描述大部分的整型数值，以后见到整型的需求首先考虑就是int型变量或常量；
+    long：主要描述文件大小或者是日期时间的数字（以后讲解到类库的时候会进行说明）</code></pre><p><em>byte描述的是一个字节，java程序开发之中的每一个字节所能描述的数据范围:”-128-127”，就需要注意其不能够存储更大的数据信息。</em></p>
+<p><strong>范例：定义byte变量</strong></p>
+<pre><code>public class DongJun{ 
+static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+public static void main(String DongJun[]){
+    byte data = 10 ; //定义一个byte变量
+    System.out.println(data);
+}
+}</code></pre><blockquote>
+<p>10</p>
+</blockquote>
+<p><strong>以上的程序实现了最为基础的byte变量的定义以及内容的输出，但是在整个的程序执行过程之中会有一个小小的问题出现了：按照之前的概念来讲，此时的数字10应该是一个int型的常量，那么按照以上操作来讲应该是int型的常量赋值给了byte型的变量，出现了一个与之前概念不匹配的应用环境，之所以没有这种强制的转换需求，主要的原因在于：Java针对于符合byte范围内，那么就必须进行强制转换处理。</strong></p>
+<p><em>范例：超过byte范围强制处理</em><br>    public class DongJun{<br>        static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示<br>        public static void main(String DongJun[]){<br>            byte data = (byte)250 ; //定义一个byte变量<br>            System.out.println(data);<br>        }<br>    }</p>
+<blockquote>
+<p>-6</p>
+</blockquote>
+<p><em>此时由于设置的整型内容超过了byte范围，所以一旦强制性转换之后就产生了数据的溢出问题；</em></p>
+<h1 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h1><blockquote>
+<p><strong>浮点型最大的特点就是在数字里面包含有小数点，在Java程序里面针对于浮点型数据类型提供了两个关键字：</strong></p>
+</blockquote>
+<pre><code>- 单精度浮点数据类型：float,包含32位的数据长度
+- 双精度浮点数据类型：double,包含64位的数据长度
+在Java里面，任何的一个小数其默认的数据类型均为double(double可以保存全宇宙里面最大的一个数值)，double是整个是所有数据类型之中可以保存数据内容最大的一种类型。</code></pre><p><em>范例：定义double变量</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        //double 变量 = 常量 (double变量)
+        double num_a  = 99.89 ; //定义double变量
+        int num_b = 199; 
+        //double变量（num_a） + double变量(num_b，int自动转为double) = double结果
+        double result = num_a + num_b ; 
+        System.out.println(result);
+    }
+}
+
+&gt;298.89</code></pre><p>　　<strong>java之所以没有使用float作为小数的默认类型，主要是考虑到float计算本身存在的二进制位的操作问题（会产生精度问题），这个问题是整个计算机编程语言行业之中最大的问题（娘胎带的问题了）,所以在java里面如果要想定义float变量，就必须将小数的常量进行强制的类型转换才可以正常进行。</strong></p>
+<p><strong>范例：定义float型变量</strong></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        float num_a  = 10.0F ; //将double常量强制转换为float变量
+        float num_b  = (float) 0.4; //将double常量强制转换为float变量
+        System.out.println(num_a/num_b);</code></pre><p>​<br>​                </p>
+<pre><code>    }
+}
+
+&gt; 25.0</code></pre><p><em>范例：观察float可能存在的问题</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        float num_a  = 9.9F ; //将double常量强制转换为float变量
+        float num_b  = (float) 0.3; //将double常量强制转换为float变量
+        System.out.println(num_a/num_b);</code></pre><p>​<br>​            </p>
+<pre><code>    }
+}</code></pre><blockquote>
+<p>32.999996(会出现许多小数)<br>　　<strong>float数据类型本身是有问题的，而正因为这些问题的存在，所以不建议使用float这种数据类型进行浮点数定义，最好使用double。</strong></p>
+</blockquote>
+<p><em>范例：通过double可以解决float的问题</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        double num_a  = 9.9 ; //将double常量强制转换为float变量
+        double num_b  =  0.3; //将double常量强制转换为float变量
+        System.out.println(num_a/num_b);</code></pre><p>​<br>​                </p>
+<pre><code>    }
+}</code></pre><blockquote>
+<p>33.0</p>
+</blockquote>
+<p>　　<em>在以后的项目开发过程之中肯定要首选double作为小数的数据类型。</em></p>
+<blockquote>
+<p><strong>在项目的开发之中整型和浮点型之间最大的区别就是小数点，也就是所有的整型数据内容是不会保留小数位的，那么如果说现在计算的数据本身会产生小数位，则如果没有使用浮点型而使用整型，对应的小数位会全部丢弃。(如果要想准确，那么就必须采用小数来进行计算，需要将其中的一个计算的内容变成double)</strong></p>
+</blockquote>
+<p><em>范例：解决小数点的保留问题</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        int num_a = 9 ;
+        int num_b = 2 ; 
+        System.out.println(num_a/(double)num_b);
+
+    }
+}</code></pre><blockquote>
+<p>4.5</p>
+</blockquote>
+<p><strong>如果在计算之中某一个类型变为了double，则其他的类型都要变为double（double范围是最广的），这个时候当前的计算结果一定是double类型。</strong></p>
+<pre><code>通过以上的分析，应该就已经非常清楚了这些数值型的数据类型的自动转换操作过程：byte&gt;short&gt;int&gt;long&gt;float&gt;double(保存范围小的自动进行转换),而在进行强制类型转换的时候，如果浮点型强制变为了整型，那么就会丢掉小数点。</code></pre><blockquote>
+<p>在未来选择数值型数字类型的时候，整型就使用int,浮点型（小数）就使用double</p>
+</blockquote>
+<h1 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h1><p>　　<em>在java程序里面，依然提供有传统编程语言使用的字符的概念，字符是使用“’”声明的一个内容，字符提供有char关键字来进行类型的定义。</em></p>
+<p><em>范例：字符的定义</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        char c=  &apos;y&apos;;//字符需要使用单引号进行声明
+        System.out.println(c);
+
+    }
+}</code></pre><blockquote>
+<p>y</p>
+</blockquote>
+<p><strong>在使用字符进行初始化内容赋值的时候后，一定只能够设置一位内容，如果设置了多位，语法一定会出错。</strong>　</p>
+<p>　　<strong>在程序之中字符（char）可以和整型（int）直接进行转化处理，而字符转换为整型之后得到的数值就属于字符的编码。</strong></p>
+<blockquote>
+<p>　　那么既然所有的字符在JVM里面都有相应的编码存在，这样一来就必须非常清楚几个常见的字符范围的定义：</p>
+</blockquote>
+<pre><code>小写字符范围（&apos;a&apos;~&apos;z&apos;）:97~122;
+大写字符范围（&apos;A&apos;~&apos;Z&apos;）:65~90;
+数字字符范围（&apos;0&apos;~&apos;9&apos;）:48~57</code></pre><blockquote>
+<p>于是这个时候有人发现一个问题：大写字符和小写字母之间的编码的数值内容差32个，所以理论上修改数值就可以进行大小写的控制，下面市县一个小写字母转大写字母的操作。</p>
+</blockquote>
+<p><em>范例：小写字母转为大写字母</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        char c=  &apos;a&apos;-32;//字符需要使用单引号进行声明
+        System.out.println(c);
+
+    }
+}</code></pre><blockquote>
+<p>A</p>
+</blockquote>
+<p><strong>通过以上的分析实际上是许多的读者就应该发现一个比较熟悉的昌吉了，这个场景的内容就是常规的编程语言里面所出现ASCII码的内容（在整个计算机内部核心的组成就是”0”,”1”），但是需要描述的内容太多了，所以就需要对这些数值进行合理的安排，就可以基于不同的内容实现相应字符的显示</strong></p>
+<pre><code>需要提醒读者的是，在使用java开发的时候后，所采用的并不是这种ASCII码，JAVA在其设计的时候已经充分的考虑了当前的开发市场（C、C++为主时代）所有的开发者都已经习惯于这样的编码顺序，那么在进行java编码的设计的时候就将传统的ASCII码包含在当前语言设计的编码当中，开发了属于JAVA自己的十六进制编码，该编码的名称为“UNICODE”。UNICODE是一个非常强大的编码，可以描述出世界上任意的文字，包括中文、日文等。</code></pre><p><em>范例：通过char保存中文</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        char c=  &apos;俊&apos;;//传统的ASCII码是不包含中文定义的
+        int num = c;
+        System.out.println(num);
+
+    }
+}</code></pre><blockquote>
+<p>20426（这个数值已经远远超过了byte可能描述的数据范围）</p>
+</blockquote>
+<p>　　<em>UNICODE描述了一个更广阔的编码范围，其中也很好的支持有传统的AsCII编码，让所有的开发者在使用上不会产生任何的不适应感。由于字符可以保存中文，所以在日后进行网络数据传输的时候，如果要进行中文数据的处理，建议使用的就是char来进行操作。</em></p>
+<h1 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a>布尔型</h1><p>　　<em>布尔型是一种描述处理结果的逻辑内容，对于计算机的世界来讲除了真就是假，没有中间的过渡环节，布尔在java编程语言里面使用boolean关键字来进行定义，而布尔的取值只有两个内容：True、False（这两个在java中都属于有特殊含义的关键字）</em></p>
+<p><strong>如果要想使用布尔类型进行程序的开发，往往都需要结合一些分支语句的结果进行使用</strong></p>
+<p><em>范例：使用布尔型</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        boolean flag = true;
+        if(flag){
+            System.out.println(&quot;1&quot;);
+        }
+    }
+}</code></pre><p>**　　如果此时设置flag的内容为false，那么对于当前的if判断就不会成立。既然已经谈到布尔数据类型就必须对一个语言的区别进行一些描述。**</p>
+<p>　　<em>如果你使用的是C、C++编程开发，在这样的编程语言里面基本上强调都是通过数字0来描述FALSE，而通过一个非0的数字来描述TRUE，通过这样的数值来描述布尔值，但是在JAVA之中并不存在于这样的概念。</em></p>
+<h1 id="String-字符串"><a href="#String-字符串" class="headerlink" title="String 字符串"></a>String 字符串</h1><p>　　<strong>在任何一门语言里面实际上字符串都属于一种比较特殊的类型，而JAVA之中字符串也属于非常特殊的一种数据形式，它不是基本数据类型，而它属于一种引用数据类型，因为字符串的类型要使用“String”声明，而在JAVA编写程序代码的过程之中已经明确强调了：首字母大写的一定是类，所以String是一个系统类（这个系统类的设计是非常繁琐的，后面会有专门的内容进行全面分析），本次先来观察一下String的基本使用</strong></p>
+<p>　　<em>在程序里面如果要想描述单个字符肯定要使用char类型（通过“’”声明），但是如果要想描述一组的字符，就可以通过字符串的形式来处理。</em></p>
+<p><em>范例：定义字符串</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        String message = &quot;董俊&quot;;
+        System.out.println(message);
+
+    }
+}</code></pre><blockquote>
+<p>董俊</p>
+</blockquote>
+<p>**　　需要注意的是，每一个字符串实际上都可以进行内容的连接，而内容的连接，可以通过“+”来实现（不是数字的加法而表述的是一个连接操作）**</p>
+<p><strong>范例：字符串连接操作</strong><br>        public class DongJun{<br>            static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示<br>            public static void main(String DongJun[]){<br>                String message = “姓名：”;<br>                message =  “我的” + message ;<br>                System.out.println(message+”董俊”);</p>
+<pre><code>    }
+}</code></pre><p>　　<em>既然在字符串之中“+”属于连接的操作形式，所以这个时候就会存在有另外一个问题：如果现在直接与其他基本数据类型进行连接又会如何呢？</em></p>
+<p><strong>范例：观察基本数据类型与字符串的连接</strong></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        String prompt = &quot;数据输出&quot;;
+        System.out.println(prompt + 1);
+        System.out.println(prompt + 1.1);
+        System.out.println(prompt + &apos;Y&apos;);
+        System.out.println(prompt + true);
+
+
+    }
+}</code></pre><blockquote>
+</blockquote>
+<p>数据输出1<br>数据输出1.1<br>数据输出Y（字符并没有变为数字，而是直接使用了原始的字符内容）<br>数据输出true</p>
+<p><strong>以上仅仅是连接了一些基本数据型常量，那么如果说现在连接的是一些基本的计算表达式，那么请继续观察程序问题。</strong></p>
+<p><em>范例：观察计算表达式问题</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        double num_a = 9.5 ;
+        int num_b  = 3 ;
+        System.out.println(&quot;数学计算:&quot;+num_a + num_b);
+    }
+}</code></pre><blockquote>
+<p>数学计算：9.53（字符串连接）</p>
+</blockquote>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        double num_a = 9.5 ;
+        int num_b  = 3 ;
+        System.out.println(&quot;数学计算:&quot;+(num_a + num_b));
+    }
+}</code></pre><blockquote>
+<p>数学计算:12.5（先数学计算再连接）</p>
+</blockquote>
+<p>**　　之所以此时要强调这种问题的关键在于，在进行字符串处理的时候“+”和数学计算的“+”会有那么一些麻烦的表述，当java任何的数据类型与字符串进行连接的似乎还，所有的数据类型会首先变为字符串，按照此时的代码，首先执行的是“字符串+double变量”，自动转为String的字符串，而后这个字符串再通过“+”连接一个整型，这个时候的整型也会自动转为字符串，所以最终的计算就称为了一个字符串的连接操作，而加上了括号之后表示要先计算括号内部的数据加法（double类型），最后再与字符串进行连接操作（double自动转为了String）但是这些操作仅仅是发生在包含有“+”的概念上，如果使用的是其他的运算，例如使用的是“-”，那么该程序在编译的时候就会出错**</p>
+<pre><code>另外需要提醒大家的是，在进行字符串定义的时候本身如果包含有一些特殊的内容肯定是无法直接定义的，所以在这样的情况下要想描述一些特殊标记的符号就要使用转义字符，常见的转义字符为：双引号（&quot;、“\&quot;”）、单引号（&apos;、“\&apos;”）、换行符(“\n”)、制表符（“\t”）。</code></pre><p><em>范例：观察转义字符</em></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        String message = &quot;董俊\&quot;\n\\\t我的填&quot;;
+        System.out.println(message);
+    }
+}</code></pre><p><strong>这些转义字符也就在基础学习的过程之中有些作用，主要可以让内容的输出更加好看一些，但是如果在实际上的开发里面用处不是特别大</strong></p>
+<h1 id="Var关键字"><a href="#Var关键字" class="headerlink" title="Var关键字"></a>Var关键字</h1>
 
         
 
@@ -575,7 +955,7 @@ var _hmt = _hmt || [];
   <p><span>本文标题:</span><a href="/2020/09/21/JAVASE/">JAVASE</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 孤桜懶契 的个人博客">孤桜懶契</a></p>
   <p><span>发布时间:</span>2020年09月21日 - 09:18:27</p>
-  <p><span>最后更新:</span>2020年10月22日 - 11:15:26</p>
+  <p><span>最后更新:</span>2020年11月16日 - 20:21:35</p>
   <p><span>原始链接:</span><a href="/2020/09/21/JAVASE/" title="JAVASE">https://gylq.gitee.io/2020/09/21/JAVASE/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://gylq.gitee.io/2020/09/21/JAVASE/"  aria-label="复制成功！"></i></span>
   </p>
@@ -885,7 +1265,7 @@ var _hmt = _hmt || [];
                     </li>
                   
                     <li class='my-links-of-blogroll-li'>
-                      <a href="/2020/10/26/Monster%E7%AC%AC%E4%B8%80%E5%A4%A9/" title="Monster第一天" target="_blank">Monster第一天</a>
+                      <a href="/2020/10/26/Monster%E7%9A%84%E5%8F%A3%E8%AF%AD%E6%96%B9%E6%B3%95/" title="Monster的口语方法" target="_blank">Monster的口语方法</a>
                     </li>
                   
                     <li class='my-links-of-blogroll-li'>
@@ -1248,7 +1628,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#程序注释"><span class="nav-number">1.</span> <span class="nav-text">程序注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标识符"><span class="nav-number">2.</span> <span class="nav-text">标识符</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#程序注释"><span class="nav-number">1.</span> <span class="nav-text">程序注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标识符"><span class="nav-number">2.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">3.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#具体内容"><span class="nav-number">3.1.</span> <span class="nav-text">具体内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量与常量"><span class="nav-number">4.</span> <span class="nav-text">变量与常量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整型"><span class="nav-number">5.</span> <span class="nav-text">整型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浮点型"><span class="nav-number">6.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符型"><span class="nav-number">7.</span> <span class="nav-text">字符型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#布尔型"><span class="nav-number">8.</span> <span class="nav-text">布尔型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#String-字符串"><span class="nav-number">9.</span> <span class="nav-text">String 字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Var关键字"><span class="nav-number">10.</span> <span class="nav-text">Var关键字</span></a></li></ol></div>
             
 
           </div>
@@ -1301,7 +1681,7 @@ var _hmt = _hmt || [];
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Site words total count">29.9k</span>
+    <span title="Site words total count">38.3k</span>
   
 </div>
 
@@ -2174,7 +2554,7 @@ return(false);
   
     <script async type="text/javascript">
         var text = "Welcome To Leaface";
-        var date = '2020-10-27';
+        var date = '2020-11-16';
         console.log("%c " + text, "font-size:100px;color:white;border-radius:20px;height:200px; background:-webkit-linear-gradient(yellow,orange,red,green,blue,purple);text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);");
         console.info('\n' + ' %c Leafae Site %c https://www.liaofuzhan.com ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
         console.info('\n' + ' %c Leafae QQ %c 793458585 ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
