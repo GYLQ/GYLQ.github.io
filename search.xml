@@ -1124,8 +1124,7 @@ public static void main(String DongJun[]){
         lonmg result = num_a + num_b;
         System.out.println(result);
     }
-}</code></pre><p>​    </p>
-<blockquote>
+}</code></pre><blockquote>
 <p>强制类型转换:将保存数据范围大的数据类型强制的变为保存数据范围小的数据类型，这种转换由于需要缩小数据类型的保存位数，所以就有可能产生数据溢出问（数据出错）</p>
 </blockquote>
 <p><em>范例：数据类型的强制转换</em></p>
@@ -1188,8 +1187,13 @@ public static void main(String DongJun[]){
     public static void main(String DongJun[]){
         float num_a  = 10.0F ; //将double常量强制转换为float变量
         float num_b  = (float) 0.4; //将double常量强制转换为float变量
-        System.out.println(num_a/num_b);</code></pre><p>​<br>​                </p>
-<pre><code>    }
+        System.out.println(num_a/num_b);
+
+
+
+
+
+    }
 }
 
 &gt; 25.0</code></pre><p><em>范例：观察float可能存在的问题</em></p>
@@ -1198,8 +1202,13 @@ public static void main(String DongJun[]){
     public static void main(String DongJun[]){
         float num_a  = 9.9F ; //将double常量强制转换为float变量
         float num_b  = (float) 0.3; //将double常量强制转换为float变量
-        System.out.println(num_a/num_b);</code></pre><p>​<br>​            </p>
-<pre><code>    }
+        System.out.println(num_a/num_b);
+
+
+
+
+
+    }
 }</code></pre><blockquote>
 <p>32.999996(会出现许多小数)<br>　　<strong>float数据类型本身是有问题的，而正因为这些问题的存在，所以不建议使用float这种数据类型进行浮点数定义，最好使用double。</strong></p>
 </blockquote>
@@ -1209,15 +1218,18 @@ public static void main(String DongJun[]){
     public static void main(String DongJun[]){
         double num_a  = 9.9 ; //将double常量强制转换为float变量
         double num_b  =  0.3; //将double常量强制转换为float变量
-        System.out.println(num_a/num_b);</code></pre><p>​<br>​                </p>
-<pre><code>    }
+        System.out.println(num_a/num_b);
+
+
+
+
+
+    }
 }</code></pre><blockquote>
 <p>33.0</p>
 </blockquote>
 <p>　　<em>在以后的项目开发过程之中肯定要首选double作为小数的数据类型。</em></p>
-<blockquote>
 <p><strong>在项目的开发之中整型和浮点型之间最大的区别就是小数点，也就是所有的整型数据内容是不会保留小数位的，那么如果说现在计算的数据本身会产生小数位，则如果没有使用浮点型而使用整型，对应的小数位会全部丢弃。(如果要想准确，那么就必须采用小数来进行计算，需要将其中的一个计算的内容变成double)</strong></p>
-</blockquote>
 <p><em>范例：解决小数点的保留问题</em></p>
 <pre><code>public class DongJun{ 
     static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
@@ -1357,7 +1369,45 @@ public static void main(String DongJun[]){
         System.out.println(message);
     }
 }</code></pre><p><strong>这些转义字符也就在基础学习的过程之中有些作用，主要可以让内容的输出更加好看一些，但是如果在实际上的开发里面用处不是特别大</strong></p>
-<h1 id="Var关键字"><a href="#Var关键字" class="headerlink" title="Var关键字"></a>Var关键字</h1>]]></content>
+<h1 id="var关键字"><a href="#var关键字" class="headerlink" title="var关键字"></a>var关键字</h1><pre><code>Java 本身属于一门静态变成语言，在进行各个变量定义的时候就必须明确的声明变量的类型以及变量的具体内容（JDK1.5之后的版本要求是在使用之前复制），但是随着当今时代编程语言的技术发展，对于编程语言的要求也开始变得更多，所以这个时候很多的语言就退出了一个所谓的推断式变量定义，后来java在JDK1.10版本之中正式引入了此机制，所以提供了一个新的var关键字，这个关键字主要用于进行变量的定义，并且会根据所赋予的内容进行自动类型的配置。</code></pre><p><strong>范例：观察var关键字的使用</strong></p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        var num_a = 10.2 ;//将自动推断num_a类型为double
+        var num_b = 3 ;//将自动推断num_b类型为int
+        System.out.println(num_a - num_b);
+
+    }
+}</code></pre><blockquote>
+<p>7.199999999999999(这种精度问题可以忽略)</p>
+</blockquote>
+<pre><code>public class DongJun{ 
+static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+public static void main(String DongJun[]){
+    var num_a = 10.2 ;//将自动推断num_a类型为double
+    var num_b = 3 ;//将自动推断num_b类型为int
+    System.out.println(((Object)num_b).getClass());//class java.lang.Integer
+    System.out.println(((Object)num_a).getClass());//class java.lang.Double
+
+}
+}</code></pre><p>**　　在使用var关键字的时候除了可以为其赋值为基本数据类型之外，也可以设置字符串变量。**</p>
+<p>范例：定义字符串变量</p>
+<pre><code>public class DongJun{ 
+    static int age; //如果现在没有定义具体的内容，则应该使用默认值“0”来表示
+    public static void main(String DongJun[]){
+        var message  = &quot;董俊&quot;;
+        System.out.println(message);
+
+    }
+}</code></pre><blockquote>
+<p>董俊</p>
+</blockquote>
+<p>**　　于是这个时候就有人提出疑问了，按照现在的做法，感觉所有的变量都使用var定义实际上减少了我们对于关键字的记忆需求，为什么你又在这边强调不要去使用它呢？**</p>
+<pre><code>个人总结两个缺点：
+    缺点一：像传统C、C++、Java这样编程语言对于数据类型都是有非常严格的要求，所以其对应的数据类型如果写的非常明确，那么就适合于程序的编写与调试，而如果使用var直接定义，那么类型不明确，于是世界上有一种变量的声明格式采用的是加入数据类型的模式完成例如：“var double_num_a = 10.2;”
+
+    缺点二：其他语言的var是真正的动态类型（随时可以改变变量所保存的数类型的），而Java之中只是提供了一个var样子而已（一旦定义了变量，并且已经推断出了类型之后，那么该变量所保存的类型不允许改变）。</code></pre><p><em>范例：错误的var操作</em></p>
+]]></content>
       <categories>
         <category>Java</category>
       </categories>
