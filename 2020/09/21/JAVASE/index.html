@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="孤桜懶契">
 <meta property="og:description" content="程序注释​    任何一套程序代码里面实际上都会由大量的程序逻辑所组成，但是如果要想对一套代码进行长期的维护，就需要编写大量的注释，对一些程序的代码功能要进行详细的解释，这样不仅为自己铺平道路，实际上也为后来接手的工程师铺平道路。  关于注释的笑话：有一位程序员到一家新的公司进行项目开发，突然有一天老板说，某一个功能执行的速度实在是太慢了，让这位程序员修改一下，后来这个程序员找到了相关源代码，里面">
 <meta property="article:published_time" content="2020-09-21T01:18:27.429Z">
-<meta property="article:modified_time" content="2020-12-15T07:40:07.877Z">
+<meta property="article:modified_time" content="2021-01-11T03:47:35.710Z">
 <meta property="article:author" content="孤桜懶契">
 <meta property="article:tag" content="知识拓展">
 <meta name="twitter:card" content="summary">
@@ -498,7 +498,7 @@ var _hmt = _hmt || [];
                 </span>
                 
                 <span title="字数">
-                  24.8k
+                  26.2k
                 </span>
               
 
@@ -538,10 +538,10 @@ var _hmt = _hmt || [];
 <li><p>​        文档注释：“/** … 文档注释的特定语法标记进行注释的编写 …… */”，这种注释往往可以结合开发工具使用</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class YootkDemo&#123; &#x2F;&#x2F; 【单行注释】定义程序的执行主类</span><br><span class="line">	public static void main(String args[])&#123;&#x2F;&#x2F; 【单行注释】程序的执行起点，主方法</span><br><span class="line">		&#x2F;*【多行注释】</span><br><span class="line">			以下的程序代码是在屏幕上进行一些提示信息的输出，如果有需要则可以再里面进行多行的定义	</span><br><span class="line">		*&#x2F;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;); </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class YootkDemo&#123; &#x2F;&#x2F; 【单行注释】定义程序的执行主类</span><br><span class="line">	public static void main(String args[])&#123;&#x2F;&#x2F; 【单行注释】程序的执行起点，主方法</span><br><span class="line">		&#x2F;*【多行注释】</span><br><span class="line">			以下的程序代码是在屏幕上进行一些提示信息的输出，如果有需要则可以再里面进行多行的定义	</span><br><span class="line">		*&#x2F;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;); </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p>​    既然所有的注释文字不会自己进行代码的编译处理，所以在实际项目开发之中可以将一些暂时不需要的代码通过注释的形式让其失效，这种形式要比直接删除代码更高效。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class YootkDemo&#123; &#x2F;&#x2F; 【单行注释】定义程序的执行主类</span><br><span class="line">	public static void main(String args[])&#123;&#x2F;&#x2F; 【单行注释】程序的执行起点，主方法</span><br><span class="line">		&#x2F;*【多行注释】</span><br><span class="line">			以下的程序代码是在屏幕上进行一些提示信息的输出，如果有需要则可以再里面进行多行的定义	</span><br><span class="line">		*&#x2F;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;); </span><br><span class="line">		&#x2F;&#x2F; 【代码失效】 System.out.println(&quot;江湖上称我为&quot;); </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class YootkDemo&#123; &#x2F;&#x2F; 【单行注释】定义程序的执行主类</span><br><span class="line">	public static void main(String args[])&#123;&#x2F;&#x2F; 【单行注释】程序的执行起点，主方法</span><br><span class="line">		&#x2F;*【多行注释】</span><br><span class="line">			以下的程序代码是在屏幕上进行一些提示信息的输出，如果有需要则可以再里面进行多行的定义	</span><br><span class="line">		*&#x2F;</span><br><span class="line">		System.out.println(&quot;Hello world!&quot;); </span><br><span class="line">		&#x2F;&#x2F; 【代码失效】 System.out.println(&quot;江湖上称我为&quot;); </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p>在以后进行项目开发的时候，一些暂时不需要的代码就可以利用注释进行关闭。</p>
 <h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><p>　　<strong>在任何一个程序里面都一定会有大量的名称进行一些特定结构的声明，例如：在Java程序里面一直强调，每一个程序都是一个类，那么所有的类就一定要有类的名称，这就是属于一个标识符，所有的程序编译器都是依据这个名称来进行代码结构管理的，既然要进行管理，对于名称就有它的命名要求。</strong></p>
@@ -1839,7 +1839,7 @@ public class DongJun
 }</code></pre><blockquote>
 <p>【1】声明book类对象：“Book book = null; ”<br>【2】实例化book类对象:“book = new Book();”</p>
 </blockquote>
-<h6 id=""><a href="#" class="headerlink" title=""></a></h6><p><strong>在整个程序执行过程之中，真正进行构造方法调用的位置处就是使用关键字“new”实例化对象的时候，实际上对于此时的操作，Book类中就定义了构造方法，但是对于构造方法本身是有其非常严格的定义要求的：</strong></p>
+<p><strong>在整个程序执行过程之中，真正进行构造方法调用的位置处就是使用关键字“new”实例化对象的时候，实际上对于此时的操作，Book类中就定义了构造方法，但是对于构造方法本身是有其非常严格的定义要求的：</strong></p>
 <pre><code>|- 构造方法的方法名称不能够任意编写，必须与类名称保持一致；
     - 此时定义的类是类名称是Book,而构造方法的名称使用的是“public Book(){}”;
 |- 构造方法没有返回值声明，并且不能够返回任何的数据内容;
@@ -1894,7 +1894,141 @@ public class DongJun //主类
 <li>如果现在构造方法不返回任何数据，那么为什么不能够使用void定义呢？<br>构造方法的名称是由大小写要求的，但是如果仅仅是凭借名称实际上编译器是无法区别构造方法还是普通方法。</li>
 </ul>
 </blockquote>
-<pre><code>如果从方法定义的角度来讲，JDK是依据结构来区分构造或是普通方法的，如果加上了void，实际上就变为了普通方法。</code></pre><h2 id="匿名对象"><a href="#匿名对象" class="headerlink" title="匿名对象"></a>匿名对象</h2>
+<pre><code>如果从方法定义的角度来讲，JDK是依据结构来区分构造或是普通方法的，如果加上了void，实际上就变为了普通方法。</code></pre><h2 id="匿名对象"><a href="#匿名对象" class="headerlink" title="匿名对象"></a>匿名对象</h2><pre><code>匿名本质上的含义指的就是没有名字，而匿名对象本质上的核心思想就是没有名字的对象。</code></pre><p><em>范例：观察匿名对象的使用</em></p>
+<pre><code>class Book {
+    private String title;
+    private String author;
+    private double price;
+    public Book(){};    //无参构造方法
+    public Book(String t){     //单参构造方法
+        this.setTitle(t);
+        this.setAuthor(&quot;沐言优拓&quot;);
+        this.setPrice(-1.0);
+        }
+    public Book(String t, String a, double p){
+        setTitle(t);
+        this.setAuthor(a);
+        setPrice(p);
+    }
+    public void getInfo() {
+        System.out.println(&quot;图书名称：&quot;+title+&quot;、图书作者：&quot;+ author + &quot;、图书价格：&quot;+ price);
+    }
+    public void setTitle(String t){
+        title = t;
+    }
+    public void setAuthor(String a){
+        author = a;
+    }
+    public void setPrice(double p) {
+        if (p &gt; 0)
+        {
+            price = p;
+        }
+    }
+    public String getTitle(){
+        return title;
+    }
+    public String getAuthor(){
+        return author;
+    }
+    public double getPrice(){
+        return price;
+    }
+}
+public class YootkDemo{
+    public static void main(String args[]){
+         new Book(&quot;从入门到时间&quot;,&quot;董俊&quot;,99).getInfo(); // 声明并实例化
+         new Book(&quot;从入门到时间&quot;).getInfo();
+         new Book().getInfo();
+    }
+}</code></pre><blockquote>
+<p><strong>此时通过关键字new创建的book类的实例化对象，那么就属于一个匿名对象，因为没有对象名称对其进行引用（之前分析了：通过对象名称可以让对象调用多次的操作，如果没有对象名称了，那么该对象就没有引用了，这个对象在使用一次之后就会成为垃圾对象了，那么这个时候有同学可能就不理解了，为什么要有匿名对象呢？）</strong><br><em>现在假设有这样一种生活场景：我是一个卖视频的商铺，因为我的生意非常的火爆，所以我没有时间为我制作的每一件商品命名</em></p>
+</blockquote>
+<p><strong>范例：使用匿名对象</strong></p>
+<pre><code>class Food
+{
+    private String name;
+    private double price;
+    public Food(String n, double p){
+        name = n;
+        price = p;
+    }
+        //setter、getter略
+        public String getInfo(){
+            return &quot;名称：&quot;+name + &quot;、价格：&quot; +price;    
+        }
+}
+public class DongJun //主类
+{
+    public static void main(String avgs[]){
+        for (int x= 0;x &lt;100  ; x ++ )
+        {
+            sale(new Food(&quot;西红柿烤烧饼&quot;,7.9);
+        }
+    }
+    public static void sale(Food temp){
+        System.out.println(&quot;【卖出商品】&quot;+ temp.getInfo());
+    }
+}</code></pre><blockquote>
+<p><strong>当然，以上的代码也可以使用有名对象，例如：先为food实例化对象命名，随后在通过对象名称进行操作</strong></p>
+</blockquote>
+<h2 id="this-关键字"><a href="#this-关键字" class="headerlink" title="this 关键字"></a>this 关键字</h2><pre><code>如果要是以java中的关键字使用为例，个人觉得this关键字是比较繁琐的一个关键字，因为this在程序开发之中使用较为灵活，它可以根据不同的环境而有所改变，而且使用this关键字进行处理操作的过程之中，可以描述是那种处理含义：成员属性、方法（普通方法、构造方法）、表示当前对象。</code></pre><h3 id="this-调用本类成员耐属性"><a href="#this-调用本类成员耐属性" class="headerlink" title="this 调用本类成员耐属性"></a>this 调用本类成员耐属性</h3><pre><code>在一个类中定义的许多的成员属性都可以互相进行调用，例如：某一个属性可能在构造方法中被调用，那么也可能在普通方法中进行调用，只要是在一个类中那么就都可以实现这样的处理。</code></pre><p><em>范例：观察之前编写过的一个代码</em></p>
+<pre><code>class Book
+{
+    private String title;
+    private String author;
+    private double price;
+    public Book(String t, String a, double p ){
+        title = t;
+        author = a ;
+        price = p ;
+    }
+    public String getInfo(){
+        return &quot;【图书信息】书名：&quot;+this.title + &quot;、作者：&quot;+ this.author + &quot;、价格：&quot;+ this.price;
+    }
+}
+public class DongJun //主类
+{
+    public static void main(String avgs[]){
+        Book book = new Book(&quot;入门到实战&quot;,&quot;董俊&quot;,90);
+        System.out.println(book.getInfo());
+    }
+}</code></pre><blockquote>
+<p>【图书信息】书名：入门到实战、作者：董俊、价格：90.0</p>
+</blockquote>
+<pre><code>以上的程序代码是在之前经常编写过的程序逻辑，但是对于当前的程序代码里面有一处的设计是非常不合理的，这一处指的就是类中定义的构造方法，来观察一下构造方法的定义：
+|- 
+    public Book(String t, String a, double p ){
+    title = t;
+    author = a ;
+    price = p ;
+    }
+这个时候的构造方法里面需要传递有三个参数，并且这三个参数名称使用了单个字母描述，那么请问，如果按照正常的标识符的定义要求来讲，这样的标识符虽然符合语法意义，但是不符合于实际的“明确要求”，因为字母t、a、p可能描述的单词范围太多了，那么这个时候最佳的做法肯定是希望可以写上全部的名称</code></pre><p><em>范例：修改程序实现正确的赋值</em></p>
+<pre><code>class Book
+{
+    private String title;
+    private String author;
+    private double price;
+    public Book(String title, String author, double price ){
+        //一旦使用了“this.属性”，那么就永恒描述的是类中的成员耐属性。
+        this.title = title;
+        this.author = author ;
+        this.price = price ;
+    }
+    public String getInfo(){
+        return &quot;【图书信息】书名：&quot;+this.title + &quot;、作者：&quot;+ this.author + &quot;、价格：&quot;+ this.price;
+    }
+}
+public class DongJun //主类
+{
+    public static void main(String avgs[]){
+        Book book = new Book(&quot;入门到实战&quot;,&quot;董俊&quot;,90);
+        System.out.println(book.getInfo());
+    }
+}</code></pre><blockquote>
+<p>【图书信息】书名：入门到实战、作者：董俊、价格：90.0</p>
+</blockquote>
+<pre><code>在以后编写代码的过程之中，只要是访问本类中的成员属性的操作里面一定要采用“this.属性”的形式进行明确的指派，我曾经个人在编写代码的时候就因为有一个地方少写了 this，最终发现执行的结果缺少内容 ，我排查了好久之后才发现的问题。</code></pre>
 
         
 
@@ -1924,7 +2058,7 @@ public class DongJun //主类
   <p><span>本文标题:</span><a href="/2020/09/21/JAVASE/">JAVASE</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 孤桜懶契 的个人博客">孤桜懶契</a></p>
   <p><span>发布时间:</span>2020年09月21日 - 09:18:27</p>
-  <p><span>最后更新:</span>2020年12月15日 - 15:40:07</p>
+  <p><span>最后更新:</span>2021年01月11日 - 11:47:35</p>
   <p><span>原始链接:</span><a href="/2020/09/21/JAVASE/" title="JAVASE">https://gylq.gitee.io/2020/09/21/JAVASE/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://gylq.gitee.io/2020/09/21/JAVASE/"  aria-label="复制成功！"></i></span>
   </p>
@@ -2597,7 +2731,7 @@ public class DongJun //主类
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#程序注释"><span class="nav-number">1.</span> <span class="nav-text">程序注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标识符"><span class="nav-number">2.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">3.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#具体内容"><span class="nav-number">3.1.</span> <span class="nav-text">具体内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量与常量"><span class="nav-number">4.</span> <span class="nav-text">变量与常量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整型"><span class="nav-number">5.</span> <span class="nav-text">整型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浮点型"><span class="nav-number">6.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符型"><span class="nav-number">7.</span> <span class="nav-text">字符型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#布尔型"><span class="nav-number">8.</span> <span class="nav-text">布尔型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#String-字符串"><span class="nav-number">9.</span> <span class="nav-text">String 字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#var关键字"><span class="nav-number">10.</span> <span class="nav-text">var关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-number">11.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数学运算符"><span class="nav-number">12.</span> <span class="nav-text">数学运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自增与自减运算符"><span class="nav-number">13.</span> <span class="nav-text">自增与自减运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关系运算符"><span class="nav-number">14.</span> <span class="nav-text">关系运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三目运算符"><span class="nav-number">15.</span> <span class="nav-text">三目运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">16.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算符"><span class="nav-number">17.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序的逻辑结构"><span class="nav-number">18.</span> <span class="nav-text">程序的逻辑结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分支结构"><span class="nav-number">19.</span> <span class="nav-text">分支结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#if-分支结构"><span class="nav-number">19.1.</span> <span class="nav-text">if 分支结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switch-开关语句"><span class="nav-number">19.2.</span> <span class="nav-text">Switch 开关语句</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#yield-关键字"><span class="nav-number">20.</span> <span class="nav-text">yield 关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环结构"><span class="nav-number">21.</span> <span class="nav-text">循环结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#while循环"><span class="nav-number">21.1.</span> <span class="nav-text">while循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环结构"><span class="nav-number">21.2.</span> <span class="nav-text">for循环结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环控制语句"><span class="nav-number">21.3.</span> <span class="nav-text">循环控制语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环嵌套"><span class="nav-number">21.4.</span> <span class="nav-text">循环嵌套</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法作用概述"><span class="nav-number">22.</span> <span class="nav-text">方法作用概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法定义"><span class="nav-number">22.1.</span> <span class="nav-text">方法定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法重载"><span class="nav-number">22.2.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法递归调用"><span class="nav-number">22.3.</span> <span class="nav-text">方法递归调用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象概述"><span class="nav-number">23.</span> <span class="nav-text">面向对象概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#类与对象"><span class="nav-number">23.1.</span> <span class="nav-text">类与对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类与对象的定义"><span class="nav-number">23.2.</span> <span class="nav-text">类与对象的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象内存分析"><span class="nav-number">23.3.</span> <span class="nav-text">对象内存分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用传递分析"><span class="nav-number">23.4.</span> <span class="nav-text">引用传递分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾产生分析"><span class="nav-number">23.5.</span> <span class="nav-text">垃圾产生分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#成员属性的私有化"><span class="nav-number">23.6.</span> <span class="nav-text">成员属性的私有化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造方法"><span class="nav-number">23.7.</span> <span class="nav-text">构造方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#"><span class="nav-number">23.7.0.0.0.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名对象"><span class="nav-number">23.8.</span> <span class="nav-text">匿名对象</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#程序注释"><span class="nav-number">1.</span> <span class="nav-text">程序注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标识符"><span class="nav-number">2.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">3.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#具体内容"><span class="nav-number">3.1.</span> <span class="nav-text">具体内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量与常量"><span class="nav-number">4.</span> <span class="nav-text">变量与常量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整型"><span class="nav-number">5.</span> <span class="nav-text">整型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浮点型"><span class="nav-number">6.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符型"><span class="nav-number">7.</span> <span class="nav-text">字符型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#布尔型"><span class="nav-number">8.</span> <span class="nav-text">布尔型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#String-字符串"><span class="nav-number">9.</span> <span class="nav-text">String 字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#var关键字"><span class="nav-number">10.</span> <span class="nav-text">var关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-number">11.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数学运算符"><span class="nav-number">12.</span> <span class="nav-text">数学运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自增与自减运算符"><span class="nav-number">13.</span> <span class="nav-text">自增与自减运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关系运算符"><span class="nav-number">14.</span> <span class="nav-text">关系运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三目运算符"><span class="nav-number">15.</span> <span class="nav-text">三目运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">16.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算符"><span class="nav-number">17.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序的逻辑结构"><span class="nav-number">18.</span> <span class="nav-text">程序的逻辑结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分支结构"><span class="nav-number">19.</span> <span class="nav-text">分支结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#if-分支结构"><span class="nav-number">19.1.</span> <span class="nav-text">if 分支结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switch-开关语句"><span class="nav-number">19.2.</span> <span class="nav-text">Switch 开关语句</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#yield-关键字"><span class="nav-number">20.</span> <span class="nav-text">yield 关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环结构"><span class="nav-number">21.</span> <span class="nav-text">循环结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#while循环"><span class="nav-number">21.1.</span> <span class="nav-text">while循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环结构"><span class="nav-number">21.2.</span> <span class="nav-text">for循环结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环控制语句"><span class="nav-number">21.3.</span> <span class="nav-text">循环控制语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环嵌套"><span class="nav-number">21.4.</span> <span class="nav-text">循环嵌套</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法作用概述"><span class="nav-number">22.</span> <span class="nav-text">方法作用概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法定义"><span class="nav-number">22.1.</span> <span class="nav-text">方法定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法重载"><span class="nav-number">22.2.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法递归调用"><span class="nav-number">22.3.</span> <span class="nav-text">方法递归调用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象概述"><span class="nav-number">23.</span> <span class="nav-text">面向对象概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#类与对象"><span class="nav-number">23.1.</span> <span class="nav-text">类与对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类与对象的定义"><span class="nav-number">23.2.</span> <span class="nav-text">类与对象的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象内存分析"><span class="nav-number">23.3.</span> <span class="nav-text">对象内存分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用传递分析"><span class="nav-number">23.4.</span> <span class="nav-text">引用传递分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾产生分析"><span class="nav-number">23.5.</span> <span class="nav-text">垃圾产生分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#成员属性的私有化"><span class="nav-number">23.6.</span> <span class="nav-text">成员属性的私有化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造方法"><span class="nav-number">23.7.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名对象"><span class="nav-number">23.8.</span> <span class="nav-text">匿名对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#this-关键字"><span class="nav-number">23.9.</span> <span class="nav-text">this 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#this-调用本类成员耐属性"><span class="nav-number">23.9.1.</span> <span class="nav-text">this 调用本类成员耐属性</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -2650,7 +2784,7 @@ public class DongJun //主类
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Site words total count">54.1k</span>
+    <span title="Site words total count">55.4k</span>
   
 </div>
 
@@ -3523,7 +3657,7 @@ return(false);
   
     <script async type="text/javascript">
         var text = "Welcome To Leaface";
-        var date = '2021-01-07';
+        var date = '2021-01-27';
         console.log("%c " + text, "font-size:100px;color:white;border-radius:20px;height:200px; background:-webkit-linear-gradient(yellow,orange,red,green,blue,purple);text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);");
         console.info('\n' + ' %c Leafae Site %c https://www.liaofuzhan.com ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
         console.info('\n' + ' %c Leafae QQ %c 793458585 ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
