@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script async src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="OTG88475E6" />
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+<link href="https://fonts.loli.net/css?family=EB+Garamond:400,400i,700,700i|Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next%20.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="靶场实战,应急响应," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="孤桜懶契" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="公众号“渗透安全团队”星球内部使用，密码在星球內">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【应急靶场实践】Linux-应急响应-挖矿（kdevtmpfsi）——事件复现（含样本）">
+<meta property="og:url" content="https://gylq.gitee.io/posts/195.html">
+<meta property="og:site_name" content="孤桜懶契">
+<meta property="og:description" content="公众号“渗透安全团队”星球内部使用，密码在星球內">
+<meta property="article:published_time" content="2022-08-17T07:55:31.175Z">
+<meta property="article:modified_time" content="2022-08-23T20:28:07.524Z">
+<meta property="article:author" content="孤桜懶契">
+<meta property="article:tag" content="靶场实战">
+<meta property="article:tag" content="应急响应">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"flipYIn","post_header":"perspectiveRightIn","post_body":"perspectiveLeftIn","coll_header":"swoopIn","sidebar":"shrinkIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://gylq.gitee.io/posts/195.html"/>
+
+
+
+
+
+<!-- 设置文章需要密码访问 -->
+<script>
+    (function(){
+        if('123123'){
+            if (prompt('请输入文章密码') !== '123123'){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+  <title>【应急靶场实践】Linux-应急响应-挖矿（kdevtmpfsi）——事件复现（含样本） | 孤桜懶契</title>
+  
+
+
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b56c2f3ac99ab0c4efa4cba7755ec64a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+  
+      <!-- 球型气泡标签云 -->
+      <script type="text/javascript" src="/js/src/bubble.js"></script>
+  
+
+  
+      <!-- haoyuePlayer 播放器，移动端大小适配-->
+      <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <!--fork me from github-->
+    <a href="https://github.com/GYLQ" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">孤桜懶契</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Run</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-导航">
+          <a href="/gylq-navigation/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            导航
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            友链
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+
+
+
+<link href="/css/DPlayer.min.css" rel="stylesheet">
+<script src="/js/src/DPlayer.min.js"></script>
+<script src="/js/src/hls.min.js"></script>
+<script>
+    function __create__dps(videos) {
+        for (i = 0; i < videos.length; i++) {
+            new DPlayer({
+                container: document.getElementById('__dp' + i),
+                screenshot: true,
+                video: {
+                    url: videos[i]
+                }
+            });
+        }
+        // 修正 Mirages 1.7.10 视频比例错误
+        setTimeout(() => {
+            let __elementList = document.querySelectorAll('.video-container.video-4-3');
+            for (let __element of __elementList) {
+                __element.className = 'video-container video-16-9';
+                __element.setAttribute('style', 'position: initial;');
+            }
+        }, 300);
+    }
+</script>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "Jo9BKDWYSJy9xykG",ck: "Jo9BKDWYSJy9xykG"})</script> </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+		<div id="container">
+		  <div id="content" class="content">
+			
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://gylq.gitee.io/posts/195.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="孤桜懶契">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/qq.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="孤桜懶契">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">【应急靶场实践】Linux-应急响应-挖矿（kdevtmpfsi）——事件复现（含样本）</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+             
+
+             
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-08-17T15:55:31+08:00">
+                2022-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%9F%A5%E8%AF%86%E7%A7%AF%E7%B4%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">知识积累</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/posts/195.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/195.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/posts/195.html" class="leancloud_visitors" data-flag-title="【应急靶场实践】Linux-应急响应-挖矿（kdevtmpfsi）——事件复现（含样本）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          <!--
+          
+          -->
+
+          
+            <span class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                <span title="字数">
+                  4
+                </span>
+              
+
+              
+
+              
+            </span>
+          
+
+          <!-- 隐藏文章内标题下，内容描述
+          
+          -->
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Here's something</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="08d553e0b1b1000fb2889f72bbb2ac940aab3045756746b99a8ead3759d3a3b4">38883827194ef36336b01b2615c76eeb711d9ff0feb6e04687366c67bd05a293e50a1028fb29dab4802b2195b55507bf470c655913caca30cfc6938ed7a4101193e6f6a2a2675e9cea07792e9d9a45cdc083c2cb9eca2b20bbb8bd982c65e0d35375716327efba649dbc849c319c643873cbf49c18f01c3d1ad06e8538056ff29446b4fd93a8e11079a414ab71718f477a22deb1366822e75ab831f099ff9950a97cb73db151b65c3242f0a00abb568ea34602556382056cd5f538123926327f5baed25678ea00d410fa5bde4a06792e10f882cd1ffb0d4d2a880776519f9d240925301bd295add77fa31640386ae7a006e9ca5fa62f4c44b5f678f14af8e9334565aa4c78b1ab7fbc92491be90fd1de8d39603ae8d0b159d3d38484ba99db868ff0540ac7c493173fcb3541a9d09cba38f7175bb00387aaed89128bc3372ababfcf748ea0297e2e010466db46cc522ff78751bd0127220242ee30d9b4e6f7e87e6be13751ea0411b30d7b11da066d15b2fa80d797bb3e5859183932d004d03d7f2ecd66dd3f611cf532b8159cf28acedd0853f9f0d87b89d69b4c31dbd81e367899f1f950449ff70e173c108930e597511ad7b012382ed2554a6dbf838b8786422d1625df0fa2cc430bbe5931edeb8d36c98377bfe0b19df6e9b6bfcad0089bcc4070e7c5c764d021f2164d35ec6fda3085c811a5dd2628e7c2ddfdc2ceb223283765f74342aa3296ac025875c1a79c669c281c5782d083b961cb68a709b93115ce281fe37a807b3aa69c0ea6dea89ac0cb068595e3eda575312019838689e320acdec3607a10fddf73a06548dd1ed7bf3c55b33cc8621aa12fc23672e45d613266fd2c6667f2451ec5fca1385ed045e421cab2d0bd4a2a352e45ff70f7e3d653dc3b40bf418db2d1acb6ad17d2e4881c7b600eb4b9346009f399a655776b5fc4f0dbdfa90d88785bf8085360736d5473891bf6a63c2a70fe6406a926bbd563e4f4194b89e02360ea48713bd430edd319d6c1986f85488c8eff4652d1071cb03cd15f6f3404091833cca849a53711aea1db1addc21ef6d47c69653e2f8cb4376f725ee040fa794c3d8b785be26e24d6ae90dc910dbe6e3340308d66a353f309d6b872ed71c7f36bc829032a2ae8188bc7fdacc9a869d99037f43a8322852c64aedf1a8a9969fa03bafe47fc7c1f9eb2d17cd0fe7ddf2906da30fb0b5be54abd6457a0540630c8cc7c0e2634c295a6a2ad6649ecb64d3438129a692313304cde8b415c8cf77ce90b063eb3858deb6c6df7364acc6e3b88bc6b579a618a013108ab2296fcd002caf26ecfa8a65a6f8817c80f7d3a5ccd4a1346836f1dbb03421b53e28c255dad78577a7ccdb01cffe462af753900c2993cb2eb85a416e61db1c5049adb5036cf0b7d9fb6ed0a29f044bacf98aea3a04d1a7c30fa49103e5b5bc61e8c42407642152cf26e2065d405dbcfc13644e23e49b7d76116aa223b2de2c02fc894c374493f36466a9623e471abd07efc4a4af41d68c0a7efa406568a0e60ea5f6c1688a5ecfd3a74de1474cd62b8c839fd426ca24db6627b23fe8031669a35f465cd0d0bf5331b0728c7784bdd3ca26d62e8505e30ba654088ae0ef79c8ab3b0cbcc8cfe748d2854d02c5c2355ca192422f0a22c77c805099d91bc4489baecb9ebe49332c8a737821ec573abc37401504038cc7ac10860f0f3d153b3d9355763dccfb0546d9ea16fbc333905f53b173a58a47bad83e660c5a24560e9eee03572895a3d340fa16c51e78d432ffa93c6ea9b266da1e3fd5199b25eae308ef8cf51e4b33a78e390f6f088dd5ce148abb6b9ad9ed0f1bcfd641c62e00ce77e9f58303e83fe0602a6585ed1f2146a0267d167da5a80c8595aa12d07e8ae8702674958b7ca962c0129937a9187333be336554d2dd8dd9149e9cd6ce2f2461769cdf2310d9a6ba7d6fea654891e1d6318bc64362a79c4ca093bd908ee8710b14240ebab44b5fe830a4f8232994db3ce6cc465ef3666b57b6fac235fabc3c4d6e62b86a73fb3816d3e94cd291a1b3854a1c5158aded67d10ee7c946755a76b719e72998036890fe3072140e2dd06bcb54500ec74ebbfc857c5a456774e4fc7d93a7e2241196540b526a438bb1b486544ce0eb540e6c7513e8f6337a3faf6fe0b4a9dcbb978c427254d8a956173472f1508d10d4de00486c0cc610b73685c916a9c922c15adbcb60e826c80f3aba40a32d57263023856a8bd9bedc4140f9cf81b0b5b8467d4ba3b28ce96c00af379a223a56d150eae5dbb91c6931f9fb7fdc0e46ee9d83e8ea117ef8d8420d688a350c6c931a60ee2b754eccee369a17aaad15a9d4156d25f614792b879a073d87c67360d0c8f0fbb27074d2a330dee0fe346163cda002cf57c6c3a3782a432a111e8d56fb456782116c56780b9d6201a2bd34b342e7305e3712d9a880d71a5111ed4a4718225167ac23774d3703dd53b43c2d87702e6fcf98a995c54ecbfa4938fc19694bbe670456164843eba45cb6b8369b17e83a21e5e2a03a21efd64212358f13be478fd0b4b617102bbafa6f27c337aaf1accd76bf11863f379322303b5fbb412f503e1136adf75c3d8dd97a5d33255e3962b71f61b68f5053c179642038852de6003124efd2923ab5a502138d32298ba13e70523631dcea5d11e541e96ebf6c215cb458f8079aa98c013d83881849959615727215835c2841ce07e4ae3559077fe0c3dcde20249a3b171eccd986cc3e380e4872c054e8c29f3abcb1877569276c84fb12e1420055faa4244338574bbac1f341c9246c16c3b3274a0c580d2a59353cf103e5d80734a75aa14a951a0cada28234ac88eb24124b4dae63c3686dcaca510c20860061c6802f66980e366f1ed2e16ed70149ee16c312ac2e659a20be4871552eb5571d5b5725309bb1542abb135462714ada74c11c6e213d17591a8d0f8ef15fee3cb96bbc1ffd03ede2a56ea7c388a4b9a483a5708e06b7dedf9232cd286c27b17c3741d5af17c8dca481a0932861be3b4dfed2b6699e51445ca402ca16a06389547b092daf0b0f260f52510bdc04668859e74bfbb845af0d34fb5ad6a534ec9ceffc789a500002b1e16cebf81e3b05c8ba8b82d19fd89f9f3be5be6811610f8e657a28359f601721334abd1e94b7ab9549535ff37c267a511c5af5b4bb3660d6d9b9acb58b6e098dbc953b29c82c90b99ee1c65178e0dd92a2ab27901749b9ace7e81716a5f3461ae9838e27245293d086a48a5818a47de33649f6ef090399fd969a647a5c3f89b99d84bac943fba6990f918d09659837d2197d5d2493a55e5b63bc82132bf4c316bc02803180dddbbc2b1a276e99f910921f1bbe583755dc58899b0522ba27461919c23e239bdfbbaf61ba7eed17fc123bafc34461e33cc3fcdea506f4f598a0e8dda31117d57c6805bd3882b466da1c62696102f63ebf008cf4c252f16cdfc3eee3e42ad80dfa20ae3a55efd5602f14b5bb6d3bb717d3041822b58e8e878457e84aec6e9c03305df946ec896a7523efd3b57c5def0320634b33e2b86753c2c818340b074c470b68ccf6c917dbe262b08454a463159533218659def310a2dfc9518056f9a801a22054709c96c7742bd577c3923397925edd0f0ace6b797cc9a0ddea0e17486eae4104232a7abf7febfed612900237d0ba7b21844af80d24e8b1a2937cc27c53a715136579da89aeb660bbfee9f305610bf143d4980e90f03f508998b066aeb3e47f79a86db10ebc3750f7db7ec31659bc10f38912a752c6efe31bbee7649ab5e3eeb282ac2c7d907f3825b75b8cf442c954d713c1e92dce3d033b31ee6883adb00bd1144a5c504976a6eb9ae80cb00c32c9288be38bfe5a804d22ff45da5d51b1e942e34774ebd5c842dca058b17927fb41133701b42cb83599fd8666013084a56621b5035ead2fbf4d3476bc8c0d193a4326c60a5747e4084b20bd8099f1c697556925e19fde4ae290797b19fe6754692c939ff1f28515440992b1dac62f7c6ed4c1517d1dab74d8bd7e51298bfc9b8cedceab1702325df42d6e768975446c1282f3a4ded8ad845394f18f0e90ff8ebbd7fbaf3e4394bed00d78bdc31fd0f32fd8b845017ae2e0de61e57e02c1b03e037ea7dc937bad673289624b2fcb1208d0eed7fc073e8afddeb6d5a235466e40e7ed1e7dae2edb576ac3811f4fb2e5f669617cd2403650c032cf18d052b8176f6ba6da0fff156d7d00d1a91f92d1f08f051e3df299083fba121cb00fa3f56ecf891031d203b97f3b3f9cf8da1959ad75915399508d31af286f4a8ee7d7f06560e43bfe32d06f355e492ca39e2699344e558317a9cf9bb8b234f150529868f89fe0d145b077faa2db9a8e4e5f0c2a241c86421c9cd24c6ced6a32bf18d34dd5e73b664ac121a8278f1da73c05f95b6ffb8ff0d8806f05e969570bbfe8a706363ce8eb34274a96a64d9dfd45b984663df524126c467c96f56e0e04edcb7b9ff7ff07be1121b69da53a80d1d8d38cd7ac838f43f239e349c55c97172454d0de50fca6ad7b9847943756448db92dfef7b3cc6160e1bed75597619c7c7d5ee92c710142c17ea509d2e681f4dabd3a7f31c859ce2068ebf4bea5eaf8db8742f993ad5c984562e8e4c0607de875746edb8122b7601de7bd17710c6548398e9c18ddbe42ffca3719b325e7de32b234c6471a52e197064f019358830b432238ea5abbbb18a8868bbe6c3f791888f8dffea756b22721b2e1fe367ac7579eca0e4b0dcc8a80892aaac12ebcb599c20a1d8939d34d791cfa0bbb50c047141a9fb9d1cf776000ebc0a61b91945a122ce51be93738703a2b06cc3561a20e2a9118e4a9e111da288eff6fb12e5359e2bbfe3b105a3c5ca80f9794fa6720719a2c329fa23d7cacb80b3b51f26db676513b7ec552554bd13fa492c31c5ee1253a25b05f5048d13fdb8f1497ad541d3973b0c9abb3f4448d0543a63a6b97eae11f3ff9999d6ba3cabbcd2431c41895a2e90328bfe69dfd47627370270f7d2d333168924fba11f9b87c98bafda96472c9f662ff6cb2ba994b83a10752aebc46a7c0f172219a9029ff0b99587ab96ea4773e12bf2908e9af87a6a5b1564a7f8602eb0384de81844972c503982bf5a673ffb1841c7341e76cef5a9c80e949515db4c7c8a05963eaf47269859ea108957097ff943de73ce35faccd0884057ece99685cc07d46f961c0cf197888ffac1e67f62230f1ceef446bb130dceb46cf8f063aa3498c6b3f5a778b1bce852b252293fe0b2d93371da246988840bb54dfbe1c02e7eb799512a4ca9c25b370c78a4ce60deb406cf5a680faebb8ab97928a0a8dcf328e9732190435117f9fbafbf527a8f01b4b3258120656949217d0d0b409bbaa311a250b1b8ec72f0623b7964bdd307b25de75c292d805fcc882f055c1077ad013721b4694c73e4ad9d3f2e122e4f9df5376c71cbc704f1ac40d0a65012b10c1af3173e628d9a547b9f8a77778fff9eee94de451522c532be009a15cc3e342d5d23060c40d7955e1fcf0dadbb2c29ad9d1957ca32233e21db9a550528c47c4aa75f036ad21b199c0f16a5723d48364b136ce04fa8e83b7d665db6d107acae20f35933487bab5a3599efd80dd7840d6867799c1456d76d0ef6ea8903d408479adffd8199c4d405190c6576078e6071fa915da4005be9a2a27f360d2220284e28c7f9894d2136c5c9ed1269facb62a30048b5d641732572516868974393b7b95fdd502cfe2c7ed81a274637fe364f461bb8d6e216213d38b6835a3da5d58c77da7212595984bc585b697c282c68c2b01bcbbebfbf8d7608a46d481067dd1268ea537e81d4c1afd25d23bcb2a62e444ce5fd0cc997e74b38d854cc7e2c06f9ec4b69f338440b3c9877c85eb3ca395e4e097efc801fe059b8001ffcc8cc2d0ac5cf800b02bd81fe45d2fbbeedd6d4ff04785449f00124fd2e4e4033fcdeeef6d2710ca33ebe704866bec4eb92e990b7c96723bee93e8a91c147504c1776bd8f3995fee458d4cdf14238732a0c33f50c91fcd3edb264e9519c21ffbfc4edd20fb5ad93b63856cfd881b9531cf892eb357b2c1782e0cefadca842d1c5e7e0c96a77d1da812f7edd179aca46f6376655be5b33e851e62942d816df8b4fb0663470ffc8eaebe3254d0aaa8f8b15c12b9d9394972c40a31b00c578394e44dad2716b5d2437efbfde407bbb7c967632f45eb3858d6eabcede8e6432d0ef87521231018008c6726da5fc601b21b44320ff350e18b5aada095f16d28eb79cc8eca8722f94dc69a954e3866cc549de3edf64cd0419f75e21aba1afce08228c7f7f5c990141a73a05b6b0ce65e35b6104643f1547645dc066be1c0f80a36e5b675174bdeb6b5f22d68902703f4292ab4fbc7ec401c6f1daf00c2d8c6331dcefb3b5d0cfb816f4204a90255b67365809e439b5e10b300850a8aa2e28a530b1f5e814baff3eb4dcbb93ee7a62e832a9fb275624df17fe9e61d7dac5f384a3cd795208b91e053d9e12c3f6208e0abd45719aa3cf37c2fd8e3a62d6dd515a99272c36ae6a301ee3b16b85f091b20ff68f944c2bff5c500698f4ce2b297f996c0f3729e2b2c25ea58e3a587edfa5205ebe7acb945669e91cda4f8d550d86c70b1b21f81bba23e2a46afef6fa24922b5f5d14abc92f33c08c0d5ee0b012b15942fb990bb3718fe94a7babdba29e81d29bb32e9f83378acb4d2c0b51f83ebddd3c6775a3580bfadad80ad43d82814478885209a98916aae2165ae1d263c29290136fb09f089b66f6131386ae2e0f60f330f9d4bf063c12582f0fa64c8659474f51da50fb91eb165082a2edcc44907cef8026a8317c7533289c0bc12b1f0c0018998780431de0c9df88d0345ed7e9b3b56b10ca6eba892113faa027c9e5b2f1330659b0559ab55dc399e8bcb67d1c843496504a749696d5d083379babfb70708485d993b090d3713a237eba3ee45f359e60ca6d592531a9a91201b55f978f7c512b1c471d006632a7f877c62bc6ef5b770d17be51d3063d5df88809ec68baa42e730c39ece9c3ddc3415351ee21d96f8a9148359852689a353e60c5bff03fb6c5f4c49777cb29810ec182a8c5dffcb4b909546f2e80232a7007d73bc2a52accd7de938595eca57472b62d4472ab8e5792db5b4dcda7391bb8292a96426983d6b539e6ee2f08eb7a890f299ca94c940a5b0da9259794df6568b6bba3a9806984c8a06d5dca6d9fc3248e716121ca5985eeebb31f68812d28e9513afad996f22c3284e2b831d7794aab20905bbd37db770de4d096774325939c5f6568b3ae61fbb074cc99692d717adb4c0ae3406a257c52a263f4ca250d1a5f3608e9620fb20dc99607bb75f1a0642f3366e93d010b0556f5d279f5700efc0a598a4c9e98930799de27eb2d185067299391f5ffe00643d8c38e828bb1e2aeb006562ccf7a6cd32ac606adf1ab07472bd6b15fb67bbf303e025e3d9656cf0b0145a052cc0cd89b542daa4f6e2bc71ded752bf618aeb9f3459c2bd42cdfe466e08cf17876befc49e5594284e9cc69651a35d4915a1b927d5858a112d62191bbbb6ebec5945cd2ac575f8fe8c2419e1b335c035979c49ac4066b6b650c2e6505a6e6eec84b485b2b0633728c24118bc819998d5672931cf85f1068da76feb979e115f423a6c24cbb8c808bfc9c43d356b5e95342069ff0c8bd3ec708959e9c3191466548a399135bbc8c47ccf01ab325cb0f1e785222b4ca00c36edf1f17c6116f373c82dc164467dfdef2ace21cc35d10bec4233f39f9370d25794f0193733f0eafb09a59a73081990beb8aea845b6c8886976353586269a5772ae67b0e4a333041c123e421bf61cf8e1e39c1e72e2a185a5f951a2918acb0ff5e32564481e9546a32a1f53e2eb0e3f29ce7550e95da420e78a31f16e47f3af87256e808035996c8e96a1a83cd527bcb9a3ff591ac9ccb10268f018b703f4f746ae66021e09ca161bbd052e8980179cbab4feb5a17b9e8d28f4a63d157dc8836637128e7fcf179b10a7537f64fa60bf635029c32d4aa7d493c82c2ffbc975bf9866b33bcb2884e817718ac91290d7f660b120d8d241d17e66d49997b1bfb34e036bff4e19e2c48ce4de8fbc53616af502ed0270ae6d6f8ce9087b02de8c5ae0e1ade96c017a3502cae19641a481421be6d49ed88fb18320c299d0b23753a87a16d2353fad06c640f0ff59ae96683c5e48f9bcb4ad40505823cf0b01ef77845a181b6fc2efb602c6ee68ad055032527e1eb109dd51817afa9c4b8b8baa78b8bdefbcef823625f3a8f31594ff3e19f3610c3e6a203b064c2d9740b54a32798518ec68b58c18be1174f6b3d8511ebdec8eafbe3b0f4acc3466ec3a06454877d26c42ae9e0339e1f7104d7851f433519e01d8325f2ec6169827936e45481fc2d87adf7cea59e1b7472996391710e38dd4438c10555429efc9db325475ac0901b5b042e4778b10e2713cf7415d7e90f235508afc6c6610b0104b819c02ae224a6126025a6a9a448fb78b18309871dcfe148548a436ccc1c5aec8ab44797ca6c265f69c390a3c8dd28b950018944b3d75a1b2c316bc230e3c4316e938cb69adec57ff9217c2fffdcae2285adfb19f19820a83c37f69b7126dcec112aef3e91868668d51d1cae00981aa3d7b6cdb83bac616240b16d2159e7d0f188bb5acd860b69769c499ce257f35367c14387c8f9cd3d5e6baa2b9d8ea1de6653981e836a121f676f9d1127d9cafd7529edb53dcade91963a01853da2bd8bdaf813bbdab52aa3b6562b715dd5fb0c709d9149f4f29fe9474c9259105ffd95a4d7097f73028fdaf16db2af4d5250b62119df3baf561c278b488e080c0f0ec7e5d9b897458719b611931555cffae6d2b35c3a364c5aff86cb67ef9095468fca4d62140b2014ee2a8f948359ebc66aba311e00c4930a913b3e30d6a5f618873bcc33e850d48213f1074cc86b3e88606baf4b50ddce6edd57ab7c45ea7247bf6b93f5748c51fe9dc9dabfbfcef36640c0ec99cf00c7fee61939e2e7d8bf49587a17d996e2c7c71b93fbee156d42e06566a1e22976626b477e3e8eb572ecbdd94edd5913e31b2d760077c5944a328c562a9a332df73338e548e14e9f7e22dac1ded27e511c9501e3ab9f40b680e68e7a82e4bfb48db11ccdd323db405178c25afa296b1c774cdb01f8c4d619e57bc9884b65a5a9609909dce630e97799fa01de668ccdb6763754c774e40a911bb01230c8ee8ee3fe3486716261c98bb0ca0c56086b1fced3d2f0f6706ea7c5312dc40b1c179d3aec14320a6ef9fcc63c5d8b0719dad2dabdfc2e5895f9df4985f5fc81639f3d1535e6b87bce9e62512cb65b3605b6d54ebf8dc7c94d8ece3202c1c18d6bcd4f75d1419c063fed1d54e487c07980084bd28b65a53da80985ba23e1d85a7ce88fdb427eab3658766dc0b074c4635a17f50bc49aad9391000a0807d473b763ea02d0b7e7f655397034a1a37c80a4581d80e5780f52320ecd841d81c33da70a9a979e0aa3b6fad68eff554c589d19a8e509f8fdbf7ceb0f5fbac12d8b3567f2a6e6aed24a7ce796735448fec8b826f5d1fe703b1cc6174ff6fa97cb2c4d60ef16afdd4346bb411a9843cb6b70f9cfec22ab6da782fbbc25a9bc21877fa05c572e84901db2535bd4da47584d64303823b44e3379137965569db423bb2dc7204964e215d9ac04d6dc6e384a5f9270310e925e8a146c566b6c2be2854dbd0d0fa405c8ca06e2f0679a51e7c1780bf83283ad046552824f249d74218ba32402fc8a243ee5e82e9bffd659221f3c97030879e0c63b3906ed94680e99291103a9283bba3fef7e4532b7cfd74a6ad697e1fa9dd0f1157ef0e1f01c9c0cd292bbe3544044838e24bfcc855c2e824ec150972d124c96f92cca29a1ceec0e684b3d3ff47c782132f127609aa17fdec4d152048db0f76020dac44fe9fc310d49784a2d3211a9e60a86cf668cd9c2fb9f1e27b1c979d8ec66f0cf7d61ab4fabb21c5dd77bc1efe2df336aab644016901291c0010acd9aa3bc1a9a0f642b959511319017f51a86d368e18063b1943151028dada885309f0563328886d897c06450f8ce879da400b17db2c028157758367b106045a49533b069eb68321721140321530a7df13e1bb95416ab83fb4cb53fba76a2ea0f65d0b405fcd46e2ee0a679c92a82be4093968c104839f43015477e91bcf36c22ba6a71f368d977e9c892c25f5f100faed39cdb4b4990c149bc82fa7d88bb7f53bad5a235dfafe2cc74c157133402f4b7e78aa52c3c03e83800fe69bcc05e4802e214d3db24de2996266d8a5d330d43f22825c3b21248613f8fc18c64cc6f7bcb4b1c3ee19bd97560777b3a1a88d8b0b4eb7450f1fcf2837044391c5ddf0cac5355498f029987aad2692bfb419c887b8a1e03f832879dd9c1fadc944c5dcf820cee4f79da2f20b6814d48dd529e334cacf307b7c9598859bf11afe87389dea5968737c22d90923d5ae5a6b32f70f6c644dba6c99af5086cc8beec0ee1cd659d87720bb0d096620df8495e21ba4c3c3b7510a4aca21ecbac4670529ae02fc7eba88fed824355d7366c39619097c20aed4bf1d637ec5c3f1aa0aca6c644e01da1bfcf59918b7f55dc900b34be2dfef337bfe3326a1fc7b1873b8767bd3d147865cd845e24cd98304f0cc05047f02b06fb7e30fa08a477140fb42b5e4c3c4709c1eabbad1115d998098bc1a93ecbdb5d824ef0aec811e10829abe8ab18187d21dd4003677afed328acfac6e3f9238b41bf0d936e8cc469f01dc767cabf4ee37c98f1156b09cc32190a71718477995b5f63d448d00ab8a77d711bcbf66373bd40646c8f8a7859b31e1948572c096f7843c3066605cc11b7850800d4f9cd09cab223cdacfd7ee8b1773eaa63bfbdd5ff5acc5e1e58cbc2fc4cbfdb0971f146600ea842741218eb10d518b1efd798b92844acf03bf460ac6caf32c18e6da607ccf96c72ec1c65253dbae2fb84047e957b4d17c2697b325d9d88145e5ef1c0c649cfe4bdedf6eafff90ce6b130d184e63082f57f1827a450643c6543ec36178b6e34f535b5f4aadc777c2b91dc9fd4b87e94205498d6b94f5b5b4ff8140ddb56db32e3cd6cc31a1e8ca5a82664e268d069fe495211e9d56ce4cdcd70d8a922b45fd9ac05ddf0143b35ff57a8eb57dfdb9d51cbed755a0de0c5d08871fde033f18bc27127878f84c4564fb5f649b0312843423fede23cd9244544f6dfb0f89188a6cb0a482d31197632e3f996e077c32e0397252f5c684020a668b7cfc4c55add95de13df0a97d5045e35821a602bf6e2a0334fa43d0f6495c1f7fb231d6f20b3f885eee89a730447d143e7ee857c71156aa4433ea904d8be2e944dad74fdcc8bbc410629ecc651f2ee7df46c2b714bb20abb1cc405cd1d6a8b6ad294fe13bdc589c8e689ccf07691fe97c5d541c6587c5bd8bd1c7e7263a33106c224fd8454018db48a8c06b41fbda620ae62763ca3e8b4af230d8fe8dcbbe26dd1a80df86bcfd90b4b3fe23c3de09056bfe77422271637e933f83c24b9365380923aed32a1900374176f62dd7101a0cf9726c92aa912a29bb42821affdd0595ec529cbaf64c008c94b2cb9038efa8a4a47ed589cd316f4d11a7d6634fd72c449c440b73d402d0228553f02c429671d6e73fefc1075de2d23a852c824eaaa242818f8265279c8dca7b7682f49bc3628f2c0cce75a6a304c2d54d0577043fee8cee11eae301dccbcdaa24975468e86a504f2b5793d0b6558a95178ee9763bf1e967d6f77e1376ee10960db81a7886005ba562e3263fe1c06afdf2b1a0aee5095a803518eebea6b7aca3584b9c76bc4364e290e0a9369ac18f47d94fd9e7868cff5345ba5333bf663eb334d41c8a5c1b856bd850b209356ac217bcf7e14fd01c0e091be282b8939aef4b3198e723ce54732188e55a5e2c9914716957d5076545e5cf6da1f1f150d5826e87301592ea599c670f1657444fcc8609a4751d9e842dd75850158dc4d7372d1372eced92e746a11bf639d8f8367a59bcd306f9dadcefdfa055129854d9aa525ffade8f97b1251fe6d5ff1b98901ca98ecbabb2dd1f1bf5475cc5dfb0c0b478c11de39e1f4d07e53bbadfff1c03092071e6f4cbb441240fbe2d7e9ae111fbc372aee7bbc7f8b1fb618f8a48924b593981c157076b82581312e4448acc02ec99092720b676af1bac7c23636fe8d599434e1907c1404a5d620fdf6be447061fc541eac47d3d9b104f6c38c7950f74e65eba15de0928172e7a785e104360a645e5c41e899826d00827916fb3c4f60f03694bea640e2a205728d3079df156a091aeb61d3df079c262edd2b89eb5ed98a3dc5d9b132591263a61f29196d5b6487ab91dae09ae95a5769722cbd937b73edd88c2051865ac16b0ee1d1528d4fbd3bedb71fc319dad77b978fa2b351f7c124bc41bacb4c45a935bf3b2a7519a3f3afd287be8f7314c60033d907677f6b2cafc9865be255e66ff1d8c75876204276760b61ae2845ff36b30d45621d735a6f073f433999f33667b2d79ecd85394cca13dd4915d70a318914b008b22ccec13bb699bf1814893a6f831b1ded984f8ad720b2bbda02b736ffda8362b47c3afdb3aac81ec7a6bd74a81f6111a29983705594f783936147076a0e89a6240c9718b711762ee0ffed0270666ac3171b7a3695ec28a629fd6668cfa1d9fc33ab8d106598c238ffe8ba3d46974553e540e1fef78b8f4531c56d8c1cad434338d5960e2c4fd65b66c45381acd83b96f9fbcd150373d5ef00304d47554a54ee3ec0d2961426e101d4a4c179dc8d23e424ba63270689bad4f6089f163015a5b5e2d0516142f3c5fe574e15406649043af39cbe654080d3bfa6dd751f0a72c169928ec8584e487787f85bda56baa58909bcb501b9fee177593bb00e06213842765792f8006d65c53807be1af6320e4af8f0aebe5dad3c5ca8dc128564d18989de36af5af184edaffc3d9745e6074715f7b8c945b6fb9d6dcd9a959f0e568da29b5d308a1ff23dd3caf251b14abfb9374776078fba81a583757add03e08c492fc8e076c28dba89155bbc16c8914c8a1700318d47a68279f8ca</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+
+        
+
+      
+    </div>
+
+      <!-- 相关文章推荐 -->
+     
+
+    
+    
+    
+
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="/js/src/jquery.min.js"></script>
+  <script src="/js/src/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/posts/195.html">【应急靶场实践】Linux-应急响应-挖矿（kdevtmpfsi）——事件复现（含样本）</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 孤桜懶契 的个人博客">孤桜懶契</a></p>
+  <p><span>发布时间:</span>2022年08月17日 - 15:55:31</p>
+  <p><span>最后更新:</span>2022年08月24日 - 04:28:07</p>
+  <p><span>原始链接:</span><a href="/posts/195.html" title="【应急靶场实践】Linux-应急响应-挖矿（kdevtmpfsi）——事件复现（含样本）">https://gylq.gitee.io/posts/195.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://gylq.gitee.io/posts/195.html"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          icon: "success",
+          showConfirmButton: true
+          });
+    });
+    });
+</script>
+
+
+          
+    </div>
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div class="read-over">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div>
+    
+</div>
+
+      
+    </div>
+
+    
+      <div>
+        <div class="share_reward">
+  <div>坚持原创技术分享，感谢您的支持和鼓励！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="孤桜懶契 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="孤桜懶契 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98/" rel="tag"> <i class="fa fa-tag"></i> 靶场实战</a>
+          
+            <a href="/tags/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" rel="tag"> <i class="fa fa-tag"></i> 应急响应</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div style="color:rgba(0,0,0,.75);font-size:13px;letter-spacing:4px;margin-bottom:5px;">(&gt;看完记得五星好评哦亲&lt;)</div>
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/196.html" rel="prev" title="【渗透靶场实践】centos8-渗透模拟实战（含靶场与挖矿样本）——篡改页面植入暗链、植入挖矿(sysupdate、networkservice)">
+                <i class="fa fa-chevron-left"></i> 【渗透靶场实践】centos8-渗透模拟实战（含靶场与挖矿样本）——篡改页面植入暗链、植入挖矿(sysupdate、networkservice)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/194.html" rel="next" title="【应急靶场实践】centos8-篡改页面、挖矿(sysupdate、networkservice)含靶场环境">
+                【应急靶场实践】centos8-篡改页面、挖矿(sysupdate、networkservice)含靶场环境 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+         <div
+  data-weibo-title="分享到微博"
+  data-qq-title="分享到QQ"
+  data-douban-title="分享到豆瓣"
+  class="social-share"
+  class="share-component"
+
+
+
+  data-disabled="qzone,google+,linkedin"
+  data-description="Share.js - 一键分享到微博，QQ空间，腾讯微博，人人，豆瓣...">
+   分享到：
+</div>
+
+
+      
+    </div>
+  </div>
+
+
+		  </div>
+		</div>
+	
+
+
+	
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+
+
+	
+<script src="https://readmore.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+<script>
+    const btw = new BTWPlugin();
+    btw.init({
+        id: 'container',
+        blogId: '23138-1631285680758-213',
+        name: '渗透安全团队',
+        qrcode: 'https://gylq.gitee.io/cloudimages/img/mmexport1627522419167.jpg',
+        keyword: 'vip',
+    });
+</script>
+
+	</div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <a href="/">
+              <img class="site-author-image" itemprop="image"
+                src="/images/qq.png"
+                alt="孤桜懶契" />
+              </a>
+            
+              <p class="site-author-name" itemprop="name">孤桜懶契</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">203</span>
+                  <span class="site-state-item-name">文章</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">123</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+              <!-- 为Hexo Next主题添加哈林摇特效  -->
+              <a title="收藏到书签，偶尔High一下^_^" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:void(0)" onclick="javascript:(function go() {function c() {var e = document.createElement('link');e.setAttribute('type', 'text/css');e.setAttribute('rel', 'stylesheet');e.setAttribute('href', f);e.setAttribute('class', l);document.body.appendChild(e)}function h(){var e = document.getElementsByClassName(l);for(var t = 0; t< e.length; t++){document.body.removeChild(e[t])}}function p(){var e = document.createElement('div');e.setAttribute('class', a);document.body.appendChild(e);setTimeout(function(){document.body.removeChild(e)},100)}function d(e){return{height:e.offsetHeight,width:e.offsetWidth}}function v(i){var s = d(i);return s.height>e &amp;&amp;s.height<n &amp;&amp; s.width>t &amp;&amp;s.width<r}function m(e){var t=e;var n=0;while(!!t){n+=t.offsetTop;t=t.offsetParent}return n}function g(){var e=document.documentElement;if(!!window.innerWidth){return window.innerHeight}else if(e &amp;&amp; !isNaN(e.clientHeight)){return e.clientHeight}return 0}function y(){if(window.pageYOffset){return window.pageYOffset}return Math.max(document.documentElement.scrollTop,document.body.scrollTop)}function E(e){var t=m(e);return t>=w &amp;&amp; t<=b+w}var songs=['https://www.liaofuzhan.com/music/无尽光芒.mp3'];function S(){var e=document.getElementById('audio_element_id');if(e!=null){var index=parseInt(e.getAttribute('curSongIndex'));if(index>songs.length-2){index=0;}else{index++;}e.setAttribute('curSongIndex',index);N();}e.src=i;e.play()}function x(e){e.className+=' '+s+' '+o}function T(e){e.className+=' '+s+' '+u[Math.floor(Math.random()*u.length)]}function N(){var e=document.getElementsByClassName(s);var t=new RegExp('\\b'+s+'\\b');for(var n=0;n<e.length;){e[n].className=e[n].className.replace(t,'')}}function initAudioEle(){var e=document.getElementById('audio_element_id');if(e===null){e=document.createElement('audio');e.setAttribute('class',l);e.setAttribute('curSongIndex',0);e.id='audio_element_id';e.loop=false;e.bgcolor=0;e.addEventListener('canplay',function(){setTimeout(function(){x(k)},500);setTimeout(function(){N();p();for(var e=0;e<O.length;e++){T(O[e])}},15500)},true);e.addEventListener('ended',function(){N();h();go();},true);e.innerHTML='<p>If you are reading this,it is because your browser does not support the audio element. We recommend that you get a new browser.</p><p>';document.body.appendChild(e);}}initAudioEle();var e=30;var t=30;var n=350;var r=350;var curSongIndex=parseInt(document.getElementById('audio_element_id').getAttribute('curSongIndex'));var i=songs[curSongIndex];var s='mw-harlem_shake_me';var o='im_first';var u=['im_drunk','im_baked','im_trippin','im_blown'];var a='mw-strobe_light';var f='https://s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css';var l='mw_added_css';var b=g();var w=y();var C=document.getElementsByTagName('*');var k=null;for(var L=0;L<C.length;L++){var A=C[L];if(v(A)){if(E(A)){k=A;break}}}if(A===null){console.warn('Could not find a node of the right size. Please try a different page.');return}c();S();var O=[];for(var L=0;L<C.length;L++){var A=C[L];if(v(A)){O.push(A)}}})()"><i class="fa fa-music"></i> High~</a>
+
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a rel="external nofollow" href="https://github.com/GYLQ/GYLQ.github.io" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a rel="external nofollow" href="mailto:2324298829@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a rel="external nofollow" href="https://t.me/GuYingLanQi" target="_blank" title="telegram">
+                      
+                        <i class="fa fa-fw fa-telegram"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a rel="external nofollow" href="https://mobile.twitter.com/9mGGrn8tDvq6ZhY" target="_blank" title="twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a rel="external nofollow" href="https://space.bilibili.com/13563835" target="_blank" title="哔哩哔哩">
+                      
+                        <i class="fa fa-fw fa-apple"></i></a>
+                  </span>
+                
+            </div>
+          
+
+            <!--
+            <div id="music163player">
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1336790004&auto=1&height=66"></iframe>
+            </div>
+            -->
+
+          
+          
+
+          
+          
+
+          <!--近期文章版块 began-->
+          
+              <div class="links-of-blogroll motion-element links-of-blogroll-block">
+                <div class="links-of-blogroll-title">
+                  <i class="fa fa-history fa-" aria-hidden="true"></i>
+                  近期文章
+                </div>
+                <ul class="links-of-blogroll-list">
+                  
+                  
+                    <li class='my-links-of-blogroll-li'>
+                      <a href="/posts/202.html" title="【漏扫工具】渗透测试常用工具集整理（包含xray、awvs等）" target="_blank">【漏扫工具】渗透测试常用工具集整理（包含xray、awvs等）</a>
+                    </li>
+                  
+                    <li class='my-links-of-blogroll-li'>
+                      <a href="/posts/201.html" title="【应急靶场实践】Ubuntu-暴力破解、写入ssh公钥留后门、植入GPU挖矿程序——事件复现（含靶场环境）" target="_blank">【应急靶场实践】Ubuntu-暴力破解、写入ssh公钥留后门、植入GPU挖矿程序——事件复现（含靶场环境）</a>
+                    </li>
+                  
+                    <li class='my-links-of-blogroll-li'>
+                      <a href="/posts/200.html" title="【渗透靶场实践】Win2008-暴力破解、留后门隐藏账户与shift粘贴键后门、植入WaKuang程序——事件复现（含靶场环境）" target="_blank">【渗透靶场实践】Win2008-暴力破解、留后门隐藏账户与shift粘贴键后门、植入WaKuang程序——事件复现（含靶场环境）</a>
+                    </li>
+                  
+                    <li class='my-links-of-blogroll-li'>
+                      <a href="/posts/199.html" title="【应急靶场实践】Win2008-暴力破解、留隐藏账户后门与shift粘贴键后门、植入WaKuang程序——事件复现（含靶场环境）" target="_blank">【应急靶场实践】Win2008-暴力破解、留隐藏账户后门与shift粘贴键后门、植入WaKuang程序——事件复现（含靶场环境）</a>
+                    </li>
+                  
+                    <li class='my-links-of-blogroll-li'>
+                      <a href="/posts/198.html" title="【渗透靶场实践】Linux-暴力破解、替换ps命令、留多个后门——事件复现（含靶场环境）" target="_blank">【渗透靶场实践】Linux-暴力破解、替换ps命令、留多个后门——事件复现（含靶场环境）</a>
+                    </li>
+                  
+                </ul>
+              </div>
+          
+          <!--近期文章版块 end-->
+
+          
+              <!-- canvas粒子时钟 -->
+              <!-- canvas粒子时钟 https://www.cnblogs.com/xiaohuochai/p/6368039.html
+  https://www.html5tricks.com/html5-canvas-dance-time.html
+ -->
+<div id="">
+  <canvas id="canvas" style="width:60%;">
+</div>
+<script async>
+(function(){
+  var WINDOW_WIDTH = 820;
+  		var WINDOW_HEIGHT = 250;
+  		var RADIUS = 7; //球半径
+  		var NUMBER_GAP = 10; //数字之间的间隙
+  		var u=0.65; //碰撞能量损耗系数
+  		var context; //Canvas绘制上下文
+  		var balls = []; //存储彩色的小球
+  		const colors = ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"]; //彩色小球的颜色
+  		var currentNums = []; //屏幕显示的8个字符
+  		var digit =
+                  [
+                      [
+                          [0,0,1,1,1,0,0],
+                          [0,1,1,0,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,0,1,1,0],
+                          [0,0,1,1,1,0,0]
+                      ],//0
+                      [
+                          [0,0,0,1,1,0,0],
+                          [0,1,1,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [1,1,1,1,1,1,1]
+                      ],//1
+                      [
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,1,1,0,0,0,0],
+                          [1,1,0,0,0,0,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,1,1,1,1,1]
+                      ],//2
+                      [
+                          [1,1,1,1,1,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,1,1,1,0,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//3
+                      [
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,1,0],
+                          [0,0,1,1,1,1,0],
+                          [0,1,1,0,1,1,0],
+                          [1,1,0,0,1,1,0],
+                          [1,1,1,1,1,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,1,1]
+                      ],//4
+                      [
+                          [1,1,1,1,1,1,1],
+                          [1,1,0,0,0,0,0],
+                          [1,1,0,0,0,0,0],
+                          [1,1,1,1,1,1,0],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//5
+                      [
+                          [0,0,0,0,1,1,0],
+                          [0,0,1,1,0,0,0],
+                          [0,1,1,0,0,0,0],
+                          [1,1,0,0,0,0,0],
+                          [1,1,0,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//6
+                      [
+                          [1,1,1,1,1,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,0,1,1,0,0,0]
+                      ],//7
+                      [
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//8
+                      [
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,1,1,0,0,0,0]
+                      ],//9
+                      [
+                          [0,0,0,0],
+                          [0,0,0,0],
+                          [0,1,1,0],
+                          [0,1,1,0],
+                          [0,0,0,0],
+                          [0,0,0,0],
+                          [0,1,1,0],
+                          [0,1,1,0],
+                          [0,0,0,0],
+                          [0,0,0,0]
+                      ]//:
+                  ];
+
+  		function drawDatetime(cxt){
+  			var nums = [];
+
+  			context.fillStyle="#005eac"
+  			var date = new Date();
+  			var offsetX = 70, offsetY = 30;
+  			var hours = date.getHours();
+  			var num1 = Math.floor(hours/10);
+  			var num2 = hours%10;
+  			nums.push({num: num1});
+  			nums.push({num: num2});
+  			nums.push({num: 10}); //冒号
+  			var minutes = date.getMinutes();
+  			var num1 = Math.floor(minutes/10);
+  			var num2 = minutes%10;
+  			nums.push({num: num1});
+  			nums.push({num: num2});
+  			nums.push({num: 10}); //冒号
+  			var seconds = date.getSeconds();
+  			var num1 = Math.floor(seconds/10);
+  			var num2 = seconds%10;
+  			nums.push({num: num1});
+  			nums.push({num: num2});
+
+  			for(var x = 0;x<nums.length;x++){
+  				nums[x].offsetX = offsetX;
+  				offsetX = drawSingleNumber(offsetX,offsetY, nums[x].num,cxt);
+  				//两个数字连一块，应该间隔一些距离
+  				if(x<nums.length-1){
+  					if((nums[x].num!=10) &&(nums[x+1].num!=10)){
+  						offsetX+=NUMBER_GAP;
+  					}
+  				}
+  			}
+
+  			//说明这是初始化
+  			if(currentNums.length ==0){
+  				currentNums = nums;
+  			}else{
+  				//进行比较
+  				for(var index = 0;index<currentNums.length;index++){
+  					if(currentNums[index].num!=nums[index].num){
+  						//不一样时，添加彩色小球
+  						addBalls(nums[index]);
+  						currentNums[index].num=nums[index].num;
+  					}
+  				}
+  			}
+  			renderBalls(cxt);
+  			updateBalls();
+
+  			return date;
+  		}
+
+  		function addBalls (item) {
+  			var num = item.num;
+  			var numMatrix = digit[num];
+  			for(var y = 0;y<numMatrix.length;y++){
+  				for(var x = 0;x<numMatrix[y].length;x++){
+  					if(numMatrix[y][x]==1){
+  						var ball={
+  							offsetX:item.offsetX+RADIUS+RADIUS*2*x,
+  							offsetY:30+RADIUS+RADIUS*2*y,
+  							color:colors[Math.floor(Math.random()*colors.length)],
+  							g:1.5+Math.random(),
+  							vx:Math.pow(-1, Math.ceil(Math.random()*10))*4+Math.random(),
+  							vy:-5
+  						}
+  						balls.push(ball);
+  					}
+  				}
+  			}
+  		}
+
+  		function renderBalls(cxt){
+  			for(var index = 0;index<balls.length;index++){
+  				cxt.beginPath();
+  				cxt.fillStyle=balls[index].color;
+  				cxt.arc(balls[index].offsetX, balls[index].offsetY, RADIUS, 0, 2*Math.PI);
+  				cxt.fill();
+  			}
+  		}
+
+  		function updateBalls () {
+  			var i =0;
+  			for(var index = 0;index<balls.length;index++){
+  				var ball = balls[index];
+  				ball.offsetX += ball.vx;
+  				ball.offsetY += ball.vy;
+  				ball.vy+=ball.g;
+  				if(ball.offsetY > (WINDOW_HEIGHT-RADIUS)){
+  					ball.offsetY= WINDOW_HEIGHT-RADIUS;
+  					ball.vy=-ball.vy*u;
+  				}
+  				if(ball.offsetX>RADIUS&&ball.offsetX<(WINDOW_WIDTH-RADIUS)){
+
+  					balls[i]=balls[index];
+  					i++;
+  				}
+  			}
+  			//去除出边界的球
+  			for(;i<balls.length;i++){
+  				balls.pop();
+  			}
+  		}
+  		function drawSingleNumber(offsetX, offsetY, num, cxt){
+  			var numMatrix = digit[num];
+  			for(var y = 0;y<numMatrix.length;y++){
+  				for(var x = 0;x<numMatrix[y].length;x++){
+  					if(numMatrix[y][x]==1){
+  						cxt.beginPath();
+  						cxt.arc(offsetX+RADIUS+RADIUS*2*x,offsetY+RADIUS+RADIUS*2*y,RADIUS,0,2*Math.PI);
+  						cxt.fill();
+  					}
+  				}
+  			}
+  			cxt.beginPath();
+  			offsetX += numMatrix[0].length*RADIUS*2;
+  			return offsetX;
+  		}
+
+  		var canvas = document.getElementById("canvas");
+  		canvas.width=WINDOW_WIDTH;
+  		canvas.height=WINDOW_HEIGHT;
+  		context = canvas.getContext("2d");
+
+  		//记录当前绘制的时刻
+  		var currentDate = new Date();
+
+  		setInterval(function(){
+  			//清空整个Canvas，重新绘制内容
+  			context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+  			drawDatetime(context);
+  		}, 50)
+})();
+</script>
+
+          
+          
+              <!-- 网站运行时间 -->
+              <div id="days"></div>
+
+<script async language="javascript">
+
+  function show_date_time(){
+      window.setTimeout("show_date_time()", 1000);
+  //    BirthDay=new Date("08/07/2019 20:00:00");
+      BirthDay=new Date("07/02/2020 10:00:00");
+      today=new Date();
+      timeold=(today.getTime()-BirthDay.getTime());
+      sectimeold=timeold/1000
+      secondsold=Math.floor(sectimeold);
+      msPerDay=24*60*60*1000
+      e_daysold=timeold/msPerDay
+      daysold=Math.floor(e_daysold);
+      e_hrsold=(e_daysold-daysold)*24;
+      hrsold=setzero(Math.floor(e_hrsold));
+      e_minsold=(e_hrsold-hrsold)*60;
+      minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+      seconds=setzero(Math.floor((e_minsold-minsold)*60));
+      document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"时"+minsold+"分"+seconds+"秒";
+  }
+
+  function setzero(i){
+      if (i<10)
+      {i="0" + i};
+      return i;
+  }
+
+  show_date_time();
+
+</script>
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+      
+
+      <!-- 标签云 -->
+      <!--
+      
+      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+      <div class="widget-wrap">
+      <h3 class="widget-title">Tag Cloud</h3>
+      <div id="myCanvasContainer" class="widget tagcloud">
+          <canvas width="250" height="250" id="resCanvas" style="width=100%">
+              <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AU/" rel="tag">AU</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWVS/" rel="tag">AWVS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CMS/" rel="tag">CMS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSRF/" rel="tag">CSRF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CVE-2021-40444/" rel="tag">CVE-2021-40444</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cobalt-Strike/" rel="tag">Cobalt Strike</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag">C语言</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dns%E5%8A%AB%E6%8C%81/" rel="tag">Dns劫持</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EXP%E7%BC%96%E5%86%99/" rel="tag">EXP编写</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ettercap/" rel="tag">Ettercap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Form/" rel="tag">Form</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gitee%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/" rel="tag">Gitee自动部署</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-hack%E8%AF%AD%E6%B3%95/" rel="tag">Google hack语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hashcat/" rel="tag">Hashcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Json%E5%8A%AB%E6%8C%81/" rel="tag">Json劫持</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kali/" rel="tag">Kali</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Metasploit/" rel="tag">Metasploit</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nmap/" rel="tag">Nmap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL%E6%B3%A8%E5%85%A5/" rel="tag">SQL注入</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSR/" rel="tag">SSR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSRF/" rel="tag">SSRF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SUID%E6%8F%90%E6%9D%83/" rel="tag">SUID提权</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UDF/" rel="tag">UDF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPN/" rel="tag">VPN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPS/" rel="tag">VPS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vulnhub/" rel="tag">Vulnhub</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XSS/" rel="tag">XSS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XXE/" rel="tag">XXE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xpath%E6%B3%A8%E5%85%A5/" rel="tag">Xpath注入</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aircrack/" rel="tag">aircrack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/burp/" rel="tag">burp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clash/" rel="tag">clash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cracked/" rel="tag">cracked</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf/" rel="tag">ctf</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctfshow/" rel="tag">ctfshow</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ew/" rel="tag">ew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/input/" rel="tag">input</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kali%E5%9F%BA%E7%A1%80/" rel="tag">kali基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/list%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="tag">list的使用</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/msf/" rel="tag">msf</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxychains/" rel="tag">proxychains</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E8%84%9A%E6%9C%AC/" rel="tag">python脚本</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sqlmap/" rel="tag">sqlmap</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/w13scan/" rel="tag">w13scan</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web%E5%AE%89%E5%85%A8/" rel="tag">web安全</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wireshark/" rel="tag">wireshark</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wp/" rel="tag">wp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xray/" rel="tag">xray</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E6%A0%91/" rel="tag">二分搜索树</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91/" rel="tag">二次开发</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%90%86/" rel="tag">代理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" rel="tag">代码审计</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C/" rel="tag">任意代码执行</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="tag">信息收集</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E6%9D%80/" rel="tag">免杀</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%86%85%E6%A0%B8%E6%8F%90%E6%9D%83/" rel="tag">内核提权</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/" rel="tag">内网渗透</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/" rel="tag">命令执行</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%97%85%E6%8E%A2%E5%B7%A5%E5%85%B7/" rel="tag">嗅探工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A0%86%E6%8E%92%E5%BA%8F/" rel="tag">堆排序</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%87%E5%BF%98%E5%BD%95/" rel="tag">备忘录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" rel="tag">大数据</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%90%E5%9F%9F%E5%90%8D/" rel="tag">子域名</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="tag">学习记录</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%89%E5%85%A8/" rel="tag">安全</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%81%E7%A5%9E%E5%8F%B0/" rel="tag">封神台</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" rel="tag">应急响应</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%82%E5%B8%B8/" rel="tag">异常</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" rel="tag">归并排序</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86/" rel="tag">微机原理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" rel="tag">快速排序</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/" rel="tag">成长之路</a><span class="tag-list-count">34</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/" rel="tag">扫描工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB/" rel="tag">指纹识别</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8F%90%E6%9D%83/" rel="tag">提权</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" rel="tag">插入排序</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E/" rel="tag">支付漏洞</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" rel="tag">文件上传</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/" rel="tag">文件读写</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A0%E7%BA%BFwifi%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/" rel="tag">无线wifi密码破解</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%83%E9%99%90%E7%BB%B4%E6%8C%81/" rel="tag">权限维持</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%87%E7%AD%BE%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="tag">标签的使用</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A8%A1%E5%9D%97/" rel="tag">模块</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" rel="tag">渗透测试</a><span class="tag-list-count">80</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80/" rel="tag">渗透测试基础</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/" rel="tag">渗透测试工具</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BA%AF%E6%BA%90/" rel="tag">溯源</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BC%8F%E6%89%AB%E5%B7%A5%E5%85%B7/" rel="tag">漏扫工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" rel="tag">漏洞复现</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BC%8F%E6%B4%9E%E5%B7%A5%E5%85%B7/" rel="tag">漏洞工具</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%86%E7%A0%B4%E5%B7%A5%E5%85%B7/" rel="tag">爆破工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%88%E6%9C%AC%E5%85%B1%E5%AD%98/" rel="tag">版本共存</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%91%E6%8E%A7%E8%AE%BE%E5%A4%87/" rel="tag">监控设备</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E6%8B%93%E5%B1%95/" rel="tag">知识拓展</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E7%A7%AF%E7%B4%AF/" rel="tag">知识积累</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/" rel="tag">端口转发</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%B7%A5%E5%85%B7/" rel="tag">网络攻防工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7/" rel="tag">英语四级</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%AE%E8%AE%BA%E6%96%87%E4%B8%87%E8%83%BD%E6%A8%A1%E6%9D%BF/" rel="tag">议论文万能模板</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B0%B7%E6%AD%8C%E8%AF%AD%E6%B3%95/" rel="tag">谷歌语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B6%8A%E6%9D%83/" rel="tag">越权</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9C%E6%8E%A7%E5%B7%A5%E5%85%B7/" rel="tag">远控工具</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" rel="tag">选择排序</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" rel="tag">链表实现队列</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" rel="tag">链表的增删改查</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98/" rel="tag">靶场实战</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87/" rel="tag">验证码绕过</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%BB%91%E5%AE%A2%E5%B7%A5%E5%85%B7/" rel="tag">黑客工具</a><span class="tag-list-count">64</span></li></ul>
+          </canvas>
+      </div>
+      </div>
+      
+      -->
+      <!-- 标签云 -->
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2020 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+       <i class="fa fa-heartbeat"></i>
+  </span>
+  <!--
+    <span class="author" itemprop="copyrightHolder"> &nbsp;孤桜懶契</span>
+  -->
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="Site words total count">275.6k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="subscribe-box">
+
+  </div>
+
+
+        
+<div class="busuanzi-count">
+  <!--
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+   
+
+  
+  
+    
+      <span class="site-uv">
+        
+        我的第 <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 位朋友，
+      </span>
+    
+
+    
+      <span class="site-pv">
+        历经 <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次回眸才与你相遇
+        <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      </span>
+    
+  
+
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="60" alpha="0.1"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/src/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+
+  <!-- https://deserts.io/diy-a-comment-system/ -->
+  <script type="text/javascript">
+    new Valine({
+        lang: 'zh-cn',
+        admin_email: '2324298849@qq.com', //博主邮箱
+        el: '#comments' ,
+        appId: 'HzU5gDhBUYHF8QTF8DmbGhjD-gzGzoHsz',
+        appKey: 'wp1HNJ17SdpnE0wIFq99eTKH',
+        emoticon_url: 'https://cdn.jsdelivr.net/gh/leafjame/cdn/emoji',
+       // emoticon_list: ["吐.png","喷血.png","狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","中指.png","尴尬.png","瞅你.png","想一想.png","中枪.png","得意.png","肿包.png","扇耳光.png","亲亲.png","惊喜.png","脸红.png","无所谓.png","便便.png","愤怒.png","蜡烛.png","献黄瓜.png","内伤.png","投降.png","观察.png","看不见.png","击掌.png","抠鼻.png","邪恶.png","看热闹.png","口水.png","抽烟.png","锁眉.png","装大款.png","吐舌.png","无奈.png","长草.png","赞一个.png","呲牙.png","无语.png","阴暗.png","不出所料.png","咽气.png","期待.png","高兴.png","吐血倒地.png","哭泣.png","欢呼.png","黑线.png","喜极而泣.png","喷水.png","深思.png","鼓掌.png","暗地观察.png"],
+        emoticon_list: ["大佬.gif","点赞.gif","尴尬.gif","鼓掌.gif","笑哭.gif","害羞.gif","黑人问号.gif","坏笑.gif","惊吓.gif","可爱.gif","抠鼻子.gif","流汗.gif","色.gif","吐血.gif","无奈.gif","huaji.png","liuhanhuaji.png","mojinghuaji.png","coshuaji.png","shounuehuaji.png","jizhi.png","doge.png","chigua.png","motion_1016.png","motion_1012.png","motion_1017.png","f_hufen.png","f_geili.png","f_jiong.png","f_meng.png","f_shenma.png","f_v5.png","c_onef.png","c_onem.png","c_fivem.png","c_oney.png","c_teny.png","c_oy.png","1f60a.png","1f60b.png","1f60d.png","1f60e.png","1f61a.png","1f62d.png","1f601.png","1f602.png","1f605.png","1f606.png","1f607.png","1f618.png","1f630.png","1f631.png","1f632.png","1f633.png","1f63e.png","1f63f.png","1f638.png","1f639.png","zhayanjian.gif","ciya.gif","xieyanxiao.gif","huaixiao.gif","xiaoku.gif","leiben.gif","penxue.gif","hanxiao.gif","baiyan.gif","cahan.gif","fadai.gif","haixiu.gif","haqian.gif","ku.gif","liuhan.gif","OK.gif","qiang.gif","woshou.gif","baoquan.gif","qiudale.gif","se.gif","yinxian.gif","yun.gif","zaijian.gif"],
+        placeholder: '&#x270d;&nbsp;写评论',
+  });
+
+  <!--点击邮件中的链接跳转至相应评论-->
+  if(window.location.hash){
+      var checkExist = setInterval(function() {
+         if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+         }
+      }, 100);
+   }
+
+  </script>
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+    <script>  function addCount(Counter){var $visitors=$('.leancloud_visitors');var url=$visitors.attr('id').trim();var title=$visitors.attr('data-flag-title').trim();Counter('get','/classes/Counter',{where:JSON.stringify({url})}).done(function({results}){if(results.length>0){var counter=results[0]; var $element=$(document.getElementById(url));$element.find('.leancloud-visitors-count').text(counter.time+1);Counter('put','/classes/Counter/'+counter.objectId,JSON.stringify({time:{'__op':'Increment','amount':1}})) .fail(function({responseJSON}){console.log('Failed to save Visitor num, with error message: '+responseJSON.error);})}else{ Counter('post','/classes/Counter',JSON.stringify({title:title,url:url,time:1})).done(function(){var $element=$(document.getElementById(url));$element.find('.leancloud-visitors-count').text(1);}).fail(function(){console.log('Failed to create');});}}).fail(function({responseJSON}){console.log('LeanCloud Counter Error: '+responseJSON.code+' '+responseJSON.error);});}$(function(){$.get('https://app-router.leancloud.cn/2/route?appId='+'HzU5gDhBUYHF8QTF8DmbGhjD-gzGzoHsz').done(function({api_server}){var Counter=function(method,url,data){return $.ajax({method:method,url:'https://'+api_server+'/1.1'+url,headers:{'X-LC-Id':'HzU5gDhBUYHF8QTF8DmbGhjD-gzGzoHsz','X-LC-Key':'wp1HNJ17SdpnE0wIFq99eTKH','Content-Type':'application/json',},data:data});};  const localhost=/http:\/\/(localhost|127.0.0.1|0.0.0.0)/;if(localhost.test(document.URL))return;addCount(Counter);});});</script>
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 31766,
+    el: 'wpac-rating',
+    color: 'ff9800'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '/js/src/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
+
+  
+
+  
+
+  
+
+
+  <!-- Tidio 在线联系功能、鼠标点击特效、页面反馈...-->
+  
+
+
+  
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+    <script async src="/js/src/anime.min.js"></script>
+    <script async src="/js/cursor/explosion.min.js"></script>
+  
+
+
+
+<script>//禁止右键
+function click(e) {
+if (document.all) {
+if (event.button==2||event.button==3) { alert("欢迎光临寒舍，有什么需要帮忙的话，请与站长联系！谢谢您的合作！！！");
+oncontextmenu='return false';
+}
+}
+if (document.layers) {
+if (e.which == 3) {
+oncontextmenu='return false';
+}
+}
+}
+if (document.layers) {
+document.captureEvents(Event.MOUSEDOWN);
+}
+document.onmousedown=click;
+document.oncontextmenu = new Function("return false;")
+document.onkeydown =document.onkeyup = document.onkeypress=function(){
+if(window.event.keyCode == 12) {
+window.event.returnValue=false;
+return(false);
+}
+}
+</script>
+
+
+  <script>//禁止F12
+function fuckyou(){
+//关闭当前窗口(防抽)
+window.location="https://github.com/GYLQ"; //将当前窗口跳转置空白页
+}
+
+function click(e) {
+if (document.all) {
+  if (event.button==2||event.button==3) {
+alert("欢迎光临寒舍，有什么需要帮忙的话，请与站长联系！谢谢您的合作！！！");
+oncontextmenu='return false';
+}
+
+}
+if (document.layers) {
+if (e.which == 3) {
+oncontextmenu='return false';
+}
+}
+}
+if (document.layers) {
+fuckyou();
+document.captureEvents(Event.MOUSEDOWN);
+}
+document.onmousedown=click;
+document.oncontextmenu = new Function("return false;")
+document.onkeydown =document.onkeyup = document.onkeypress=function(){
+if(window.event.keyCode == 123) {
+fuckyou();
+window.event.returnValue=false;
+return(false);
+}
+}
+</script>
+
+
+
+
+
+
+
+ <!-- Hotjar Tracking Code for https://gylq.gitee.io -->
+  <script async>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:2656906,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+
+
+
+  <script src="/js/src/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
+
+
+
+
+  <script async language="javascript">
+
+    var div = document.createElement("div");
+    //插入到自定义的theme-info或者copyright之后
+    var copyright = document.querySelector(".theme-info2") || document.querySelector(".copyright");
+
+    function show_run_time(){
+        window.setTimeout("show_run_time()", 1000);
+      // BirthDay=new Date("03/07/2020 20:00:00");
+        BirthDay=new Date("07/02/2020 10:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+
+        // 使用zh-Hans.yml的文字替换
+        div.innerHTML = "我已在此等候你 " + "<span style='color: #1890ff'> " + daysold + " </span> 天 <span style='color: #1890ff'>" + hrsold + " </span>时 <span style='color: #1890ff'>" + minsold + " </span>分 <span style='color: #1890ff'>" + seconds + " </span>秒 ";
+
+        document.querySelector(".footer-inner").insertBefore(div, copyright.nextSibling);
+
+    }
+    function setzero(i){
+        if (i<10)
+        {i="0" + i};
+        return i;
+    }
+
+    show_run_time();
+
+  </script>
+
+
+
+
+<!-- 旋转魔方 -->
+
+   
+      
+<style>
+    .cube_container {
+      width: 50px;
+      height: 60px;
+      margin: 0 auto;
+      position: fixed;
+      z-index: 999;
+      -webkit-perspective: 1000px;
+              perspective: 1000px;
+      right: 0px;
+      bottom: 0px;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+
+    .cube {
+      /*
+      width: 100%;
+      height: 100%;
+      */
+      width: 0%; /* 大角度旋转 */
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transform: rotateX(-15deg) rotateY(-20deg) translateZ(-100px);
+      transform: rotateX(-15deg) rotateY(-20deg) translateZ(-100px);
+      -webkit-transform-origin: center center -100px;
+      transform-origin: center center -100px;
+      -webkit-animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
+      animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
+    }
+    .cube div {
+      width: 50px;
+      height: 50px;
+      display: block;
+      margin: 0;
+      position: absolute;
+    }
+    .cube div a {
+      color: white;
+      font-size: 12px;
+      text-decoration: none;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 45%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+    .cube .front {
+      -webkit-transform: rotateY(0deg) translateZ(25px);
+              transform: rotateY(0deg) translateZ(25px);
+      background-color: rgba(0, 191, 255, 0.7);
+      border: 1px solid rgba(0, 191, 255, 0.7);
+    }
+    .cube .back {
+      -webkit-transform: rotateX(180deg) translateZ(25px);
+              transform: rotateX(180deg) translateZ(25px);
+      background-color: rgba(124, 252, 0, 0.7);
+      border: 1px solid rgba(124, 252, 0, 0.7);
+    }
+    .cube .left {
+      -webkit-transform: rotateY(-90deg) translateZ(25px);
+              transform: rotateY(-90deg) translateZ(25px);
+      background-color: rgba(255, 215, 0, 0.7);
+      border: 1px solid rgba(255, 215, 0, 0.7);
+    }
+    .cube .right {
+      -webkit-transform: rotateY(90deg) translateZ(25px);
+              transform: rotateY(90deg) translateZ(25px);
+      background-color: rgba(255, 69, 0, 0.7);
+      border: 1px solid rgba(255, 69, 0, 0.7);
+    }
+    .cube .top {
+      -webkit-transform: rotateX(90deg) translateZ(25px);
+              transform: rotateX(90deg) translateZ(25px);
+      background-color: rgba(255, 0, 157, 0.7);
+      border: 1px solid rgba(255, 0, 157, 0.7);
+    }
+    .cube .bottom {
+      -webkit-transform: rotateX(-90deg) translateZ(25px);
+              transform: rotateX(-90deg) translateZ(25px);
+      background-color: rgba(184, 111, 220, 0.7);
+      border: 1px solid rgba(184, 111, 220, 0.7);
+    }
+
+     @-webkit-keyframes around {
+      100% {
+        -webkit-transform: rotateX(-15deg) rotateY(-380deg) translateZ(-100px);
+                transform: rotateX(-15deg) rotateY(-380deg) translateZ(-100px);
+      }
+    }
+
+    @keyframes around {
+      100% {
+        -webkit-transform: rotateX(-15deg) rotateY(-380deg) translateZ(-100px);
+        transform: rotateX(-15deg) rotateY(-380deg) translateZ(-100px);
+      }
+    }
+</style>
+
+<div class="cube_container">
+	  <div class="cube">
+	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
+	    <div class="back"><a onclick="back2top()" rel="nofollow"> ❤️ </a></div>
+	    <div class="right"><a onclick="back2top()" rel="nofollow"> 孤桜懶契 </a></div>
+	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 请多关照 </a></div>
+	    <div class="top"><a href="https://gylq.gitee.io/gylq-navigation/" target="_blank" rel="nofollow"> ❤️ </a></div>
+	    <div class="bottom"><a href="https://gylq.gitee.io/gylq-navigation/" target="_blank" rel="nofollow"> ❤️ </a></div>
+	  </div>
+</div>
+
+<script>
+
+  function back2top(){
+    $('html, body').animate({scrollTop: 0}, 500);
+  }
+
+</script>
+
+   
+
+
+<!-- Console 输出第三方个性化字体 -->
+
+  <script async type="text/javascript" src="/figlet/fetch.min.js"></script>
+  <script type="text/javascript" src="/figlet/figlet.js"></script>
+  <script type="text/javascript">
+
+      figlet.defaults({fontPath: "/figlet/fonts"});
+      figlet("Welcome To 孤桜懶契", "Big Money-ne", function(err, text) {
+          if (err) {
+              console.log("something went wrong...");
+              console.dir(err);
+              return;
+          }
+          console.log(text);
+      });
+  </script>
+
+
+  <!-- Console 输出自定义字体 -->
+  
+    <script async type="text/javascript">
+        var text = "Welcome To Leaface";
+        var date = '2022-11-03';
+        console.log("%c " + text, "font-size:100px;color:white;border-radius:20px;height:200px; background:-webkit-linear-gradient(yellow,orange,red,green,blue,purple);text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);");
+        console.info('\n' + ' %c Leafae Site %c https://www.liaofuzhan.com ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+        console.info('\n' + ' %c Leafae QQ %c 793458585 ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+        console.info('\n' + ' %c Leafae Wechat %c leaface ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+       // console.log("%c Time: " + date, "font-size:100px;white:"+fcolor+";border-radius:20px;height:200px; background:-webkit-linear-gradient(yellow,orange,red,green,blue,purple);text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);  background-image: linear-gradient(to right, orangered, orange, gold, lightgreen, cyan, dodgerblue, mediumpurple, hotpink, orangered);");
+       // console.log("%c .", "padding:300px 600px;line-height:10px;background:url(https://s2.ax1x.com/2019/10/17/KkoAJJ.md.png) no-repeat;");
+    </script>
+  
+
+
+  <!-- 看板娘 -->
+  
+      <script async src="/live2d-widget/autoload.js"></script>
+  
+
+  
+  
+
+  <!-- 代码块复制功能 -->
+  <script async type="text/javascript" src="/js/src/clipboard.min.js"></script>
+  <script async type="text/javascript" src="/js/src/clipboard-use.js"></script>
+
+  <!--share.js-->
+  <link async rel="stylesheet" href="/sharejs/css/share.min.css">
+  <script async src="/sharejs/js/social-share.min.js"></script>
+
+  <!-- 模仿知乎卡片样式链接、崩溃欺骗特效 -->
+  <script async type="text/javascript" src="/js/src/linkcard.js"></script>
+
+  <!--崩溃欺骗 放在js文件最后-->
+  <!--
+  <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+  -->
+
+ 
+    <script src="https://myhkw.cn/api/player/159368326389" id="myhk" key="159368326389" m="1"></script>
+ 
+
+
+</body>
+</html>
